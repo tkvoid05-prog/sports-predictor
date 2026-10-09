@@ -1,0 +1,188 @@
+{
+  "updated_at": "2026-10-09T18:56:08.662083",
+  "shift": "tarde_noite",
+  "matches": [
+    {
+      "league": "Brasileirão Série A",
+      "home_team": "Vasco da Gama",
+      "away_team": "Remo",
+      "kickoff": "2026-10-10T21:00Z",
+      "referee": "Não divulgado",
+      "markets": {
+        "goals": {
+          "expected_total": 2.4,
+          "over_1_5": {
+            "line": 1.5,
+            "prob_over": 69.2,
+            "prob_under": 30.8
+          },
+          "over_2_5": {
+            "line": 2.5,
+            "prob_over": 43.0,
+            "prob_under": 57.0
+          },
+          "over_3_5": {
+            "line": 3.5,
+            "prob_over": 22.1,
+            "prob_under": 77.9
+          }
+        },
+        "corners": {
+          "expected_total": 9.9,
+          "over_8_5": {
+            "line": 8.5,
+            "prob_over": 62.4,
+            "prob_under": 37.6
+          },
+          "over_9_5": {
+            "line": 9.5,
+            "prob_over": 51.3,
+            "prob_under": 48.7
+          },
+          "over_10_5": {
+            "line": 10.5,
+            "prob_over": 40.5,
+            "prob_under": 59.5
+          }
+        },
+        "shots": {
+          "expected_shots": 24.0,
+          "expected_sot": 8.3,
+          "over_24_5_shots": {
+            "line": 24.5,
+            "prob_over": 44.6,
+            "prob_under": 55.4
+          },
+          "over_8_5_sot": {
+            "line": 8.5,
+            "prob_over": 44.9,
+            "prob_under": 55.1
+          }
+        },
+        "fouls": {
+          "expected_total": 29.5,
+          "over_25_5": {
+            "line": 25.5,
+            "prob_over": 73.7,
+            "prob_under": 26.3
+          },
+          "over_27_5": {
+            "line": 27.5,
+            "prob_over": 61.5,
+            "prob_under": 38.5
+          }
+        },
+        "cards": {
+          "expected_total": 5.82,
+          "referee_factor": 1.08,
+          "over_3_5": {
+            "line": 3.5,
+            "prob_over": 83.2,
+            "prob_under": 16.8
+          },
+          "over_4_5": {
+            "line": 4.5,
+            "prob_over": 68.9,
+            "prob_under": 31.1
+          },
+          "over_5_5": {
+            "line": 5.5,
+            "prob_over": 52.4,
+            "prob_under": 47.6
+          }
+        }
+      }
+    },
+    {
+      "league": "Brasileirão Série A",
+      "home_team": "São Paulo",
+      "away_team": "Vitória",
+      "kickoff": "2026-10-11T00:00Z",
+      "referee": "Não divulgado",
+      "markets": {
+        "goals": {
+          "expected_total": 2.4,
+          "over_1_5": {
+            "line": 1.5,
+            "prob_over": 69.2,
+            "prob_under": 30.8
+          },
+          "over_2_5": {
+            "line": 2.5,
+            "prob_over": 43.0,
+            "prob_under": 57.0
+          },
+          "over_3_5": {
+            "line": 3.5,
+            "prob_over": 22.1,
+            "prob_under": 77.9
+          }
+        },
+        "corners": {
+          "expected_total": 9.9,
+          "over_8_5": {
+            "line": 8.5,
+            "prob_over": 62.4,
+            "prob_under": 37.6
+          },
+          "over_9_5": {
+            "line": 9.5,
+            "prob_over": 51.3,
+            "prob_under": 48.7
+          },
+          "over_10_5": {
+            "line": 10.5,
+            "prob_over": 40.5,
+            "prob_under": 59.5
+          }
+        },
+        "shots": {
+          "expected_shots": 24.0,
+          "expected_sot": 8.3,
+          "over_24_5_shots": {
+            "line": 24.5,
+            "prob_over": 44.6,
+            "prob_under": 55.4
+          },
+          "over_8_5_sot": {
+            "line": 8.5,
+            "prob_over": 44.9,
+            "prob_under": 55.1
+          }
+        },
+        "fouls": {
+          "expected_total": 29.5,
+          "over_25_5": {
+            "line": 25.5,
+            "prob_over": 73.7,
+            "prob_under": 26.3
+          },
+          "over_27_5": {
+            "line": 27.5,
+            "prob_over": 61.5,
+            "prob_under": 38.5
+          }
+        },
+        "cards": {
+          "expected_total": 5.82,
+          "referee_factor": 1.08,
+          "over_3_5": {
+            "line": 3.5,
+            "prob_over": 83.2,
+            "prob_under": 16.8
+          },
+          "over_4_5": {
+            "line": 4.5,
+            "prob_over": 68.9,
+            "prob_under": 31.1
+          },
+          "over_5_5": {
+            "line": 5.5,
+            "prob_over": 52.4,
+            "prob_under": 47.6
+          }
+        }
+      }
+    }
+  ]
+}
