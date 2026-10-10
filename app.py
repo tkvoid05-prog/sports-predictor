@@ -38,6 +38,56 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+@st.dialog("Diagnóstico Completo da Partida")
+def show_match_summary_dialog(m):
+    mkts = m.get("markets", {})
+    home = m.get("home_team", "")
+    away = m.get("away_team", "")
+    g = mkts.get("goals", {})
+    c = mkts.get("corners", {})
+    s = mkts.get("shots", {})
+    cd = mkts.get("cards", {})
+    combo = g.get("btts_or_over25", {})
+    profiles = m.get("team_profiles", {})
+
+    st.subheader(f"{home} vs {away}")
+    st.caption(f"Liga: {m.get('league')} | Árbitro: {m.get('referee', 'Não divulgado')} | Confiança: {m.get('data_confidence', 'Média')}")
+
+    st.markdown("#### ⚽ Gols & Mercados Principais")
+    col1, col2, col3 = st.columns(3)
+    col1.metric("Média Gols", g.get("expected_total", 0))
+    col1.metric("+1.5 Gols", f"{g.get('over_1_5', {}).get('prob_over', 0)}%", f"@{g.get('over_1_5', {}).get('fair_odd', 0)}")
+    
+    col2.metric("+2.5 Gols", f"{g.get('over_2_5', {}).get('prob_over', 0)}%", f"@{g.get('over_2_5', {}).get('fair_odd', 0)}")
+    col2.metric("BTTS (Sim)", f"{g.get('btts', {}).get('prob_yes', 0)}%", f"@{g.get('btts', {}).get('fair_odd', 0)}")
+
+    col3.metric("BTTS ou +2.5", f"{combo.get('prob_hit', 0)}%", f"@{combo.get('fair_odd', 0)}")
+
+    st.divider()
+
+    st.markdown("#### 📊 Volume: Cantos, Chutes & Cartões")
+    col_v1, col_v2, col_v3 = st.columns(3)
+    col_v1.metric("Cantos Totais", c.get("expected_total", 0))
+    col_v1.metric("+8.5 Cantos", f"{c.get('over_8_5', {}).get('prob_over', 0)}%", f"@{c.get('over_8_5', {}).get('fair_odd_over', 0)}")
+
+    col_v2.metric("Finalizações", s.get("expected_shots", 0))
+    col_v2.metric("+8.5 no Alvo", f"{s.get('over_8_5_sot', {}).get('prob_over', 0)}%", f"@{s.get('over_8_5_sot', {}).get('fair_odd', 0)}")
+
+    col_v3.metric("Cartões Totais", cd.get("expected_total", 0))
+    col_v3.metric("+3.5 Cartões", f"{cd.get('over_3_5', {}).get('prob_over', 0)}%", f"@{cd.get('over_3_5', {}).get('fair_odd', 0)}")
+
+    if profiles:
+        st.divider()
+        st.markdown("#### 📈 Projeção Comparativa por Time")
+        h_data = profiles.get("home", {})
+        a_data = profiles.get("away", {})
+        chart_df = pd.DataFrame({
+            "Métrica": ["Finalizações", "No Alvo", "Cantos"],
+            f"{home} (Casa)": [h_data.get("shots", 0), h_data.get("sot", 0), h_data.get("corners", 0)],
+            f"{away} (Fora)": [a_data.get("shots", 0), a_data.get("sot", 0), a_data.get("corners", 0)],
+        }).set_index("Métrica")
+        st.bar_chart(chart_df, horizontal=True, stack=False)
+
 st.title("⚽ Preditor Quantitativo")
 
 data_file = os.path.join("data", "predictions_today.json")
@@ -63,7 +113,7 @@ selected_league = st.selectbox("Filtrar Liga", ["Todas"] + leagues)
 
 filtered = [m for m in matches if selected_league == "Todas" or m.get("league") == selected_league]
 
-for m in filtered:
+for idx, m in enumerate(filtered):
     mkts = m.get("markets", {})
     home = m.get("home_team", "")
     away = m.get("away_team", "")
@@ -72,11 +122,16 @@ for m in filtered:
     profiles = m.get("team_profiles", {})
 
     with st.expander(f"{home} vs {away}", expanded=True):
-        st.markdown(
-            f"<span class='badge-league'>{m.get('league')}</span> "
-            f"<span class='badge-conf'>Amostra: {conf}</span> | Árbitro: **{referee}**",
-            unsafe_allow_html=True
-        )
+        col_hdr, col_btn = st.columns([3, 1])
+        with col_hdr:
+            st.markdown(
+                f"<span class='badge-league'>{m.get('league')}</span> "
+                f"<span class='badge-conf'>Amostra: {conf}</span> | Árbitro: **{referee}**",
+                unsafe_allow_html=True
+            )
+        with col_btn:
+            if st.button("📋 Resumo (Print)", key=f"btn_pop_{idx}"):
+                show_match_summary_dialog(m)
 
         tab_gols, tab_combo, tab_grafico, tab_cantos, tab_chutes, tab_cards = st.tabs([
             "Gols", "BTTS ou +2.5", "Comparativo 📊", "Cantos", "Chutes", "Cartões"
@@ -102,13 +157,11 @@ for m in filtered:
             if profiles:
                 h_data = profiles.get("home", {})
                 a_data = profiles.get("away", {})
-                
                 chart_df = pd.DataFrame({
                     "Métrica": ["Finalizações", "Chutes no Alvo", "Escanteios"],
                     f"{home} (Casa)": [h_data.get("shots", 0), h_data.get("sot", 0), h_data.get("corners", 0)],
                     f"{away} (Fora)": [a_data.get("shots", 0), a_data.get("sot", 0), a_data.get("corners", 0)],
                 }).set_index("Métrica")
-                
                 st.write("**Projeção Volumétrica por Equipe:**")
                 st.bar_chart(chart_df, horizontal=True, stack=False)
             else:
