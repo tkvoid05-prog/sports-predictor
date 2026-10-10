@@ -1,75 +1,131 @@
-import io
 from datetime import datetime
-import pandas as pd
 import requests
 
-# Mapeamento oficial dos CSVs de football-data.co.uk (Ligas Europeias)
-LEAGUE_URLS = {
-    "Premier League": "https://www.football-data.co.uk/mmz4281/2425/E0.csv",
-    "La Liga": "https://www.football-data.co.uk/mmz4281/2425/SP1.csv",
-    "Bundesliga": "https://www.football-data.co.uk/mmz4281/2425/D1.csv",
-    "Ligue 1": "https://www.football-data.co.uk/mmz4281/2425/F1.csv",
+ESPN_LEAGUES = {
+    "Premier League": "eng.1",
+    "La Liga": "esp.1",
+    "Bundesliga": "ger.1",
+    "Ligue 1": "fra.1",
+    "Brasileirão Série A": "bra.1",
 }
 
-# Endpoint público e sem bloqueio da ESPN para o Brasileirão Série A
-ESPN_BRAZIL_API = "https://site.api.espn.com/apis/site/v2/sports/soccer/bra.1/scoreboard"
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+}
 
 
-def fetch_european_league_data(league_name: str) -> pd.DataFrame:
-    """Descarrega os dados históricos consolidados de uma liga europeia específica."""
-    url = LEAGUE_URLS.get(league_name)
-    if not url:
-        return pd.DataFrame()
-
-    headers = {"User-Agent": "Mozilla/5.0"}
-    response = requests.get(url, headers=headers, timeout=15)
-    if response.status_code == 200:
-        df = pd.read_csv(io.StringIO(response.text))
-        # Filtra apenas colunas essenciais para performance e memória
-        cols = [
-            "Date", "HomeTeam", "AwayTeam", "FTHG", "FTAG",
-            "HS", "AS", "HST", "AST", "HF", "AF",
-            "HC", "AC", "HY", "AY", "HR", "AR", "Referee"
-        ]
-        available_cols = [c for c in cols if c in df.columns]
-        return df[available_cols].dropna(subset=["HomeTeam", "AwayTeam"])
-    return pd.DataFrame()
-
-
-def fetch_espn_fixtures(target_date: str = None) -> list:
-    """Obtém jogos agendados e dados de arbitragem via ESPN para o Brasileirão."""
-    params = {}
-    if target_date:
-        params["dates"] = target_date.replace("-", "")
-
-    headers = {"User-Agent": "Mozilla/5.0"}
+def fetch_team_last_5_matches(league_slug: str, team_id: str) -> dict:
+    """Busca os últimos 5 jogos reais já finalizados de uma equipe na ESPN."""
+    url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{league_slug}/teams/{team_id}/schedule"
     try:
-        response = requests.get(ESPN_BRAZIL_API, headers=headers, params=params, timeout=15)
-        if response.status_code != 200:
-            return []
-        data = response.json()
-        events = data.get("events", [])
-        fixtures = []
+        resp = requests.get(url, headers=HEADERS, timeout=10)
+        if resp.status_code != 200:
+            return {
+                "goals_scored": [1.2] * 5,
+                "goals_conceded": [1.1] * 5,
+                "sample_size": 0,
+            }
+
+        events = resp.json().get("events", [])
+        finished_matches = []
 
         for ev in events:
-            competition = ev.get("competitions", [{}])[0]
-            competitors = competition.get("competitors", [])
-            home_team = next((c["team"]["name"] for c in competitors if c.get("homeAway") == "home"), "Desconhecido")
-            away_team = next((c["team"]["name"] for c in competitors if c.get("homeAway") == "away"), "Desconhecido")
+            comp = ev.get("competitions", [{}])[0]
+            status = comp.get("status", {}).get("type", {}).get("state", "")
+            # Considera apenas jogos que já terminaram
+            if status == "post":
+                finished_matches.append(comp)
 
-            # Identifica o árbitro escalado (se já divulgado)
-            officials = competition.get("officials", [])
-            referee_name = officials[0].get("displayName", "Não divulgado") if officials else "Não divulgado"
+        # Pega os 5 jogos mais recentes
+        recent_5 = finished_matches[-5:]
+        if not recent_5:
+            return {
+                "goals_scored": [1.2] * 5,
+                "goals_conceded": [1.1] * 5,
+                "sample_size": 0,
+            }
 
-            # Formata o horário do jogo
-            date_str = competition.get("date", "")
-            fixtures.append({
-                "league": "Brasileirão Série A",
-                "home_team": home_team,
-                "away_team": away_team,
-                "kickoff": date_str,
-                "referee": referee_name
-            })
-        return fixtures
+        scored = []
+        conceded = []
+
+        for comp in recent_5:
+            competitors = comp.get("competitors", [])
+            team_score = 0
+            opp_score = 0
+            for c in competitors:
+                s = int(c.get("score", {}).get("value", 0))
+                if str(c.get("id")) == str(team_id):
+                    team_score = s
+                else:
+                    opp_score = s
+            scored.append(team_score)
+            conceded.append(opp_score)
+
+        return {
+            "goals_scored": scored,
+            "goals_conceded": conceded,
+            "sample_size": len(recent_5),
+        }
     except Exception:
-        return []
+        return {
+            "goals_scored": [1.2] * 5,
+            "goals_conceded": [1.1] * 5,
+            "sample_size": 0,
+        }
+
+
+def fetch_espn_fixtures() -> list:
+    """Busca as partidas reais do dia e extrai os 5 jogos anteriores de cada clube."""
+    # Busca pela data do dia em formato UTC
+    today_str = datetime.utcnow().strftime("%Y%m%d")
+    fixtures = []
+
+    for league_name, slug in ESPN_LEAGUES.items():
+        url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{slug}/scoreboard?dates={today_str}"
+        try:
+            resp = requests.get(url, headers=HEADERS, timeout=10)
+            if resp.status_code != 200:
+                continue
+
+            events = resp.json().get("events", [])
+            for event in events:
+                comp = event.get("competitions", [{}])[0]
+                competitors = comp.get("competitors", [])
+                if len(competitors) < 2:
+                    continue
+
+                c0 = competitors[0]
+                c1 = competitors[1]
+
+                home_comp = c0 if c0.get("homeAway") == "home" else c1
+                away_comp = c1 if c0.get("homeAway") == "home" else c0
+
+                home_id = str(home_comp.get("id"))
+                away_id = str(away_comp.get("id"))
+                home_name = home_comp.get("team", {}).get("displayName", "")
+                away_name = away_comp.get("team", {}).get("displayName", "")
+
+                officials = comp.get("officials", [])
+                referee = (
+                    officials[0].get("displayName", "Não divulgado")
+                    if officials
+                    else "Não divulgado"
+                )
+
+                # Busca histórico real dos últimos 5 jogos de cada time
+                home_history = fetch_team_last_5_matches(slug, home_id)
+                away_history = fetch_team_last_5_matches(slug, away_id)
+
+                fixtures.append({
+                    "league": league_name,
+                    "home_team": home_name,
+                    "away_team": away_name,
+                    "kickoff": event.get("date", ""),
+                    "referee": referee,
+                    "home_history_5": home_history,
+                    "away_history_5": away_history,
+                })
+        except Exception:
+            continue
+
+    return fixtures
