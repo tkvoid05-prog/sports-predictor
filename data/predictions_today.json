@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-10T01:06:54.532865",
-  "shift": "manha",
+  "updated_at": "2026-10-10T15:48:26.931700",
+  "shift": "tarde_noite",
   "matches": [
     {
       "league": "Premier League",
@@ -482,7 +482,7 @@
       "away_team": "Athletic Club",
       "kickoff": "2026-10-10T12:00Z",
       "referee": "Não divulgado",
-      "data_confidence": "Média",
+      "data_confidence": "Alta",
       "team_profiles": {
         "home": {
           "shots": 14.3,
@@ -490,29 +490,29 @@
           "corners": 5.7
         },
         "away": {
-          "shots": 10.5,
-          "sot": 3.5,
-          "corners": 4.0
+          "shots": 9.6,
+          "sot": 3.2,
+          "corners": 3.8
         }
       },
       "markets": {
         "goals": {
-          "expected_total": 3.17,
+          "expected_total": 3.2,
           "over_1_5": {
-            "prob_over": 83.7,
-            "fair_odd": 1.2
+            "prob_over": 84.0,
+            "fair_odd": 1.19
           },
           "over_2_5": {
-            "prob_over": 61.4,
-            "fair_odd": 1.63
+            "prob_over": 62.0,
+            "fair_odd": 1.61
           },
           "btts": {
-            "prob_yes": 64.1,
-            "fair_odd": 1.56
+            "prob_yes": 64.8,
+            "fair_odd": 1.54
           },
           "btts_or_over25": {
-            "prob_hit": 73.1,
-            "fair_odd": 1.37
+            "prob_hit": 73.6,
+            "fair_odd": 1.36
           }
         },
         "corners": {
@@ -798,37 +798,37 @@
       "away_team": "SV Elversberg",
       "kickoff": "2026-10-10T13:30Z",
       "referee": "Não divulgado",
-      "data_confidence": "Média",
+      "data_confidence": "Alta",
       "team_profiles": {
         "home": {
-          "shots": 12.4,
-          "sot": 4.1,
-          "corners": 5.0
+          "shots": 12.2,
+          "sot": 4.0,
+          "corners": 4.9
         },
         "away": {
-          "shots": 15.0,
-          "sot": 5.0,
-          "corners": 6.0
+          "shots": 14.1,
+          "sot": 4.7,
+          "corners": 5.7
         }
       },
       "markets": {
         "goals": {
-          "expected_total": 4.34,
+          "expected_total": 4.27,
           "over_1_5": {
-            "prob_over": 93.6,
+            "prob_over": 93.2,
             "fair_odd": 1.07
           },
           "over_2_5": {
-            "prob_over": 80.6,
-            "fair_odd": 1.24
+            "prob_over": 79.8,
+            "fair_odd": 1.25
           },
           "btts": {
-            "prob_yes": 75.7,
-            "fair_odd": 1.32
+            "prob_yes": 74.5,
+            "fair_odd": 1.34
           },
           "btts_or_over25": {
-            "prob_hit": 87.0,
-            "fair_odd": 1.15
+            "prob_hit": 86.4,
+            "fair_odd": 1.16
           }
         },
         "corners": {
@@ -877,10 +877,10 @@
       "away_team": "Bayern Munich",
       "kickoff": "2026-10-10T13:30Z",
       "referee": "Não divulgado",
-      "data_confidence": "Média",
+      "data_confidence": "Alta",
       "team_profiles": {
         "home": {
-          "shots": 23.3,
+          "shots": 23.4,
           "sot": 7.7,
           "corners": 9.3
         },
@@ -892,22 +892,22 @@
       },
       "markets": {
         "goals": {
-          "expected_total": 3.36,
+          "expected_total": 3.56,
           "over_1_5": {
-            "prob_over": 85.9,
-            "fair_odd": 1.16
+            "prob_over": 88.0,
+            "fair_odd": 1.14
           },
           "over_2_5": {
-            "prob_over": 65.3,
-            "fair_odd": 1.53
+            "prob_over": 69.0,
+            "fair_odd": 1.45
           },
           "btts": {
-            "prob_yes": 66.2,
-            "fair_odd": 1.51
+            "prob_yes": 69.3,
+            "fair_odd": 1.44
           },
           "btts_or_over25": {
-            "prob_hit": 76.0,
-            "fair_odd": 1.32
+            "prob_hit": 78.9,
+            "fair_odd": 1.27
           }
         },
         "corners": {
@@ -956,37 +956,37 @@
       "away_team": "Bayer Leverkusen",
       "kickoff": "2026-10-10T13:30Z",
       "referee": "Não divulgado",
-      "data_confidence": "Média",
+      "data_confidence": "Alta",
       "team_profiles": {
         "home": {
-          "shots": 19.3,
-          "sot": 6.4,
-          "corners": 7.7
+          "shots": 20.2,
+          "sot": 6.7,
+          "corners": 8.1
         },
         "away": {
-          "shots": 16.1,
-          "sot": 5.3,
-          "corners": 6.5
+          "shots": 17.3,
+          "sot": 5.7,
+          "corners": 6.9
         }
       },
       "markets": {
         "goals": {
-          "expected_total": 3.58,
+          "expected_total": 4.23,
           "over_1_5": {
-            "prob_over": 88.2,
-            "fair_odd": 1.13
+            "prob_over": 93.1,
+            "fair_odd": 1.07
           },
           "over_2_5": {
-            "prob_over": 69.4,
-            "fair_odd": 1.44
+            "prob_over": 79.3,
+            "fair_odd": 1.26
           },
           "btts": {
-            "prob_yes": 69.2,
-            "fair_odd": 1.45
+            "prob_yes": 77.4,
+            "fair_odd": 1.29
           },
           "btts_or_over25": {
-            "prob_hit": 79.1,
-            "fair_odd": 1.26
+            "prob_hit": 86.5,
+            "fair_odd": 1.16
           }
         },
         "corners": {
@@ -1035,37 +1035,37 @@
       "away_team": "VfB Stuttgart",
       "kickoff": "2026-10-10T13:30Z",
       "referee": "Não divulgado",
-      "data_confidence": "Média",
+      "data_confidence": "Alta",
       "team_profiles": {
         "home": {
-          "shots": 7.7,
-          "sot": 2.5,
-          "corners": 3.1
+          "shots": 6.9,
+          "sot": 2.3,
+          "corners": 2.8
         },
         "away": {
-          "shots": 11.7,
-          "sot": 3.9,
-          "corners": 4.7
+          "shots": 12.0,
+          "sot": 4.0,
+          "corners": 4.8
         }
       },
       "markets": {
         "goals": {
-          "expected_total": 2.32,
+          "expected_total": 2.21,
           "over_1_5": {
-            "prob_over": 68.8,
-            "fair_odd": 1.45
+            "prob_over": 66.2,
+            "fair_odd": 1.51
           },
           "over_2_5": {
-            "prob_over": 40.9,
-            "fair_odd": 2.44
+            "prob_over": 37.9,
+            "fair_odd": 2.64
           },
           "btts": {
-            "prob_yes": 48.3,
-            "fair_odd": 2.07
+            "prob_yes": 46.1,
+            "fair_odd": 2.17
           },
           "btts_or_over25": {
-            "prob_hit": 55.5,
-            "fair_odd": 1.8
+            "prob_hit": 52.8,
+            "fair_odd": 1.89
           }
         },
         "corners": {
@@ -1114,37 +1114,37 @@
       "away_team": "Hamburg SV",
       "kickoff": "2026-10-10T13:30Z",
       "referee": "Não divulgado",
-      "data_confidence": "Média",
+      "data_confidence": "Alta",
       "team_profiles": {
         "home": {
-          "shots": 16.4,
-          "sot": 5.4,
-          "corners": 6.6
+          "shots": 16.7,
+          "sot": 5.5,
+          "corners": 6.7
         },
         "away": {
-          "shots": 5.1,
-          "sot": 1.7,
-          "corners": 2.0
+          "shots": 6.1,
+          "sot": 2.0,
+          "corners": 2.4
         }
       },
       "markets": {
         "goals": {
-          "expected_total": 3.79,
+          "expected_total": 4.0,
           "over_1_5": {
-            "prob_over": 89.7,
-            "fair_odd": 1.12
+            "prob_over": 91.4,
+            "fair_odd": 1.09
           },
           "over_2_5": {
-            "prob_over": 72.6,
-            "fair_odd": 1.38
+            "prob_over": 76.0,
+            "fair_odd": 1.32
           },
           "btts": {
-            "prob_yes": 54.3,
-            "fair_odd": 1.84
+            "prob_yes": 62.3,
+            "fair_odd": 1.61
           },
           "btts_or_over25": {
-            "prob_hit": 78.9,
-            "fair_odd": 1.27
+            "prob_hit": 82.3,
+            "fair_odd": 1.21
           }
         },
         "corners": {
