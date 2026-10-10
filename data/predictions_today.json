@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-10T15:48:26.931700",
+  "updated_at": "2026-10-10T19:47:33.876527",
   "shift": "tarde_noite",
   "matches": [
     {
@@ -1193,37 +1193,37 @@
       "away_team": "Eintracht Frankfurt",
       "kickoff": "2026-10-10T16:30Z",
       "referee": "Não divulgado",
-      "data_confidence": "Média",
+      "data_confidence": "Alta",
       "team_profiles": {
         "home": {
-          "shots": 20.0,
-          "sot": 6.6,
-          "corners": 8.0
+          "shots": 23.0,
+          "sot": 7.6,
+          "corners": 9.2
         },
         "away": {
-          "shots": 14.8,
-          "sot": 4.9,
-          "corners": 5.9
+          "shots": 13.9,
+          "sot": 4.6,
+          "corners": 5.5
         }
       },
       "markets": {
         "goals": {
-          "expected_total": 4.34,
+          "expected_total": 4.16,
           "over_1_5": {
-            "prob_over": 93.6,
-            "fair_odd": 1.07
+            "prob_over": 92.5,
+            "fair_odd": 1.08
           },
           "over_2_5": {
-            "prob_over": 80.6,
-            "fair_odd": 1.24
+            "prob_over": 78.2,
+            "fair_odd": 1.28
           },
           "btts": {
-            "prob_yes": 71.8,
-            "fair_odd": 1.39
+            "prob_yes": 67.1,
+            "fair_odd": 1.49
           },
           "btts_or_over25": {
-            "prob_hit": 86.6,
-            "fair_odd": 1.16
+            "prob_hit": 84.5,
+            "fair_odd": 1.18
           }
         },
         "corners": {
