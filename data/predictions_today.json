@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-10T00:32:12.540463",
+  "updated_at": "2026-10-10T00:47:13.367439",
   "shift": "manha",
   "matches": [
     {
@@ -8,41 +8,42 @@
       "away_team": "Leeds United",
       "kickoff": "2026-10-10T11:30Z",
       "referee": "Não divulgado",
+      "data_confidence": "Alta",
       "markets": {
         "goals": {
-          "expected_total": 1.24,
+          "expected_total": 1.61,
           "over_1_5": {
-            "prob_over": 36.4,
-            "fair_odd": 2.75
+            "prob_over": 49.1,
+            "fair_odd": 2.04
           },
           "over_2_5": {
-            "prob_over": 13.0,
-            "fair_odd": 7.7
+            "prob_over": 21.9,
+            "fair_odd": 4.58
           },
           "btts": {
-            "prob_yes": 20.3,
-            "fair_odd": 4.92
+            "prob_yes": 29.5,
+            "fair_odd": 3.39
           },
           "btts_or_over25": {
-            "prob_hit": 24.0,
-            "fair_odd": 4.16
+            "prob_hit": 35.1,
+            "fair_odd": 2.85
           }
         },
         "corners": {
           "expected_total": 10.2,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.2,
+            "prob_over": 65.4,
             "fair_odd_over": 1.53
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.4,
-            "fair_odd_over": 1.84
+            "prob_over": 54.5,
+            "fair_odd_over": 1.83
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.7,
+            "prob_over": 43.8,
             "fair_odd_over": 2.29
           }
         },
@@ -52,19 +53,6 @@
           "over_8_5_sot": {
             "prob_over": 46.3,
             "fair_odd": 2.16
-          }
-        },
-        "fouls": {
-          "expected_total": 26.0,
-          "over_25_5": {
-            "line": 25.5,
-            "prob_over": 51.8,
-            "fair_odd_over": 1.93
-          },
-          "over_27_5": {
-            "line": 27.5,
-            "prob_over": 38.1,
-            "fair_odd_over": 2.63
           }
         },
         "cards": {
@@ -79,10 +67,6 @@
             "fair_odd": 2.25
           }
         }
-      },
-      "sample_info": {
-        "home_sample": 5,
-        "away_sample": 5
       }
     },
     {
@@ -91,41 +75,42 @@
       "away_team": "Brentford",
       "kickoff": "2026-10-10T14:00Z",
       "referee": "Não divulgado",
+      "data_confidence": "Alta",
       "markets": {
         "goals": {
-          "expected_total": 2.49,
+          "expected_total": 2.31,
           "over_1_5": {
-            "prob_over": 71.7,
-            "fair_odd": 1.4
+            "prob_over": 68.0,
+            "fair_odd": 1.47
           },
           "over_2_5": {
-            "prob_over": 45.4,
-            "fair_odd": 2.2
+            "prob_over": 40.5,
+            "fair_odd": 2.47
           },
           "btts": {
-            "prob_yes": 23.6,
-            "fair_odd": 4.23
+            "prob_yes": 33.1,
+            "fair_odd": 3.02
           },
           "btts_or_over25": {
-            "prob_hit": 51.4,
-            "fair_odd": 1.95
+            "prob_hit": 50.2,
+            "fair_odd": 1.99
           }
         },
         "corners": {
           "expected_total": 10.2,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.2,
+            "prob_over": 65.4,
             "fair_odd_over": 1.53
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.4,
-            "fair_odd_over": 1.84
+            "prob_over": 54.5,
+            "fair_odd_over": 1.83
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.7,
+            "prob_over": 43.8,
             "fair_odd_over": 2.29
           }
         },
@@ -135,19 +120,6 @@
           "over_8_5_sot": {
             "prob_over": 46.3,
             "fair_odd": 2.16
-          }
-        },
-        "fouls": {
-          "expected_total": 26.0,
-          "over_25_5": {
-            "line": 25.5,
-            "prob_over": 51.8,
-            "fair_odd_over": 1.93
-          },
-          "over_27_5": {
-            "line": 27.5,
-            "prob_over": 38.1,
-            "fair_odd_over": 2.63
           }
         },
         "cards": {
@@ -162,10 +134,6 @@
             "fair_odd": 2.25
           }
         }
-      },
-      "sample_info": {
-        "home_sample": 5,
-        "away_sample": 5
       }
     },
     {
@@ -174,41 +142,42 @@
       "away_team": "AFC Bournemouth",
       "kickoff": "2026-10-10T14:00Z",
       "referee": "Não divulgado",
+      "data_confidence": "Alta",
       "markets": {
         "goals": {
-          "expected_total": 4.63,
+          "expected_total": 3.95,
           "over_1_5": {
-            "prob_over": 95.0,
-            "fair_odd": 1.05
+            "prob_over": 91.2,
+            "fair_odd": 1.1
           },
           "over_2_5": {
-            "prob_over": 84.0,
-            "fair_odd": 1.19
+            "prob_over": 75.4,
+            "fair_odd": 1.33
           },
           "btts": {
-            "prob_yes": 77.8,
-            "fair_odd": 1.29
+            "prob_yes": 72.0,
+            "fair_odd": 1.39
           },
           "btts_or_over25": {
-            "prob_hit": 89.4,
-            "fair_odd": 1.12
+            "prob_hit": 83.3,
+            "fair_odd": 1.2
           }
         },
         "corners": {
           "expected_total": 10.2,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.2,
+            "prob_over": 65.4,
             "fair_odd_over": 1.53
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.4,
-            "fair_odd_over": 1.84
+            "prob_over": 54.5,
+            "fair_odd_over": 1.83
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.7,
+            "prob_over": 43.8,
             "fair_odd_over": 2.29
           }
         },
@@ -218,19 +187,6 @@
           "over_8_5_sot": {
             "prob_over": 46.3,
             "fair_odd": 2.16
-          }
-        },
-        "fouls": {
-          "expected_total": 26.0,
-          "over_25_5": {
-            "line": 25.5,
-            "prob_over": 51.8,
-            "fair_odd_over": 1.93
-          },
-          "over_27_5": {
-            "line": 27.5,
-            "prob_over": 38.1,
-            "fair_odd_over": 2.63
           }
         },
         "cards": {
@@ -245,10 +201,6 @@
             "fair_odd": 2.25
           }
         }
-      },
-      "sample_info": {
-        "home_sample": 5,
-        "away_sample": 5
       }
     },
     {
@@ -257,41 +209,42 @@
       "away_team": "Fulham",
       "kickoff": "2026-10-10T14:00Z",
       "referee": "Não divulgado",
+      "data_confidence": "Alta",
       "markets": {
         "goals": {
-          "expected_total": 3.61,
+          "expected_total": 3.28,
           "over_1_5": {
-            "prob_over": 88.5,
-            "fair_odd": 1.13
+            "prob_over": 85.0,
+            "fair_odd": 1.18
           },
           "over_2_5": {
-            "prob_over": 69.9,
-            "fair_odd": 1.43
+            "prob_over": 63.6,
+            "fair_odd": 1.57
           },
           "btts": {
-            "prob_yes": 69.1,
-            "fair_odd": 1.45
+            "prob_yes": 64.9,
+            "fair_odd": 1.54
           },
           "btts_or_over25": {
-            "prob_hit": 79.4,
-            "fair_odd": 1.26
+            "prob_hit": 74.6,
+            "fair_odd": 1.34
           }
         },
         "corners": {
           "expected_total": 10.2,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.2,
+            "prob_over": 65.4,
             "fair_odd_over": 1.53
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.4,
-            "fair_odd_over": 1.84
+            "prob_over": 54.5,
+            "fair_odd_over": 1.83
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.7,
+            "prob_over": 43.8,
             "fair_odd_over": 2.29
           }
         },
@@ -301,19 +254,6 @@
           "over_8_5_sot": {
             "prob_over": 46.3,
             "fair_odd": 2.16
-          }
-        },
-        "fouls": {
-          "expected_total": 26.0,
-          "over_25_5": {
-            "line": 25.5,
-            "prob_over": 51.8,
-            "fair_odd_over": 1.93
-          },
-          "over_27_5": {
-            "line": 27.5,
-            "prob_over": 38.1,
-            "fair_odd_over": 2.63
           }
         },
         "cards": {
@@ -328,10 +268,6 @@
             "fair_odd": 2.25
           }
         }
-      },
-      "sample_info": {
-        "home_sample": 5,
-        "away_sample": 5
       }
     },
     {
@@ -340,41 +276,42 @@
       "away_team": "Brighton & Hove Albion",
       "kickoff": "2026-10-10T14:00Z",
       "referee": "Não divulgado",
+      "data_confidence": "Alta",
       "markets": {
         "goals": {
-          "expected_total": 3.88,
+          "expected_total": 3.4,
           "over_1_5": {
-            "prob_over": 90.5,
-            "fair_odd": 1.1
+            "prob_over": 86.2,
+            "fair_odd": 1.16
           },
           "over_2_5": {
-            "prob_over": 74.3,
-            "fair_odd": 1.35
+            "prob_over": 65.9,
+            "fair_odd": 1.52
           },
           "btts": {
-            "prob_yes": 58.1,
-            "fair_odd": 1.72
+            "prob_yes": 59.6,
+            "fair_odd": 1.68
           },
           "btts_or_over25": {
-            "prob_hit": 80.7,
-            "fair_odd": 1.24
+            "prob_hit": 75.0,
+            "fair_odd": 1.33
           }
         },
         "corners": {
           "expected_total": 10.2,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.2,
+            "prob_over": 65.4,
             "fair_odd_over": 1.53
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.4,
-            "fair_odd_over": 1.84
+            "prob_over": 54.5,
+            "fair_odd_over": 1.83
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.7,
+            "prob_over": 43.8,
             "fair_odd_over": 2.29
           }
         },
@@ -384,19 +321,6 @@
           "over_8_5_sot": {
             "prob_over": 46.3,
             "fair_odd": 2.16
-          }
-        },
-        "fouls": {
-          "expected_total": 26.0,
-          "over_25_5": {
-            "line": 25.5,
-            "prob_over": 51.8,
-            "fair_odd_over": 1.93
-          },
-          "over_27_5": {
-            "line": 27.5,
-            "prob_over": 38.1,
-            "fair_odd_over": 2.63
           }
         },
         "cards": {
@@ -411,10 +335,6 @@
             "fair_odd": 2.25
           }
         }
-      },
-      "sample_info": {
-        "home_sample": 5,
-        "away_sample": 5
       }
     },
     {
@@ -423,41 +343,42 @@
       "away_team": "Tottenham Hotspur",
       "kickoff": "2026-10-10T16:30Z",
       "referee": "Não divulgado",
+      "data_confidence": "Alta",
       "markets": {
         "goals": {
-          "expected_total": 2.75,
+          "expected_total": 2.44,
           "over_1_5": {
-            "prob_over": 76.8,
-            "fair_odd": 1.3
+            "prob_over": 70.8,
+            "fair_odd": 1.41
           },
           "over_2_5": {
-            "prob_over": 51.8,
-            "fair_odd": 1.93
+            "prob_over": 43.9,
+            "fair_odd": 2.28
           },
           "btts": {
-            "prob_yes": 38.2,
-            "fair_odd": 2.62
+            "prob_yes": 34.5,
+            "fair_odd": 2.9
           },
           "btts_or_over25": {
-            "prob_hit": 60.3,
-            "fair_odd": 1.66
+            "prob_hit": 53.3,
+            "fair_odd": 1.88
           }
         },
         "corners": {
           "expected_total": 10.2,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.2,
+            "prob_over": 65.4,
             "fair_odd_over": 1.53
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.4,
-            "fair_odd_over": 1.84
+            "prob_over": 54.5,
+            "fair_odd_over": 1.83
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.7,
+            "prob_over": 43.8,
             "fair_odd_over": 2.29
           }
         },
@@ -467,19 +388,6 @@
           "over_8_5_sot": {
             "prob_over": 46.3,
             "fair_odd": 2.16
-          }
-        },
-        "fouls": {
-          "expected_total": 26.0,
-          "over_25_5": {
-            "line": 25.5,
-            "prob_over": 51.8,
-            "fair_odd_over": 1.93
-          },
-          "over_27_5": {
-            "line": 27.5,
-            "prob_over": 38.1,
-            "fair_odd_over": 2.63
           }
         },
         "cards": {
@@ -494,10 +402,6 @@
             "fair_odd": 2.25
           }
         }
-      },
-      "sample_info": {
-        "home_sample": 5,
-        "away_sample": 5
       }
     },
     {
@@ -506,41 +410,42 @@
       "away_team": "Athletic Club",
       "kickoff": "2026-10-10T12:00Z",
       "referee": "Não divulgado",
+      "data_confidence": "Alta",
       "markets": {
         "goals": {
-          "expected_total": 3.5,
+          "expected_total": 3.2,
           "over_1_5": {
-            "prob_over": 87.5,
-            "fair_odd": 1.14
+            "prob_over": 84.0,
+            "fair_odd": 1.19
           },
           "over_2_5": {
-            "prob_over": 68.0,
-            "fair_odd": 1.47
+            "prob_over": 62.0,
+            "fair_odd": 1.61
           },
           "btts": {
-            "prob_yes": 69.2,
-            "fair_odd": 1.45
+            "prob_yes": 64.8,
+            "fair_odd": 1.54
           },
           "btts_or_over25": {
-            "prob_hit": 78.2,
-            "fair_odd": 1.28
+            "prob_hit": 73.6,
+            "fair_odd": 1.36
           }
         },
         "corners": {
           "expected_total": 10.2,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.2,
+            "prob_over": 65.4,
             "fair_odd_over": 1.53
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.4,
-            "fair_odd_over": 1.84
+            "prob_over": 54.5,
+            "fair_odd_over": 1.83
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.7,
+            "prob_over": 43.8,
             "fair_odd_over": 2.29
           }
         },
@@ -550,19 +455,6 @@
           "over_8_5_sot": {
             "prob_over": 46.3,
             "fair_odd": 2.16
-          }
-        },
-        "fouls": {
-          "expected_total": 26.0,
-          "over_25_5": {
-            "line": 25.5,
-            "prob_over": 51.8,
-            "fair_odd_over": 1.93
-          },
-          "over_27_5": {
-            "line": 27.5,
-            "prob_over": 38.1,
-            "fair_odd_over": 2.63
           }
         },
         "cards": {
@@ -577,10 +469,6 @@
             "fair_odd": 2.25
           }
         }
-      },
-      "sample_info": {
-        "home_sample": 5,
-        "away_sample": 5
       }
     },
     {
@@ -589,23 +477,24 @@
       "away_team": "Atlético Madrid",
       "kickoff": "2026-10-10T14:15Z",
       "referee": "Não divulgado",
+      "data_confidence": "Alta",
       "markets": {
         "goals": {
-          "expected_total": 2.74,
+          "expected_total": 2.71,
           "over_1_5": {
-            "prob_over": 77.0,
-            "fair_odd": 1.3
+            "prob_over": 76.6,
+            "fair_odd": 1.31
           },
           "over_2_5": {
-            "prob_over": 51.6,
-            "fair_odd": 1.94
+            "prob_over": 50.9,
+            "fair_odd": 1.96
           },
           "btts": {
-            "prob_yes": 50.1,
-            "fair_odd": 1.99
+            "prob_yes": 52.3,
+            "fair_odd": 1.91
           },
           "btts_or_over25": {
-            "prob_hit": 63.2,
+            "prob_hit": 63.4,
             "fair_odd": 1.58
           }
         },
@@ -613,17 +502,17 @@
           "expected_total": 10.2,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.2,
+            "prob_over": 65.4,
             "fair_odd_over": 1.53
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.4,
-            "fair_odd_over": 1.84
+            "prob_over": 54.5,
+            "fair_odd_over": 1.83
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.7,
+            "prob_over": 43.8,
             "fair_odd_over": 2.29
           }
         },
@@ -633,19 +522,6 @@
           "over_8_5_sot": {
             "prob_over": 46.3,
             "fair_odd": 2.16
-          }
-        },
-        "fouls": {
-          "expected_total": 26.0,
-          "over_25_5": {
-            "line": 25.5,
-            "prob_over": 51.8,
-            "fair_odd_over": 1.93
-          },
-          "over_27_5": {
-            "line": 27.5,
-            "prob_over": 38.1,
-            "fair_odd_over": 2.63
           }
         },
         "cards": {
@@ -660,10 +536,6 @@
             "fair_odd": 2.25
           }
         }
-      },
-      "sample_info": {
-        "home_sample": 5,
-        "away_sample": 5
       }
     },
     {
@@ -672,41 +544,42 @@
       "away_team": "Getafe",
       "kickoff": "2026-10-10T16:30Z",
       "referee": "Não divulgado",
+      "data_confidence": "Alta",
       "markets": {
         "goals": {
-          "expected_total": 4.34,
+          "expected_total": 3.4,
           "over_1_5": {
-            "prob_over": 92.9,
-            "fair_odd": 1.08
+            "prob_over": 85.6,
+            "fair_odd": 1.17
           },
           "over_2_5": {
-            "prob_over": 80.2,
-            "fair_odd": 1.25
+            "prob_over": 65.7,
+            "fair_odd": 1.52
           },
           "btts": {
-            "prob_yes": 16.9,
-            "fair_odd": 5.93
+            "prob_yes": 34.8,
+            "fair_odd": 2.87
           },
           "btts_or_over25": {
-            "prob_hit": 81.4,
-            "fair_odd": 1.23
+            "prob_hit": 70.6,
+            "fair_odd": 1.42
           }
         },
         "corners": {
           "expected_total": 10.2,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.2,
+            "prob_over": 65.4,
             "fair_odd_over": 1.53
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.4,
-            "fair_odd_over": 1.84
+            "prob_over": 54.5,
+            "fair_odd_over": 1.83
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.7,
+            "prob_over": 43.8,
             "fair_odd_over": 2.29
           }
         },
@@ -716,19 +589,6 @@
           "over_8_5_sot": {
             "prob_over": 46.3,
             "fair_odd": 2.16
-          }
-        },
-        "fouls": {
-          "expected_total": 26.0,
-          "over_25_5": {
-            "line": 25.5,
-            "prob_over": 51.8,
-            "fair_odd_over": 1.93
-          },
-          "over_27_5": {
-            "line": 27.5,
-            "prob_over": 38.1,
-            "fair_odd_over": 2.63
           }
         },
         "cards": {
@@ -743,10 +603,6 @@
             "fair_odd": 2.25
           }
         }
-      },
-      "sample_info": {
-        "home_sample": 5,
-        "away_sample": 5
       }
     },
     {
@@ -755,41 +611,42 @@
       "away_team": "Villarreal",
       "kickoff": "2026-10-10T19:00Z",
       "referee": "Não divulgado",
+      "data_confidence": "Alta",
       "markets": {
         "goals": {
-          "expected_total": 4.74,
+          "expected_total": 3.75,
           "over_1_5": {
-            "prob_over": 95.1,
-            "fair_odd": 1.05
+            "prob_over": 89.4,
+            "fair_odd": 1.12
           },
           "over_2_5": {
-            "prob_over": 84.8,
-            "fair_odd": 1.18
+            "prob_over": 72.0,
+            "fair_odd": 1.39
           },
           "btts": {
-            "prob_yes": 49.3,
-            "fair_odd": 2.03
+            "prob_yes": 52.9,
+            "fair_odd": 1.89
           },
           "btts_or_over25": {
-            "prob_hit": 87.6,
-            "fair_odd": 1.14
+            "prob_hit": 78.3,
+            "fair_odd": 1.28
           }
         },
         "corners": {
           "expected_total": 10.2,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.2,
+            "prob_over": 65.4,
             "fair_odd_over": 1.53
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.4,
-            "fair_odd_over": 1.84
+            "prob_over": 54.5,
+            "fair_odd_over": 1.83
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.7,
+            "prob_over": 43.8,
             "fair_odd_over": 2.29
           }
         },
@@ -799,19 +656,6 @@
           "over_8_5_sot": {
             "prob_over": 46.3,
             "fair_odd": 2.16
-          }
-        },
-        "fouls": {
-          "expected_total": 26.0,
-          "over_25_5": {
-            "line": 25.5,
-            "prob_over": 51.8,
-            "fair_odd_over": 1.93
-          },
-          "over_27_5": {
-            "line": 27.5,
-            "prob_over": 38.1,
-            "fair_odd_over": 2.63
           }
         },
         "cards": {
@@ -826,10 +670,6 @@
             "fair_odd": 2.25
           }
         }
-      },
-      "sample_info": {
-        "home_sample": 5,
-        "away_sample": 5
       }
     },
     {
@@ -838,41 +678,42 @@
       "away_team": "SV Elversberg",
       "kickoff": "2026-10-10T13:30Z",
       "referee": "Não divulgado",
+      "data_confidence": "Média",
       "markets": {
         "goals": {
-          "expected_total": 7.06,
+          "expected_total": 4.34,
           "over_1_5": {
-            "prob_over": 99.3,
-            "fair_odd": 1.01
+            "prob_over": 93.6,
+            "fair_odd": 1.07
           },
           "over_2_5": {
-            "prob_over": 96.9,
-            "fair_odd": 1.03
+            "prob_over": 80.6,
+            "fair_odd": 1.24
           },
           "btts": {
-            "prob_yes": 82.4,
-            "fair_odd": 1.21
+            "prob_yes": 75.7,
+            "fair_odd": 1.32
           },
           "btts_or_over25": {
-            "prob_hit": 97.9,
-            "fair_odd": 1.02
+            "prob_hit": 87.0,
+            "fair_odd": 1.15
           }
         },
         "corners": {
           "expected_total": 10.2,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.2,
+            "prob_over": 65.4,
             "fair_odd_over": 1.53
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.4,
-            "fair_odd_over": 1.84
+            "prob_over": 54.5,
+            "fair_odd_over": 1.83
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.7,
+            "prob_over": 43.8,
             "fair_odd_over": 2.29
           }
         },
@@ -882,19 +723,6 @@
           "over_8_5_sot": {
             "prob_over": 46.3,
             "fair_odd": 2.16
-          }
-        },
-        "fouls": {
-          "expected_total": 26.0,
-          "over_25_5": {
-            "line": 25.5,
-            "prob_over": 51.8,
-            "fair_odd_over": 1.93
-          },
-          "over_27_5": {
-            "line": 27.5,
-            "prob_over": 38.1,
-            "fair_odd_over": 2.63
           }
         },
         "cards": {
@@ -909,10 +737,6 @@
             "fair_odd": 2.25
           }
         }
-      },
-      "sample_info": {
-        "home_sample": 4,
-        "away_sample": 4
       }
     },
     {
@@ -921,41 +745,42 @@
       "away_team": "Bayern Munich",
       "kickoff": "2026-10-10T13:30Z",
       "referee": "Não divulgado",
+      "data_confidence": "Média",
       "markets": {
         "goals": {
-          "expected_total": 3.5,
+          "expected_total": 3.36,
           "over_1_5": {
-            "prob_over": 87.3,
-            "fair_odd": 1.15
+            "prob_over": 85.9,
+            "fair_odd": 1.16
           },
           "over_2_5": {
-            "prob_over": 67.8,
-            "fair_odd": 1.47
+            "prob_over": 65.3,
+            "fair_odd": 1.53
           },
           "btts": {
-            "prob_yes": 63.5,
-            "fair_odd": 1.57
+            "prob_yes": 66.2,
+            "fair_odd": 1.51
           },
           "btts_or_over25": {
-            "prob_hit": 77.1,
-            "fair_odd": 1.3
+            "prob_hit": 76.0,
+            "fair_odd": 1.32
           }
         },
         "corners": {
           "expected_total": 10.2,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.2,
+            "prob_over": 65.4,
             "fair_odd_over": 1.53
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.4,
-            "fair_odd_over": 1.84
+            "prob_over": 54.5,
+            "fair_odd_over": 1.83
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.7,
+            "prob_over": 43.8,
             "fair_odd_over": 2.29
           }
         },
@@ -965,19 +790,6 @@
           "over_8_5_sot": {
             "prob_over": 46.3,
             "fair_odd": 2.16
-          }
-        },
-        "fouls": {
-          "expected_total": 26.0,
-          "over_25_5": {
-            "line": 25.5,
-            "prob_over": 51.8,
-            "fair_odd_over": 1.93
-          },
-          "over_27_5": {
-            "line": 27.5,
-            "prob_over": 38.1,
-            "fair_odd_over": 2.63
           }
         },
         "cards": {
@@ -992,10 +804,6 @@
             "fair_odd": 2.25
           }
         }
-      },
-      "sample_info": {
-        "home_sample": 4,
-        "away_sample": 4
       }
     },
     {
@@ -1004,41 +812,42 @@
       "away_team": "Bayer Leverkusen",
       "kickoff": "2026-10-10T13:30Z",
       "referee": "Não divulgado",
+      "data_confidence": "Média",
       "markets": {
         "goals": {
-          "expected_total": 4.15,
+          "expected_total": 3.58,
           "over_1_5": {
-            "prob_over": 92.6,
-            "fair_odd": 1.08
+            "prob_over": 88.2,
+            "fair_odd": 1.13
           },
           "over_2_5": {
-            "prob_over": 78.3,
-            "fair_odd": 1.28
+            "prob_over": 69.4,
+            "fair_odd": 1.44
           },
           "btts": {
-            "prob_yes": 75.6,
-            "fair_odd": 1.32
+            "prob_yes": 69.2,
+            "fair_odd": 1.45
           },
           "btts_or_over25": {
-            "prob_hit": 85.6,
-            "fair_odd": 1.17
+            "prob_hit": 79.1,
+            "fair_odd": 1.26
           }
         },
         "corners": {
           "expected_total": 10.2,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.2,
+            "prob_over": 65.4,
             "fair_odd_over": 1.53
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.4,
-            "fair_odd_over": 1.84
+            "prob_over": 54.5,
+            "fair_odd_over": 1.83
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.7,
+            "prob_over": 43.8,
             "fair_odd_over": 2.29
           }
         },
@@ -1048,19 +857,6 @@
           "over_8_5_sot": {
             "prob_over": 46.3,
             "fair_odd": 2.16
-          }
-        },
-        "fouls": {
-          "expected_total": 26.0,
-          "over_25_5": {
-            "line": 25.5,
-            "prob_over": 51.8,
-            "fair_odd_over": 1.93
-          },
-          "over_27_5": {
-            "line": 27.5,
-            "prob_over": 38.1,
-            "fair_odd_over": 2.63
           }
         },
         "cards": {
@@ -1075,10 +871,6 @@
             "fair_odd": 2.25
           }
         }
-      },
-      "sample_info": {
-        "home_sample": 4,
-        "away_sample": 4
       }
     },
     {
@@ -1087,767 +879,21 @@
       "away_team": "VfB Stuttgart",
       "kickoff": "2026-10-10T13:30Z",
       "referee": "Não divulgado",
+      "data_confidence": "Média",
       "markets": {
         "goals": {
-          "expected_total": 2.09,
+          "expected_total": 2.32,
           "over_1_5": {
-            "prob_over": 63.2,
-            "fair_odd": 1.58
+            "prob_over": 68.8,
+            "fair_odd": 1.45
           },
           "over_2_5": {
-            "prob_over": 34.7,
-            "fair_odd": 2.88
+            "prob_over": 40.9,
+            "fair_odd": 2.44
           },
           "btts": {
-            "prob_yes": 43.5,
-            "fair_odd": 2.3
-          },
-          "btts_or_over25": {
-            "prob_hit": 49.7,
-            "fair_odd": 2.01
-          }
-        },
-        "corners": {
-          "expected_total": 10.2,
-          "over_8_5": {
-            "line": 8.5,
-            "prob_over": 65.2,
-            "fair_odd_over": 1.53
-          },
-          "over_9_5": {
-            "line": 9.5,
-            "prob_over": 54.4,
-            "fair_odd_over": 1.84
-          },
-          "over_10_5": {
-            "line": 10.5,
-            "prob_over": 43.7,
-            "fair_odd_over": 2.29
-          }
-        },
-        "shots": {
-          "expected_shots": 25.0,
-          "expected_sot": 8.4,
-          "over_8_5_sot": {
-            "prob_over": 46.3,
-            "fair_odd": 2.16
-          }
-        },
-        "fouls": {
-          "expected_total": 26.0,
-          "over_25_5": {
-            "line": 25.5,
-            "prob_over": 51.8,
-            "fair_odd_over": 1.93
-          },
-          "over_27_5": {
-            "line": 27.5,
-            "prob_over": 38.1,
-            "fair_odd_over": 2.63
-          }
-        },
-        "cards": {
-          "expected_total": 4.38,
-          "referee_factor": 1.04,
-          "over_3_5": {
-            "prob_over": 63.6,
-            "fair_odd": 1.57
-          },
-          "over_4_5": {
-            "prob_over": 44.4,
-            "fair_odd": 2.25
-          }
-        }
-      },
-      "sample_info": {
-        "home_sample": 4,
-        "away_sample": 4
-      }
-    },
-    {
-      "league": "Bundesliga",
-      "home_team": "TSG Hoffenheim",
-      "away_team": "Hamburg SV",
-      "kickoff": "2026-10-10T13:30Z",
-      "referee": "Não divulgado",
-      "markets": {
-        "goals": {
-          "expected_total": 5.32,
-          "over_1_5": {
-            "prob_over": 97.0,
-            "fair_odd": 1.03
-          },
-          "over_2_5": {
-            "prob_over": 89.6,
-            "fair_odd": 1.12
-          },
-          "btts": {
-            "prob_yes": 54.4,
-            "fair_odd": 1.84
-          },
-          "btts_or_over25": {
-            "prob_hit": 91.6,
-            "fair_odd": 1.09
-          }
-        },
-        "corners": {
-          "expected_total": 10.2,
-          "over_8_5": {
-            "line": 8.5,
-            "prob_over": 65.2,
-            "fair_odd_over": 1.53
-          },
-          "over_9_5": {
-            "line": 9.5,
-            "prob_over": 54.4,
-            "fair_odd_over": 1.84
-          },
-          "over_10_5": {
-            "line": 10.5,
-            "prob_over": 43.7,
-            "fair_odd_over": 2.29
-          }
-        },
-        "shots": {
-          "expected_shots": 25.0,
-          "expected_sot": 8.4,
-          "over_8_5_sot": {
-            "prob_over": 46.3,
-            "fair_odd": 2.16
-          }
-        },
-        "fouls": {
-          "expected_total": 26.0,
-          "over_25_5": {
-            "line": 25.5,
-            "prob_over": 51.8,
-            "fair_odd_over": 1.93
-          },
-          "over_27_5": {
-            "line": 27.5,
-            "prob_over": 38.1,
-            "fair_odd_over": 2.63
-          }
-        },
-        "cards": {
-          "expected_total": 4.38,
-          "referee_factor": 1.04,
-          "over_3_5": {
-            "prob_over": 63.6,
-            "fair_odd": 1.57
-          },
-          "over_4_5": {
-            "prob_over": 44.4,
-            "fair_odd": 2.25
-          }
-        }
-      },
-      "sample_info": {
-        "home_sample": 4,
-        "away_sample": 4
-      }
-    },
-    {
-      "league": "Bundesliga",
-      "home_team": "RB Leipzig",
-      "away_team": "Eintracht Frankfurt",
-      "kickoff": "2026-10-10T16:30Z",
-      "referee": "Não divulgado",
-      "markets": {
-        "goals": {
-          "expected_total": 6.25,
-          "over_1_5": {
-            "prob_over": 98.7,
-            "fair_odd": 1.01
-          },
-          "over_2_5": {
-            "prob_over": 94.5,
-            "fair_odd": 1.06
-          },
-          "btts": {
-            "prob_yes": 77.8,
-            "fair_odd": 1.29
-          },
-          "btts_or_over25": {
-            "prob_hit": 96.2,
-            "fair_odd": 1.04
-          }
-        },
-        "corners": {
-          "expected_total": 10.2,
-          "over_8_5": {
-            "line": 8.5,
-            "prob_over": 65.2,
-            "fair_odd_over": 1.53
-          },
-          "over_9_5": {
-            "line": 9.5,
-            "prob_over": 54.4,
-            "fair_odd_over": 1.84
-          },
-          "over_10_5": {
-            "line": 10.5,
-            "prob_over": 43.7,
-            "fair_odd_over": 2.29
-          }
-        },
-        "shots": {
-          "expected_shots": 25.0,
-          "expected_sot": 8.4,
-          "over_8_5_sot": {
-            "prob_over": 46.3,
-            "fair_odd": 2.16
-          }
-        },
-        "fouls": {
-          "expected_total": 26.0,
-          "over_25_5": {
-            "line": 25.5,
-            "prob_over": 51.8,
-            "fair_odd_over": 1.93
-          },
-          "over_27_5": {
-            "line": 27.5,
-            "prob_over": 38.1,
-            "fair_odd_over": 2.63
-          }
-        },
-        "cards": {
-          "expected_total": 4.38,
-          "referee_factor": 1.04,
-          "over_3_5": {
-            "prob_over": 63.6,
-            "fair_odd": 1.57
-          },
-          "over_4_5": {
-            "prob_over": 44.4,
-            "fair_odd": 2.25
-          }
-        }
-      },
-      "sample_info": {
-        "home_sample": 4,
-        "away_sample": 4
-      }
-    },
-    {
-      "league": "Ligue 1",
-      "home_team": "Lille",
-      "away_team": "Le Havre AC",
-      "kickoff": "2026-10-10T15:15Z",
-      "referee": "Não divulgado",
-      "markets": {
-        "goals": {
-          "expected_total": 1.84,
-          "over_1_5": {
-            "prob_over": 55.5,
-            "fair_odd": 1.8
-          },
-          "over_2_5": {
-            "prob_over": 27.9,
-            "fair_odd": 3.58
-          },
-          "btts": {
-            "prob_yes": 19.0,
-            "fair_odd": 5.26
-          },
-          "btts_or_over25": {
-            "prob_hit": 35.2,
-            "fair_odd": 2.84
-          }
-        },
-        "corners": {
-          "expected_total": 10.2,
-          "over_8_5": {
-            "line": 8.5,
-            "prob_over": 65.2,
-            "fair_odd_over": 1.53
-          },
-          "over_9_5": {
-            "line": 9.5,
-            "prob_over": 54.4,
-            "fair_odd_over": 1.84
-          },
-          "over_10_5": {
-            "line": 10.5,
-            "prob_over": 43.7,
-            "fair_odd_over": 2.29
-          }
-        },
-        "shots": {
-          "expected_shots": 25.0,
-          "expected_sot": 8.4,
-          "over_8_5_sot": {
-            "prob_over": 46.3,
-            "fair_odd": 2.16
-          }
-        },
-        "fouls": {
-          "expected_total": 26.0,
-          "over_25_5": {
-            "line": 25.5,
-            "prob_over": 51.8,
-            "fair_odd_over": 1.93
-          },
-          "over_27_5": {
-            "line": 27.5,
-            "prob_over": 38.1,
-            "fair_odd_over": 2.63
-          }
-        },
-        "cards": {
-          "expected_total": 4.38,
-          "referee_factor": 1.04,
-          "over_3_5": {
-            "prob_over": 63.6,
-            "fair_odd": 1.57
-          },
-          "over_4_5": {
-            "prob_over": 44.4,
-            "fair_odd": 2.25
-          }
-        }
-      },
-      "sample_info": {
-        "home_sample": 5,
-        "away_sample": 5
-      }
-    },
-    {
-      "league": "Ligue 1",
-      "home_team": "AS Monaco",
-      "away_team": "Toulouse",
-      "kickoff": "2026-10-10T18:45Z",
-      "referee": "Não divulgado",
-      "markets": {
-        "goals": {
-          "expected_total": 2.41,
-          "over_1_5": {
-            "prob_over": 70.0,
-            "fair_odd": 1.43
-          },
-          "over_2_5": {
-            "prob_over": 43.2,
-            "fair_odd": 2.31
-          },
-          "btts": {
-            "prob_yes": 26.0,
-            "fair_odd": 3.84
-          },
-          "btts_or_over25": {
-            "prob_hit": 50.3,
-            "fair_odd": 1.99
-          }
-        },
-        "corners": {
-          "expected_total": 10.2,
-          "over_8_5": {
-            "line": 8.5,
-            "prob_over": 65.2,
-            "fair_odd_over": 1.53
-          },
-          "over_9_5": {
-            "line": 9.5,
-            "prob_over": 54.4,
-            "fair_odd_over": 1.84
-          },
-          "over_10_5": {
-            "line": 10.5,
-            "prob_over": 43.7,
-            "fair_odd_over": 2.29
-          }
-        },
-        "shots": {
-          "expected_shots": 25.0,
-          "expected_sot": 8.4,
-          "over_8_5_sot": {
-            "prob_over": 46.3,
-            "fair_odd": 2.16
-          }
-        },
-        "fouls": {
-          "expected_total": 26.0,
-          "over_25_5": {
-            "line": 25.5,
-            "prob_over": 51.8,
-            "fair_odd_over": 1.93
-          },
-          "over_27_5": {
-            "line": 27.5,
-            "prob_over": 38.1,
-            "fair_odd_over": 2.63
-          }
-        },
-        "cards": {
-          "expected_total": 4.38,
-          "referee_factor": 1.04,
-          "over_3_5": {
-            "prob_over": 63.6,
-            "fair_odd": 1.57
-          },
-          "over_4_5": {
-            "prob_over": 44.4,
-            "fair_odd": 2.25
-          }
-        }
-      },
-      "sample_info": {
-        "home_sample": 5,
-        "away_sample": 5
-      }
-    },
-    {
-      "league": "Ligue 1",
-      "home_team": "Brest",
-      "away_team": "Angers",
-      "kickoff": "2026-10-10T18:45Z",
-      "referee": "Não divulgado",
-      "markets": {
-        "goals": {
-          "expected_total": 2.57,
-          "over_1_5": {
-            "prob_over": 74.1,
-            "fair_odd": 1.35
-          },
-          "over_2_5": {
-            "prob_over": 47.5,
-            "fair_odd": 2.1
-          },
-          "btts": {
-            "prob_yes": 52.7,
-            "fair_odd": 1.9
-          },
-          "btts_or_over25": {
-            "prob_hit": 61.2,
-            "fair_odd": 1.63
-          }
-        },
-        "corners": {
-          "expected_total": 10.2,
-          "over_8_5": {
-            "line": 8.5,
-            "prob_over": 65.2,
-            "fair_odd_over": 1.53
-          },
-          "over_9_5": {
-            "line": 9.5,
-            "prob_over": 54.4,
-            "fair_odd_over": 1.84
-          },
-          "over_10_5": {
-            "line": 10.5,
-            "prob_over": 43.7,
-            "fair_odd_over": 2.29
-          }
-        },
-        "shots": {
-          "expected_shots": 25.0,
-          "expected_sot": 8.4,
-          "over_8_5_sot": {
-            "prob_over": 46.3,
-            "fair_odd": 2.16
-          }
-        },
-        "fouls": {
-          "expected_total": 26.0,
-          "over_25_5": {
-            "line": 25.5,
-            "prob_over": 51.8,
-            "fair_odd_over": 1.93
-          },
-          "over_27_5": {
-            "line": 27.5,
-            "prob_over": 38.1,
-            "fair_odd_over": 2.63
-          }
-        },
-        "cards": {
-          "expected_total": 4.38,
-          "referee_factor": 1.04,
-          "over_3_5": {
-            "prob_over": 63.6,
-            "fair_odd": 1.57
-          },
-          "over_4_5": {
-            "prob_over": 44.4,
-            "fair_odd": 2.25
-          }
-        }
-      },
-      "sample_info": {
-        "home_sample": 5,
-        "away_sample": 5
-      }
-    },
-    {
-      "league": "Ligue 1",
-      "home_team": "Lorient",
-      "away_team": "Paris FC",
-      "kickoff": "2026-10-10T18:45Z",
-      "referee": "Não divulgado",
-      "markets": {
-        "goals": {
-          "expected_total": 1.23,
-          "over_1_5": {
-            "prob_over": 35.9,
-            "fair_odd": 2.79
-          },
-          "over_2_5": {
-            "prob_over": 12.8,
-            "fair_odd": 7.83
-          },
-          "btts": {
-            "prob_yes": 18.0,
-            "fair_odd": 5.56
-          },
-          "btts_or_over25": {
-            "prob_hit": 22.6,
-            "fair_odd": 4.43
-          }
-        },
-        "corners": {
-          "expected_total": 10.2,
-          "over_8_5": {
-            "line": 8.5,
-            "prob_over": 65.2,
-            "fair_odd_over": 1.53
-          },
-          "over_9_5": {
-            "line": 9.5,
-            "prob_over": 54.4,
-            "fair_odd_over": 1.84
-          },
-          "over_10_5": {
-            "line": 10.5,
-            "prob_over": 43.7,
-            "fair_odd_over": 2.29
-          }
-        },
-        "shots": {
-          "expected_shots": 25.0,
-          "expected_sot": 8.4,
-          "over_8_5_sot": {
-            "prob_over": 46.3,
-            "fair_odd": 2.16
-          }
-        },
-        "fouls": {
-          "expected_total": 26.0,
-          "over_25_5": {
-            "line": 25.5,
-            "prob_over": 51.8,
-            "fair_odd_over": 1.93
-          },
-          "over_27_5": {
-            "line": 27.5,
-            "prob_over": 38.1,
-            "fair_odd_over": 2.63
-          }
-        },
-        "cards": {
-          "expected_total": 4.38,
-          "referee_factor": 1.04,
-          "over_3_5": {
-            "prob_over": 63.6,
-            "fair_odd": 1.57
-          },
-          "over_4_5": {
-            "prob_over": 44.4,
-            "fair_odd": 2.25
-          }
-        }
-      },
-      "sample_info": {
-        "home_sample": 5,
-        "away_sample": 5
-      }
-    },
-    {
-      "league": "Ligue 1",
-      "home_team": "Paris Saint-Germain",
-      "away_team": "Le Mans",
-      "kickoff": "2026-10-10T18:45Z",
-      "referee": "Não divulgado",
-      "markets": {
-        "goals": {
-          "expected_total": 4.04,
-          "over_1_5": {
-            "prob_over": 91.9,
-            "fair_odd": 1.09
-          },
-          "over_2_5": {
-            "prob_over": 76.8,
-            "fair_odd": 1.3
-          },
-          "btts": {
-            "prob_yes": 74.3,
-            "fair_odd": 1.35
-          },
-          "btts_or_over25": {
-            "prob_hit": 84.5,
-            "fair_odd": 1.18
-          }
-        },
-        "corners": {
-          "expected_total": 10.2,
-          "over_8_5": {
-            "line": 8.5,
-            "prob_over": 65.2,
-            "fair_odd_over": 1.53
-          },
-          "over_9_5": {
-            "line": 9.5,
-            "prob_over": 54.4,
-            "fair_odd_over": 1.84
-          },
-          "over_10_5": {
-            "line": 10.5,
-            "prob_over": 43.7,
-            "fair_odd_over": 2.29
-          }
-        },
-        "shots": {
-          "expected_shots": 25.0,
-          "expected_sot": 8.4,
-          "over_8_5_sot": {
-            "prob_over": 46.3,
-            "fair_odd": 2.16
-          }
-        },
-        "fouls": {
-          "expected_total": 26.0,
-          "over_25_5": {
-            "line": 25.5,
-            "prob_over": 51.8,
-            "fair_odd_over": 1.93
-          },
-          "over_27_5": {
-            "line": 27.5,
-            "prob_over": 38.1,
-            "fair_odd_over": 2.63
-          }
-        },
-        "cards": {
-          "expected_total": 4.38,
-          "referee_factor": 1.04,
-          "over_3_5": {
-            "prob_over": 63.6,
-            "fair_odd": 1.57
-          },
-          "over_4_5": {
-            "prob_over": 44.4,
-            "fair_odd": 2.25
-          }
-        }
-      },
-      "sample_info": {
-        "home_sample": 5,
-        "away_sample": 5
-      }
-    },
-    {
-      "league": "Brasileirão Série A",
-      "home_team": "Vasco da Gama",
-      "away_team": "Remo",
-      "kickoff": "2026-10-10T21:00Z",
-      "referee": "Não divulgado",
-      "markets": {
-        "goals": {
-          "expected_total": 2.41,
-          "over_1_5": {
-            "prob_over": 70.8,
-            "fair_odd": 1.41
-          },
-          "over_2_5": {
-            "prob_over": 43.3,
-            "fair_odd": 2.31
-          },
-          "btts": {
-            "prob_yes": 49.7,
-            "fair_odd": 2.01
-          },
-          "btts_or_over25": {
-            "prob_hit": 57.5,
-            "fair_odd": 1.74
-          }
-        },
-        "corners": {
-          "expected_total": 10.2,
-          "over_8_5": {
-            "line": 8.5,
-            "prob_over": 65.2,
-            "fair_odd_over": 1.53
-          },
-          "over_9_5": {
-            "line": 9.5,
-            "prob_over": 54.4,
-            "fair_odd_over": 1.84
-          },
-          "over_10_5": {
-            "line": 10.5,
-            "prob_over": 43.7,
-            "fair_odd_over": 2.29
-          }
-        },
-        "shots": {
-          "expected_shots": 25.0,
-          "expected_sot": 8.4,
-          "over_8_5_sot": {
-            "prob_over": 46.3,
-            "fair_odd": 2.16
-          }
-        },
-        "fouls": {
-          "expected_total": 26.0,
-          "over_25_5": {
-            "line": 25.5,
-            "prob_over": 51.8,
-            "fair_odd_over": 1.93
-          },
-          "over_27_5": {
-            "line": 27.5,
-            "prob_over": 38.1,
-            "fair_odd_over": 2.63
-          }
-        },
-        "cards": {
-          "expected_total": 4.38,
-          "referee_factor": 1.04,
-          "over_3_5": {
-            "prob_over": 63.6,
-            "fair_odd": 1.57
-          },
-          "over_4_5": {
-            "prob_over": 44.4,
-            "fair_odd": 2.25
-          }
-        }
-      },
-      "sample_info": {
-        "home_sample": 5,
-        "away_sample": 5
-      }
-    },
-    {
-      "league": "Brasileirão Série A",
-      "home_team": "São Paulo",
-      "away_team": "Vitória",
-      "kickoff": "2026-10-11T00:00Z",
-      "referee": "Não divulgado",
-      "markets": {
-        "goals": {
-          "expected_total": 2.58,
-          "over_1_5": {
-            "prob_over": 73.6,
-            "fair_odd": 1.36
-          },
-          "over_2_5": {
-            "prob_over": 47.6,
-            "fair_odd": 2.1
-          },
-          "btts": {
-            "prob_yes": 32.4,
-            "fair_odd": 3.09
+            "prob_yes": 48.3,
+            "fair_odd": 2.07
           },
           "btts_or_over25": {
             "prob_hit": 55.5,
@@ -1858,17 +904,17 @@
           "expected_total": 10.2,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.2,
+            "prob_over": 65.4,
             "fair_odd_over": 1.53
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.4,
-            "fair_odd_over": 1.84
+            "prob_over": 54.5,
+            "fair_odd_over": 1.83
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.7,
+            "prob_over": 43.8,
             "fair_odd_over": 2.29
           }
         },
@@ -1878,19 +924,6 @@
           "over_8_5_sot": {
             "prob_over": 46.3,
             "fair_odd": 2.16
-          }
-        },
-        "fouls": {
-          "expected_total": 26.0,
-          "over_25_5": {
-            "line": 25.5,
-            "prob_over": 51.8,
-            "fair_odd_over": 1.93
-          },
-          "over_27_5": {
-            "line": 27.5,
-            "prob_over": 38.1,
-            "fair_odd_over": 2.63
           }
         },
         "cards": {
@@ -1905,10 +938,609 @@
             "fair_odd": 2.25
           }
         }
-      },
-      "sample_info": {
-        "home_sample": 5,
-        "away_sample": 5
+      }
+    },
+    {
+      "league": "Bundesliga",
+      "home_team": "TSG Hoffenheim",
+      "away_team": "Hamburg SV",
+      "kickoff": "2026-10-10T13:30Z",
+      "referee": "Não divulgado",
+      "data_confidence": "Média",
+      "markets": {
+        "goals": {
+          "expected_total": 3.78,
+          "over_1_5": {
+            "prob_over": 89.6,
+            "fair_odd": 1.12
+          },
+          "over_2_5": {
+            "prob_over": 72.6,
+            "fair_odd": 1.38
+          },
+          "btts": {
+            "prob_yes": 54.2,
+            "fair_odd": 1.84
+          },
+          "btts_or_over25": {
+            "prob_hit": 78.8,
+            "fair_odd": 1.27
+          }
+        },
+        "corners": {
+          "expected_total": 10.2,
+          "over_8_5": {
+            "line": 8.5,
+            "prob_over": 65.4,
+            "fair_odd_over": 1.53
+          },
+          "over_9_5": {
+            "line": 9.5,
+            "prob_over": 54.5,
+            "fair_odd_over": 1.83
+          },
+          "over_10_5": {
+            "line": 10.5,
+            "prob_over": 43.8,
+            "fair_odd_over": 2.29
+          }
+        },
+        "shots": {
+          "expected_shots": 25.0,
+          "expected_sot": 8.4,
+          "over_8_5_sot": {
+            "prob_over": 46.3,
+            "fair_odd": 2.16
+          }
+        },
+        "cards": {
+          "expected_total": 4.38,
+          "referee_factor": 1.04,
+          "over_3_5": {
+            "prob_over": 63.6,
+            "fair_odd": 1.57
+          },
+          "over_4_5": {
+            "prob_over": 44.4,
+            "fair_odd": 2.25
+          }
+        }
+      }
+    },
+    {
+      "league": "Bundesliga",
+      "home_team": "RB Leipzig",
+      "away_team": "Eintracht Frankfurt",
+      "kickoff": "2026-10-10T16:30Z",
+      "referee": "Não divulgado",
+      "data_confidence": "Média",
+      "markets": {
+        "goals": {
+          "expected_total": 4.34,
+          "over_1_5": {
+            "prob_over": 93.6,
+            "fair_odd": 1.07
+          },
+          "over_2_5": {
+            "prob_over": 80.6,
+            "fair_odd": 1.24
+          },
+          "btts": {
+            "prob_yes": 71.8,
+            "fair_odd": 1.39
+          },
+          "btts_or_over25": {
+            "prob_hit": 86.6,
+            "fair_odd": 1.16
+          }
+        },
+        "corners": {
+          "expected_total": 10.2,
+          "over_8_5": {
+            "line": 8.5,
+            "prob_over": 65.4,
+            "fair_odd_over": 1.53
+          },
+          "over_9_5": {
+            "line": 9.5,
+            "prob_over": 54.5,
+            "fair_odd_over": 1.83
+          },
+          "over_10_5": {
+            "line": 10.5,
+            "prob_over": 43.8,
+            "fair_odd_over": 2.29
+          }
+        },
+        "shots": {
+          "expected_shots": 25.0,
+          "expected_sot": 8.4,
+          "over_8_5_sot": {
+            "prob_over": 46.3,
+            "fair_odd": 2.16
+          }
+        },
+        "cards": {
+          "expected_total": 4.38,
+          "referee_factor": 1.04,
+          "over_3_5": {
+            "prob_over": 63.6,
+            "fair_odd": 1.57
+          },
+          "over_4_5": {
+            "prob_over": 44.4,
+            "fair_odd": 2.25
+          }
+        }
+      }
+    },
+    {
+      "league": "Ligue 1",
+      "home_team": "Lille",
+      "away_team": "Le Havre AC",
+      "kickoff": "2026-10-10T15:15Z",
+      "referee": "Não divulgado",
+      "data_confidence": "Alta",
+      "markets": {
+        "goals": {
+          "expected_total": 1.97,
+          "over_1_5": {
+            "prob_over": 59.5,
+            "fair_odd": 1.68
+          },
+          "over_2_5": {
+            "prob_over": 31.4,
+            "fair_odd": 3.19
+          },
+          "btts": {
+            "prob_yes": 29.3,
+            "fair_odd": 3.41
+          },
+          "btts_or_over25": {
+            "prob_hit": 42.0,
+            "fair_odd": 2.38
+          }
+        },
+        "corners": {
+          "expected_total": 10.2,
+          "over_8_5": {
+            "line": 8.5,
+            "prob_over": 65.4,
+            "fair_odd_over": 1.53
+          },
+          "over_9_5": {
+            "line": 9.5,
+            "prob_over": 54.5,
+            "fair_odd_over": 1.83
+          },
+          "over_10_5": {
+            "line": 10.5,
+            "prob_over": 43.8,
+            "fair_odd_over": 2.29
+          }
+        },
+        "shots": {
+          "expected_shots": 25.0,
+          "expected_sot": 8.4,
+          "over_8_5_sot": {
+            "prob_over": 46.3,
+            "fair_odd": 2.16
+          }
+        },
+        "cards": {
+          "expected_total": 4.38,
+          "referee_factor": 1.04,
+          "over_3_5": {
+            "prob_over": 63.6,
+            "fair_odd": 1.57
+          },
+          "over_4_5": {
+            "prob_over": 44.4,
+            "fair_odd": 2.25
+          }
+        }
+      }
+    },
+    {
+      "league": "Ligue 1",
+      "home_team": "AS Monaco",
+      "away_team": "Toulouse",
+      "kickoff": "2026-10-10T18:45Z",
+      "referee": "Não divulgado",
+      "data_confidence": "Alta",
+      "markets": {
+        "goals": {
+          "expected_total": 2.33,
+          "over_1_5": {
+            "prob_over": 68.4,
+            "fair_odd": 1.46
+          },
+          "over_2_5": {
+            "prob_over": 41.0,
+            "fair_odd": 2.44
+          },
+          "btts": {
+            "prob_yes": 32.9,
+            "fair_odd": 3.04
+          },
+          "btts_or_over25": {
+            "prob_hit": 50.6,
+            "fair_odd": 1.98
+          }
+        },
+        "corners": {
+          "expected_total": 10.2,
+          "over_8_5": {
+            "line": 8.5,
+            "prob_over": 65.4,
+            "fair_odd_over": 1.53
+          },
+          "over_9_5": {
+            "line": 9.5,
+            "prob_over": 54.5,
+            "fair_odd_over": 1.83
+          },
+          "over_10_5": {
+            "line": 10.5,
+            "prob_over": 43.8,
+            "fair_odd_over": 2.29
+          }
+        },
+        "shots": {
+          "expected_shots": 25.0,
+          "expected_sot": 8.4,
+          "over_8_5_sot": {
+            "prob_over": 46.3,
+            "fair_odd": 2.16
+          }
+        },
+        "cards": {
+          "expected_total": 4.38,
+          "referee_factor": 1.04,
+          "over_3_5": {
+            "prob_over": 63.6,
+            "fair_odd": 1.57
+          },
+          "over_4_5": {
+            "prob_over": 44.4,
+            "fair_odd": 2.25
+          }
+        }
+      }
+    },
+    {
+      "league": "Ligue 1",
+      "home_team": "Brest",
+      "away_team": "Angers",
+      "kickoff": "2026-10-10T18:45Z",
+      "referee": "Não divulgado",
+      "data_confidence": "Alta",
+      "markets": {
+        "goals": {
+          "expected_total": 2.54,
+          "over_1_5": {
+            "prob_over": 73.4,
+            "fair_odd": 1.36
+          },
+          "over_2_5": {
+            "prob_over": 46.5,
+            "fair_odd": 2.15
+          },
+          "btts": {
+            "prob_yes": 52.1,
+            "fair_odd": 1.92
+          },
+          "btts_or_over25": {
+            "prob_hit": 60.4,
+            "fair_odd": 1.66
+          }
+        },
+        "corners": {
+          "expected_total": 10.2,
+          "over_8_5": {
+            "line": 8.5,
+            "prob_over": 65.4,
+            "fair_odd_over": 1.53
+          },
+          "over_9_5": {
+            "line": 9.5,
+            "prob_over": 54.5,
+            "fair_odd_over": 1.83
+          },
+          "over_10_5": {
+            "line": 10.5,
+            "prob_over": 43.8,
+            "fair_odd_over": 2.29
+          }
+        },
+        "shots": {
+          "expected_shots": 25.0,
+          "expected_sot": 8.4,
+          "over_8_5_sot": {
+            "prob_over": 46.3,
+            "fair_odd": 2.16
+          }
+        },
+        "cards": {
+          "expected_total": 4.38,
+          "referee_factor": 1.04,
+          "over_3_5": {
+            "prob_over": 63.6,
+            "fair_odd": 1.57
+          },
+          "over_4_5": {
+            "prob_over": 44.4,
+            "fair_odd": 2.25
+          }
+        }
+      }
+    },
+    {
+      "league": "Ligue 1",
+      "home_team": "Lorient",
+      "away_team": "Paris FC",
+      "kickoff": "2026-10-10T18:45Z",
+      "referee": "Não divulgado",
+      "data_confidence": "Alta",
+      "markets": {
+        "goals": {
+          "expected_total": 1.49,
+          "over_1_5": {
+            "prob_over": 45.2,
+            "fair_odd": 2.21
+          },
+          "over_2_5": {
+            "prob_over": 18.9,
+            "fair_odd": 5.28
+          },
+          "btts": {
+            "prob_yes": 27.0,
+            "fair_odd": 3.7
+          },
+          "btts_or_over25": {
+            "prob_hit": 31.8,
+            "fair_odd": 3.14
+          }
+        },
+        "corners": {
+          "expected_total": 10.2,
+          "over_8_5": {
+            "line": 8.5,
+            "prob_over": 65.4,
+            "fair_odd_over": 1.53
+          },
+          "over_9_5": {
+            "line": 9.5,
+            "prob_over": 54.5,
+            "fair_odd_over": 1.83
+          },
+          "over_10_5": {
+            "line": 10.5,
+            "prob_over": 43.8,
+            "fair_odd_over": 2.29
+          }
+        },
+        "shots": {
+          "expected_shots": 25.0,
+          "expected_sot": 8.4,
+          "over_8_5_sot": {
+            "prob_over": 46.3,
+            "fair_odd": 2.16
+          }
+        },
+        "cards": {
+          "expected_total": 4.38,
+          "referee_factor": 1.04,
+          "over_3_5": {
+            "prob_over": 63.6,
+            "fair_odd": 1.57
+          },
+          "over_4_5": {
+            "prob_over": 44.4,
+            "fair_odd": 2.25
+          }
+        }
+      }
+    },
+    {
+      "league": "Ligue 1",
+      "home_team": "Paris Saint-Germain",
+      "away_team": "Le Mans",
+      "kickoff": "2026-10-10T18:45Z",
+      "referee": "Não divulgado",
+      "data_confidence": "Alta",
+      "markets": {
+        "goals": {
+          "expected_total": 3.53,
+          "over_1_5": {
+            "prob_over": 87.7,
+            "fair_odd": 1.14
+          },
+          "over_2_5": {
+            "prob_over": 68.5,
+            "fair_odd": 1.46
+          },
+          "btts": {
+            "prob_yes": 68.2,
+            "fair_odd": 1.47
+          },
+          "btts_or_over25": {
+            "prob_hit": 78.3,
+            "fair_odd": 1.28
+          }
+        },
+        "corners": {
+          "expected_total": 10.2,
+          "over_8_5": {
+            "line": 8.5,
+            "prob_over": 65.4,
+            "fair_odd_over": 1.53
+          },
+          "over_9_5": {
+            "line": 9.5,
+            "prob_over": 54.5,
+            "fair_odd_over": 1.83
+          },
+          "over_10_5": {
+            "line": 10.5,
+            "prob_over": 43.8,
+            "fair_odd_over": 2.29
+          }
+        },
+        "shots": {
+          "expected_shots": 25.0,
+          "expected_sot": 8.4,
+          "over_8_5_sot": {
+            "prob_over": 46.3,
+            "fair_odd": 2.16
+          }
+        },
+        "cards": {
+          "expected_total": 4.38,
+          "referee_factor": 1.04,
+          "over_3_5": {
+            "prob_over": 63.6,
+            "fair_odd": 1.57
+          },
+          "over_4_5": {
+            "prob_over": 44.4,
+            "fair_odd": 2.25
+          }
+        }
+      }
+    },
+    {
+      "league": "Brasileirão Série A",
+      "home_team": "Vasco da Gama",
+      "away_team": "Remo",
+      "kickoff": "2026-10-10T21:00Z",
+      "referee": "Não divulgado",
+      "data_confidence": "Alta",
+      "markets": {
+        "goals": {
+          "expected_total": 2.46,
+          "over_1_5": {
+            "prob_over": 71.8,
+            "fair_odd": 1.39
+          },
+          "over_2_5": {
+            "prob_over": 44.5,
+            "fair_odd": 2.25
+          },
+          "btts": {
+            "prob_yes": 50.4,
+            "fair_odd": 1.98
+          },
+          "btts_or_over25": {
+            "prob_hit": 58.5,
+            "fair_odd": 1.71
+          }
+        },
+        "corners": {
+          "expected_total": 10.2,
+          "over_8_5": {
+            "line": 8.5,
+            "prob_over": 65.4,
+            "fair_odd_over": 1.53
+          },
+          "over_9_5": {
+            "line": 9.5,
+            "prob_over": 54.5,
+            "fair_odd_over": 1.83
+          },
+          "over_10_5": {
+            "line": 10.5,
+            "prob_over": 43.8,
+            "fair_odd_over": 2.29
+          }
+        },
+        "shots": {
+          "expected_shots": 25.0,
+          "expected_sot": 8.4,
+          "over_8_5_sot": {
+            "prob_over": 46.3,
+            "fair_odd": 2.16
+          }
+        },
+        "cards": {
+          "expected_total": 4.38,
+          "referee_factor": 1.04,
+          "over_3_5": {
+            "prob_over": 63.6,
+            "fair_odd": 1.57
+          },
+          "over_4_5": {
+            "prob_over": 44.4,
+            "fair_odd": 2.25
+          }
+        }
+      }
+    },
+    {
+      "league": "Brasileirão Série A",
+      "home_team": "São Paulo",
+      "away_team": "Vitória",
+      "kickoff": "2026-10-11T00:00Z",
+      "referee": "Não divulgado",
+      "data_confidence": "Alta",
+      "markets": {
+        "goals": {
+          "expected_total": 2.51,
+          "over_1_5": {
+            "prob_over": 72.6,
+            "fair_odd": 1.38
+          },
+          "over_2_5": {
+            "prob_over": 45.9,
+            "fair_odd": 2.18
+          },
+          "btts": {
+            "prob_yes": 40.4,
+            "fair_odd": 2.48
+          },
+          "btts_or_over25": {
+            "prob_hit": 56.5,
+            "fair_odd": 1.77
+          }
+        },
+        "corners": {
+          "expected_total": 10.2,
+          "over_8_5": {
+            "line": 8.5,
+            "prob_over": 65.4,
+            "fair_odd_over": 1.53
+          },
+          "over_9_5": {
+            "line": 9.5,
+            "prob_over": 54.5,
+            "fair_odd_over": 1.83
+          },
+          "over_10_5": {
+            "line": 10.5,
+            "prob_over": 43.8,
+            "fair_odd_over": 2.29
+          }
+        },
+        "shots": {
+          "expected_shots": 25.0,
+          "expected_sot": 8.4,
+          "over_8_5_sot": {
+            "prob_over": 46.3,
+            "fair_odd": 2.16
+          }
+        },
+        "cards": {
+          "expected_total": 4.38,
+          "referee_factor": 1.04,
+          "over_3_5": {
+            "prob_over": 63.6,
+            "fair_odd": 1.57
+          },
+          "over_4_5": {
+            "prob_over": 44.4,
+            "fair_odd": 2.25
+          }
+        }
       }
     }
   ]

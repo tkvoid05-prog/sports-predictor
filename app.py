@@ -1,5 +1,5 @@
-import json
 import os
+import json
 import streamlit as st
 
 st.set_page_config(page_title="Preditor Quant", page_icon="⚽", layout="centered", initial_sidebar_state="collapsed")
@@ -12,10 +12,19 @@ st.markdown("""
         color: white;
         padding: 3px 8px;
         border-radius: 4px;
-        font-size: 0.75rem;
+        font-size: 0.72rem;
         font-weight: 700;
         display: inline-block;
         margin-bottom: 6px;
+    }
+    .badge-conf {
+        background-color: #4b5563;
+        color: #f3f4f6;
+        padding: 2px 7px;
+        border-radius: 4px;
+        font-size: 0.68rem;
+        font-weight: 600;
+        margin-left: 6px;
     }
     .badge-league {
         background-color: #2563eb;
@@ -32,7 +41,7 @@ st.title("⚽ Preditor Quantitativo")
 
 data_file = os.path.join("data", "predictions_today.json")
 if not os.path.exists(data_file):
-    st.warning("Aguardando geração da base. Execute o pipeline primeiro.")
+    st.warning("Aguardando pipeline. Execute o motor para carregar os dados.")
     st.stop()
 
 with open(data_file, "r", encoding="utf-8") as f:
@@ -45,7 +54,7 @@ matches = payload.get("matches", [])
 st.caption(f"Turno: **{shift}** | Atualizado em: {updated}")
 
 if not matches:
-    st.info("Nenhuma partida programada para este ciclo.")
+    st.info("Nenhuma partida agendada para este ciclo.")
     st.stop()
 
 leagues = sorted(list({m.get("league", "") for m in matches if m.get("league")}))
@@ -58,9 +67,14 @@ for m in filtered:
     home = m.get("home_team", "")
     away = m.get("away_team", "")
     referee = m.get("referee", "Não divulgado")
+    conf = m.get("data_confidence", "Média")
 
     with st.expander(f"{home} vs {away}", expanded=True):
-        st.markdown(f"<span class='badge-league'>{m.get('league')}</span> | Árbitro: **{referee}**", unsafe_allow_html=True)
+        st.markdown(
+            f"<span class='badge-league'>{m.get('league')}</span> "
+            f"<span class='badge-conf'>Amostra: {conf}</span> | Árbitro: **{referee}**",
+            unsafe_allow_html=True
+        )
 
         tab_gols, tab_combo, tab_cantos, tab_chutes, tab_cards = st.tabs([
             "Gols", "BTTS ou +2.5", "Cantos", "Chutes", "Cartões"
@@ -77,10 +91,10 @@ for m in filtered:
         with tab_combo:
             combo = mkts.get("goals", {}).get("btts_or_over25", {})
             prob_combo = combo.get("prob_hit", 0)
-            if prob_combo >= 70.0:
-                st.markdown("<span class='badge-value'>ALTA PROBABILIDADE HISTÓRICA</span>", unsafe_allow_html=True)
+            if prob_combo >= 75.0:
+                st.markdown("<span class='badge-value'>SINAL QUANTITATIVO: ALTA PROBABILIDADE</span>", unsafe_allow_html=True)
             st.metric("Ambas Marcam OU +2.5 Gols", f"{prob_combo}%", f"Odd Justa: @{combo.get('fair_odd', 0)}")
-            st.caption("Perde apenas se o placar terminar em 0-0, 1-0, 2-0, 0-1 ou 0-2.")
+            st.caption("Critério de acerto: placar diferente de 0-0, 1-0, 2-0, 0-1 ou 0-2.")
 
         with tab_cantos:
             c = mkts.get("corners", {})
