@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-10T00:56:19.251336",
+  "updated_at": "2026-10-10T01:06:54.532865",
   "shift": "manha",
   "matches": [
     {
@@ -9,6 +9,18 @@
       "kickoff": "2026-10-10T11:30Z",
       "referee": "Não divulgado",
       "data_confidence": "Alta",
+      "team_profiles": {
+        "home": {
+          "shots": 16.7,
+          "sot": 5.5,
+          "corners": 6.7
+        },
+        "away": {
+          "shots": 10.1,
+          "sot": 3.3,
+          "corners": 4.0
+        }
+      },
       "markets": {
         "goals": {
           "expected_total": 1.61,
@@ -30,29 +42,29 @@
           }
         },
         "corners": {
-          "expected_total": 10.2,
+          "expected_total": 9.5,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.4,
-            "fair_odd_over": 1.53
+            "prob_over": 58.1,
+            "fair_odd_over": 1.72
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.5,
-            "fair_odd_over": 1.83
+            "prob_over": 46.8,
+            "fair_odd_over": 2.14
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.8,
-            "fair_odd_over": 2.29
+            "prob_over": 36.2,
+            "fair_odd_over": 2.76
           }
         },
         "shots": {
-          "expected_shots": 25.0,
-          "expected_sot": 8.4,
+          "expected_shots": 23.0,
+          "expected_sot": 8.0,
           "over_8_5_sot": {
-            "prob_over": 46.3,
-            "fair_odd": 2.16
+            "prob_over": 40.7,
+            "fair_odd": 2.45
           }
         },
         "cards": {
@@ -76,6 +88,18 @@
       "kickoff": "2026-10-10T14:00Z",
       "referee": "Não divulgado",
       "data_confidence": "Alta",
+      "team_profiles": {
+        "home": {
+          "shots": 6.9,
+          "sot": 2.3,
+          "corners": 2.8
+        },
+        "away": {
+          "shots": 13.3,
+          "sot": 4.4,
+          "corners": 5.3
+        }
+      },
       "markets": {
         "goals": {
           "expected_total": 2.31,
@@ -97,29 +121,29 @@
           }
         },
         "corners": {
-          "expected_total": 10.2,
+          "expected_total": 9.5,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.4,
-            "fair_odd_over": 1.53
+            "prob_over": 58.1,
+            "fair_odd_over": 1.72
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.5,
-            "fair_odd_over": 1.83
+            "prob_over": 46.8,
+            "fair_odd_over": 2.14
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.8,
-            "fair_odd_over": 2.29
+            "prob_over": 36.2,
+            "fair_odd_over": 2.76
           }
         },
         "shots": {
-          "expected_shots": 25.0,
-          "expected_sot": 8.4,
+          "expected_shots": 23.0,
+          "expected_sot": 8.0,
           "over_8_5_sot": {
-            "prob_over": 46.3,
-            "fair_odd": 2.16
+            "prob_over": 40.7,
+            "fair_odd": 2.45
           }
         },
         "cards": {
@@ -143,6 +167,18 @@
       "kickoff": "2026-10-10T14:00Z",
       "referee": "Não divulgado",
       "data_confidence": "Alta",
+      "team_profiles": {
+        "home": {
+          "shots": 20.6,
+          "sot": 6.8,
+          "corners": 8.2
+        },
+        "away": {
+          "shots": 9.6,
+          "sot": 3.2,
+          "corners": 3.8
+        }
+      },
       "markets": {
         "goals": {
           "expected_total": 3.95,
@@ -164,29 +200,29 @@
           }
         },
         "corners": {
-          "expected_total": 10.2,
+          "expected_total": 9.5,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.4,
-            "fair_odd_over": 1.53
+            "prob_over": 58.1,
+            "fair_odd_over": 1.72
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.5,
-            "fair_odd_over": 1.83
+            "prob_over": 46.8,
+            "fair_odd_over": 2.14
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.8,
-            "fair_odd_over": 2.29
+            "prob_over": 36.2,
+            "fair_odd_over": 2.76
           }
         },
         "shots": {
-          "expected_shots": 25.0,
-          "expected_sot": 8.4,
+          "expected_shots": 23.0,
+          "expected_sot": 8.0,
           "over_8_5_sot": {
-            "prob_over": 46.3,
-            "fair_odd": 2.16
+            "prob_over": 40.7,
+            "fair_odd": 2.45
           }
         },
         "cards": {
@@ -210,6 +246,18 @@
       "kickoff": "2026-10-10T14:00Z",
       "referee": "Não divulgado",
       "data_confidence": "Alta",
+      "team_profiles": {
+        "home": {
+          "shots": 14.6,
+          "sot": 4.8,
+          "corners": 5.8
+        },
+        "away": {
+          "shots": 8.8,
+          "sot": 2.9,
+          "corners": 3.5
+        }
+      },
       "markets": {
         "goals": {
           "expected_total": 3.28,
@@ -231,29 +279,29 @@
           }
         },
         "corners": {
-          "expected_total": 10.2,
+          "expected_total": 9.5,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.4,
-            "fair_odd_over": 1.53
+            "prob_over": 58.1,
+            "fair_odd_over": 1.72
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.5,
-            "fair_odd_over": 1.83
+            "prob_over": 46.8,
+            "fair_odd_over": 2.14
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.8,
-            "fair_odd_over": 2.29
+            "prob_over": 36.2,
+            "fair_odd_over": 2.76
           }
         },
         "shots": {
-          "expected_shots": 25.0,
-          "expected_sot": 8.4,
+          "expected_shots": 23.0,
+          "expected_sot": 8.0,
           "over_8_5_sot": {
-            "prob_over": 46.3,
-            "fair_odd": 2.16
+            "prob_over": 40.7,
+            "fair_odd": 2.45
           }
         },
         "cards": {
@@ -277,6 +325,18 @@
       "kickoff": "2026-10-10T14:00Z",
       "referee": "Não divulgado",
       "data_confidence": "Alta",
+      "team_profiles": {
+        "home": {
+          "shots": 11.1,
+          "sot": 3.7,
+          "corners": 4.5
+        },
+        "away": {
+          "shots": 20.0,
+          "sot": 6.6,
+          "corners": 8.0
+        }
+      },
       "markets": {
         "goals": {
           "expected_total": 3.4,
@@ -298,29 +358,29 @@
           }
         },
         "corners": {
-          "expected_total": 10.2,
+          "expected_total": 9.5,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.4,
-            "fair_odd_over": 1.53
+            "prob_over": 58.1,
+            "fair_odd_over": 1.72
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.5,
-            "fair_odd_over": 1.83
+            "prob_over": 46.8,
+            "fair_odd_over": 2.14
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.8,
-            "fair_odd_over": 2.29
+            "prob_over": 36.2,
+            "fair_odd_over": 2.76
           }
         },
         "shots": {
-          "expected_shots": 25.0,
-          "expected_sot": 8.4,
+          "expected_shots": 23.0,
+          "expected_sot": 8.0,
           "over_8_5_sot": {
-            "prob_over": 46.3,
-            "fair_odd": 2.16
+            "prob_over": 40.7,
+            "fair_odd": 2.45
           }
         },
         "cards": {
@@ -344,50 +404,62 @@
       "kickoff": "2026-10-10T16:30Z",
       "referee": "Não divulgado",
       "data_confidence": "Alta",
+      "team_profiles": {
+        "home": {
+          "shots": 16.0,
+          "sot": 5.3,
+          "corners": 6.4
+        },
+        "away": {
+          "shots": 5.1,
+          "sot": 1.7,
+          "corners": 2.0
+        }
+      },
       "markets": {
         "goals": {
-          "expected_total": 2.44,
+          "expected_total": 2.57,
           "over_1_5": {
-            "prob_over": 70.8,
-            "fair_odd": 1.41
+            "prob_over": 73.8,
+            "fair_odd": 1.36
           },
           "over_2_5": {
-            "prob_over": 43.9,
-            "fair_odd": 2.28
+            "prob_over": 47.5,
+            "fair_odd": 2.11
           },
           "btts": {
-            "prob_yes": 34.5,
-            "fair_odd": 2.9
+            "prob_yes": 41.3,
+            "fair_odd": 2.42
           },
           "btts_or_over25": {
-            "prob_hit": 53.3,
-            "fair_odd": 1.88
+            "prob_hit": 57.9,
+            "fair_odd": 1.73
           }
         },
         "corners": {
-          "expected_total": 10.2,
+          "expected_total": 9.5,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.4,
-            "fair_odd_over": 1.53
+            "prob_over": 58.1,
+            "fair_odd_over": 1.72
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.5,
-            "fair_odd_over": 1.83
+            "prob_over": 46.8,
+            "fair_odd_over": 2.14
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.8,
-            "fair_odd_over": 2.29
+            "prob_over": 36.2,
+            "fair_odd_over": 2.76
           }
         },
         "shots": {
-          "expected_shots": 25.0,
-          "expected_sot": 8.4,
+          "expected_shots": 23.0,
+          "expected_sot": 8.0,
           "over_8_5_sot": {
-            "prob_over": 46.3,
-            "fair_odd": 2.16
+            "prob_over": 40.7,
+            "fair_odd": 2.45
           }
         },
         "cards": {
@@ -410,51 +482,63 @@
       "away_team": "Athletic Club",
       "kickoff": "2026-10-10T12:00Z",
       "referee": "Não divulgado",
-      "data_confidence": "Alta",
+      "data_confidence": "Média",
+      "team_profiles": {
+        "home": {
+          "shots": 14.3,
+          "sot": 4.7,
+          "corners": 5.7
+        },
+        "away": {
+          "shots": 10.5,
+          "sot": 3.5,
+          "corners": 4.0
+        }
+      },
       "markets": {
         "goals": {
-          "expected_total": 3.2,
+          "expected_total": 3.17,
           "over_1_5": {
-            "prob_over": 84.0,
-            "fair_odd": 1.19
+            "prob_over": 83.7,
+            "fair_odd": 1.2
           },
           "over_2_5": {
-            "prob_over": 62.0,
-            "fair_odd": 1.61
+            "prob_over": 61.4,
+            "fair_odd": 1.63
           },
           "btts": {
-            "prob_yes": 64.8,
-            "fair_odd": 1.54
+            "prob_yes": 64.1,
+            "fair_odd": 1.56
           },
           "btts_or_over25": {
-            "prob_hit": 73.6,
-            "fair_odd": 1.36
+            "prob_hit": 73.1,
+            "fair_odd": 1.37
           }
         },
         "corners": {
-          "expected_total": 10.2,
+          "expected_total": 9.5,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.4,
-            "fair_odd_over": 1.53
+            "prob_over": 58.1,
+            "fair_odd_over": 1.72
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.5,
-            "fair_odd_over": 1.83
+            "prob_over": 46.8,
+            "fair_odd_over": 2.14
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.8,
-            "fair_odd_over": 2.29
+            "prob_over": 36.2,
+            "fair_odd_over": 2.76
           }
         },
         "shots": {
-          "expected_shots": 25.0,
-          "expected_sot": 8.4,
+          "expected_shots": 23.0,
+          "expected_sot": 8.0,
           "over_8_5_sot": {
-            "prob_over": 46.3,
-            "fair_odd": 2.16
+            "prob_over": 40.7,
+            "fair_odd": 2.45
           }
         },
         "cards": {
@@ -478,6 +562,18 @@
       "kickoff": "2026-10-10T14:15Z",
       "referee": "Não divulgado",
       "data_confidence": "Alta",
+      "team_profiles": {
+        "home": {
+          "shots": 19.2,
+          "sot": 6.3,
+          "corners": 7.7
+        },
+        "away": {
+          "shots": 13.6,
+          "sot": 4.5,
+          "corners": 5.4
+        }
+      },
       "markets": {
         "goals": {
           "expected_total": 2.71,
@@ -499,29 +595,29 @@
           }
         },
         "corners": {
-          "expected_total": 10.2,
+          "expected_total": 9.5,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.4,
-            "fair_odd_over": 1.53
+            "prob_over": 58.1,
+            "fair_odd_over": 1.72
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.5,
-            "fair_odd_over": 1.83
+            "prob_over": 46.8,
+            "fair_odd_over": 2.14
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.8,
-            "fair_odd_over": 2.29
+            "prob_over": 36.2,
+            "fair_odd_over": 2.76
           }
         },
         "shots": {
-          "expected_shots": 25.0,
-          "expected_sot": 8.4,
+          "expected_shots": 23.0,
+          "expected_sot": 8.0,
           "over_8_5_sot": {
-            "prob_over": 46.3,
-            "fair_odd": 2.16
+            "prob_over": 40.7,
+            "fair_odd": 2.45
           }
         },
         "cards": {
@@ -545,6 +641,18 @@
       "kickoff": "2026-10-10T16:30Z",
       "referee": "Não divulgado",
       "data_confidence": "Alta",
+      "team_profiles": {
+        "home": {
+          "shots": 32.8,
+          "sot": 10.8,
+          "corners": 13.1
+        },
+        "away": {
+          "shots": 5.6,
+          "sot": 1.8,
+          "corners": 2.2
+        }
+      },
       "markets": {
         "goals": {
           "expected_total": 3.4,
@@ -566,29 +674,29 @@
           }
         },
         "corners": {
-          "expected_total": 10.2,
+          "expected_total": 9.5,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.4,
-            "fair_odd_over": 1.53
+            "prob_over": 58.1,
+            "fair_odd_over": 1.72
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.5,
-            "fair_odd_over": 1.83
+            "prob_over": 46.8,
+            "fair_odd_over": 2.14
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.8,
-            "fair_odd_over": 2.29
+            "prob_over": 36.2,
+            "fair_odd_over": 2.76
           }
         },
         "shots": {
-          "expected_shots": 25.0,
-          "expected_sot": 8.4,
+          "expected_shots": 23.0,
+          "expected_sot": 8.0,
           "over_8_5_sot": {
-            "prob_over": 46.3,
-            "fair_odd": 2.16
+            "prob_over": 40.7,
+            "fair_odd": 2.45
           }
         },
         "cards": {
@@ -612,6 +720,18 @@
       "kickoff": "2026-10-10T19:00Z",
       "referee": "Não divulgado",
       "data_confidence": "Alta",
+      "team_profiles": {
+        "home": {
+          "shots": 23.4,
+          "sot": 7.7,
+          "corners": 9.3
+        },
+        "away": {
+          "shots": 10.9,
+          "sot": 3.6,
+          "corners": 4.4
+        }
+      },
       "markets": {
         "goals": {
           "expected_total": 3.75,
@@ -633,29 +753,29 @@
           }
         },
         "corners": {
-          "expected_total": 10.2,
+          "expected_total": 9.5,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.4,
-            "fair_odd_over": 1.53
+            "prob_over": 58.1,
+            "fair_odd_over": 1.72
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.5,
-            "fair_odd_over": 1.83
+            "prob_over": 46.8,
+            "fair_odd_over": 2.14
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.8,
-            "fair_odd_over": 2.29
+            "prob_over": 36.2,
+            "fair_odd_over": 2.76
           }
         },
         "shots": {
-          "expected_shots": 25.0,
-          "expected_sot": 8.4,
+          "expected_shots": 23.0,
+          "expected_sot": 8.0,
           "over_8_5_sot": {
-            "prob_over": 46.3,
-            "fair_odd": 2.16
+            "prob_over": 40.7,
+            "fair_odd": 2.45
           }
         },
         "cards": {
@@ -679,6 +799,18 @@
       "kickoff": "2026-10-10T13:30Z",
       "referee": "Não divulgado",
       "data_confidence": "Média",
+      "team_profiles": {
+        "home": {
+          "shots": 12.4,
+          "sot": 4.1,
+          "corners": 5.0
+        },
+        "away": {
+          "shots": 15.0,
+          "sot": 5.0,
+          "corners": 6.0
+        }
+      },
       "markets": {
         "goals": {
           "expected_total": 4.34,
@@ -700,29 +832,29 @@
           }
         },
         "corners": {
-          "expected_total": 10.2,
+          "expected_total": 9.5,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.4,
-            "fair_odd_over": 1.53
+            "prob_over": 58.1,
+            "fair_odd_over": 1.72
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.5,
-            "fair_odd_over": 1.83
+            "prob_over": 46.8,
+            "fair_odd_over": 2.14
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.8,
-            "fair_odd_over": 2.29
+            "prob_over": 36.2,
+            "fair_odd_over": 2.76
           }
         },
         "shots": {
-          "expected_shots": 25.0,
-          "expected_sot": 8.4,
+          "expected_shots": 23.0,
+          "expected_sot": 8.0,
           "over_8_5_sot": {
-            "prob_over": 46.3,
-            "fair_odd": 2.16
+            "prob_over": 40.7,
+            "fair_odd": 2.45
           }
         },
         "cards": {
@@ -746,6 +878,18 @@
       "kickoff": "2026-10-10T13:30Z",
       "referee": "Não divulgado",
       "data_confidence": "Média",
+      "team_profiles": {
+        "home": {
+          "shots": 23.3,
+          "sot": 7.7,
+          "corners": 9.3
+        },
+        "away": {
+          "shots": 19.8,
+          "sot": 6.5,
+          "corners": 7.9
+        }
+      },
       "markets": {
         "goals": {
           "expected_total": 3.36,
@@ -767,29 +911,29 @@
           }
         },
         "corners": {
-          "expected_total": 10.2,
+          "expected_total": 9.5,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.4,
-            "fair_odd_over": 1.53
+            "prob_over": 58.1,
+            "fair_odd_over": 1.72
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.5,
-            "fair_odd_over": 1.83
+            "prob_over": 46.8,
+            "fair_odd_over": 2.14
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.8,
-            "fair_odd_over": 2.29
+            "prob_over": 36.2,
+            "fair_odd_over": 2.76
           }
         },
         "shots": {
-          "expected_shots": 25.0,
-          "expected_sot": 8.4,
+          "expected_shots": 23.0,
+          "expected_sot": 8.0,
           "over_8_5_sot": {
-            "prob_over": 46.3,
-            "fair_odd": 2.16
+            "prob_over": 40.7,
+            "fair_odd": 2.45
           }
         },
         "cards": {
@@ -813,6 +957,18 @@
       "kickoff": "2026-10-10T13:30Z",
       "referee": "Não divulgado",
       "data_confidence": "Média",
+      "team_profiles": {
+        "home": {
+          "shots": 19.3,
+          "sot": 6.4,
+          "corners": 7.7
+        },
+        "away": {
+          "shots": 16.1,
+          "sot": 5.3,
+          "corners": 6.5
+        }
+      },
       "markets": {
         "goals": {
           "expected_total": 3.58,
@@ -834,29 +990,29 @@
           }
         },
         "corners": {
-          "expected_total": 10.2,
+          "expected_total": 9.5,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.4,
-            "fair_odd_over": 1.53
+            "prob_over": 58.1,
+            "fair_odd_over": 1.72
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.5,
-            "fair_odd_over": 1.83
+            "prob_over": 46.8,
+            "fair_odd_over": 2.14
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.8,
-            "fair_odd_over": 2.29
+            "prob_over": 36.2,
+            "fair_odd_over": 2.76
           }
         },
         "shots": {
-          "expected_shots": 25.0,
-          "expected_sot": 8.4,
+          "expected_shots": 23.0,
+          "expected_sot": 8.0,
           "over_8_5_sot": {
-            "prob_over": 46.3,
-            "fair_odd": 2.16
+            "prob_over": 40.7,
+            "fair_odd": 2.45
           }
         },
         "cards": {
@@ -880,6 +1036,18 @@
       "kickoff": "2026-10-10T13:30Z",
       "referee": "Não divulgado",
       "data_confidence": "Média",
+      "team_profiles": {
+        "home": {
+          "shots": 7.7,
+          "sot": 2.5,
+          "corners": 3.1
+        },
+        "away": {
+          "shots": 11.7,
+          "sot": 3.9,
+          "corners": 4.7
+        }
+      },
       "markets": {
         "goals": {
           "expected_total": 2.32,
@@ -901,29 +1069,29 @@
           }
         },
         "corners": {
-          "expected_total": 10.2,
+          "expected_total": 9.5,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.4,
-            "fair_odd_over": 1.53
+            "prob_over": 58.1,
+            "fair_odd_over": 1.72
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.5,
-            "fair_odd_over": 1.83
+            "prob_over": 46.8,
+            "fair_odd_over": 2.14
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.8,
-            "fair_odd_over": 2.29
+            "prob_over": 36.2,
+            "fair_odd_over": 2.76
           }
         },
         "shots": {
-          "expected_shots": 25.0,
-          "expected_sot": 8.4,
+          "expected_shots": 23.0,
+          "expected_sot": 8.0,
           "over_8_5_sot": {
-            "prob_over": 46.3,
-            "fair_odd": 2.16
+            "prob_over": 40.7,
+            "fair_odd": 2.45
           }
         },
         "cards": {
@@ -947,11 +1115,23 @@
       "kickoff": "2026-10-10T13:30Z",
       "referee": "Não divulgado",
       "data_confidence": "Média",
+      "team_profiles": {
+        "home": {
+          "shots": 16.4,
+          "sot": 5.4,
+          "corners": 6.6
+        },
+        "away": {
+          "shots": 5.1,
+          "sot": 1.7,
+          "corners": 2.0
+        }
+      },
       "markets": {
         "goals": {
-          "expected_total": 3.78,
+          "expected_total": 3.79,
           "over_1_5": {
-            "prob_over": 89.6,
+            "prob_over": 89.7,
             "fair_odd": 1.12
           },
           "over_2_5": {
@@ -959,38 +1139,38 @@
             "fair_odd": 1.38
           },
           "btts": {
-            "prob_yes": 54.2,
+            "prob_yes": 54.3,
             "fair_odd": 1.84
           },
           "btts_or_over25": {
-            "prob_hit": 78.8,
+            "prob_hit": 78.9,
             "fair_odd": 1.27
           }
         },
         "corners": {
-          "expected_total": 10.2,
+          "expected_total": 9.5,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.4,
-            "fair_odd_over": 1.53
+            "prob_over": 58.1,
+            "fair_odd_over": 1.72
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.5,
-            "fair_odd_over": 1.83
+            "prob_over": 46.8,
+            "fair_odd_over": 2.14
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.8,
-            "fair_odd_over": 2.29
+            "prob_over": 36.2,
+            "fair_odd_over": 2.76
           }
         },
         "shots": {
-          "expected_shots": 25.0,
-          "expected_sot": 8.4,
+          "expected_shots": 23.0,
+          "expected_sot": 8.0,
           "over_8_5_sot": {
-            "prob_over": 46.3,
-            "fair_odd": 2.16
+            "prob_over": 40.7,
+            "fair_odd": 2.45
           }
         },
         "cards": {
@@ -1014,6 +1194,18 @@
       "kickoff": "2026-10-10T16:30Z",
       "referee": "Não divulgado",
       "data_confidence": "Média",
+      "team_profiles": {
+        "home": {
+          "shots": 20.0,
+          "sot": 6.6,
+          "corners": 8.0
+        },
+        "away": {
+          "shots": 14.8,
+          "sot": 4.9,
+          "corners": 5.9
+        }
+      },
       "markets": {
         "goals": {
           "expected_total": 4.34,
@@ -1035,29 +1227,29 @@
           }
         },
         "corners": {
-          "expected_total": 10.2,
+          "expected_total": 9.5,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.4,
-            "fair_odd_over": 1.53
+            "prob_over": 58.1,
+            "fair_odd_over": 1.72
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.5,
-            "fair_odd_over": 1.83
+            "prob_over": 46.8,
+            "fair_odd_over": 2.14
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.8,
-            "fair_odd_over": 2.29
+            "prob_over": 36.2,
+            "fair_odd_over": 2.76
           }
         },
         "shots": {
-          "expected_shots": 25.0,
-          "expected_sot": 8.4,
+          "expected_shots": 23.0,
+          "expected_sot": 8.0,
           "over_8_5_sot": {
-            "prob_over": 46.3,
-            "fair_odd": 2.16
+            "prob_over": 40.7,
+            "fair_odd": 2.45
           }
         },
         "cards": {
@@ -1081,6 +1273,18 @@
       "kickoff": "2026-10-10T15:15Z",
       "referee": "Não divulgado",
       "data_confidence": "Alta",
+      "team_profiles": {
+        "home": {
+          "shots": 15.7,
+          "sot": 5.2,
+          "corners": 6.3
+        },
+        "away": {
+          "shots": 6.4,
+          "sot": 2.1,
+          "corners": 2.5
+        }
+      },
       "markets": {
         "goals": {
           "expected_total": 1.97,
@@ -1102,29 +1306,29 @@
           }
         },
         "corners": {
-          "expected_total": 10.2,
+          "expected_total": 9.5,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.4,
-            "fair_odd_over": 1.53
+            "prob_over": 58.1,
+            "fair_odd_over": 1.72
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.5,
-            "fair_odd_over": 1.83
+            "prob_over": 46.8,
+            "fair_odd_over": 2.14
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.8,
-            "fair_odd_over": 2.29
+            "prob_over": 36.2,
+            "fair_odd_over": 2.76
           }
         },
         "shots": {
-          "expected_shots": 25.0,
-          "expected_sot": 8.4,
+          "expected_shots": 23.0,
+          "expected_sot": 8.0,
           "over_8_5_sot": {
-            "prob_over": 46.3,
-            "fair_odd": 2.16
+            "prob_over": 40.7,
+            "fair_odd": 2.45
           }
         },
         "cards": {
@@ -1148,6 +1352,18 @@
       "kickoff": "2026-10-10T18:45Z",
       "referee": "Não divulgado",
       "data_confidence": "Alta",
+      "team_profiles": {
+        "home": {
+          "shots": 14.6,
+          "sot": 4.8,
+          "corners": 5.8
+        },
+        "away": {
+          "shots": 8.8,
+          "sot": 2.9,
+          "corners": 3.5
+        }
+      },
       "markets": {
         "goals": {
           "expected_total": 2.33,
@@ -1169,29 +1385,29 @@
           }
         },
         "corners": {
-          "expected_total": 10.2,
+          "expected_total": 9.5,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.4,
-            "fair_odd_over": 1.53
+            "prob_over": 58.1,
+            "fair_odd_over": 1.72
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.5,
-            "fair_odd_over": 1.83
+            "prob_over": 46.8,
+            "fair_odd_over": 2.14
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.8,
-            "fair_odd_over": 2.29
+            "prob_over": 36.2,
+            "fair_odd_over": 2.76
           }
         },
         "shots": {
-          "expected_shots": 25.0,
-          "expected_sot": 8.4,
+          "expected_shots": 23.0,
+          "expected_sot": 8.0,
           "over_8_5_sot": {
-            "prob_over": 46.3,
-            "fair_odd": 2.16
+            "prob_over": 40.7,
+            "fair_odd": 2.45
           }
         },
         "cards": {
@@ -1215,6 +1431,18 @@
       "kickoff": "2026-10-10T18:45Z",
       "referee": "Não divulgado",
       "data_confidence": "Alta",
+      "team_profiles": {
+        "home": {
+          "shots": 15.0,
+          "sot": 4.9,
+          "corners": 6.0
+        },
+        "away": {
+          "shots": 9.0,
+          "sot": 3.0,
+          "corners": 3.6
+        }
+      },
       "markets": {
         "goals": {
           "expected_total": 2.54,
@@ -1236,29 +1464,29 @@
           }
         },
         "corners": {
-          "expected_total": 10.2,
+          "expected_total": 9.5,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.4,
-            "fair_odd_over": 1.53
+            "prob_over": 58.1,
+            "fair_odd_over": 1.72
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.5,
-            "fair_odd_over": 1.83
+            "prob_over": 46.8,
+            "fair_odd_over": 2.14
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.8,
-            "fair_odd_over": 2.29
+            "prob_over": 36.2,
+            "fair_odd_over": 2.76
           }
         },
         "shots": {
-          "expected_shots": 25.0,
-          "expected_sot": 8.4,
+          "expected_shots": 23.0,
+          "expected_sot": 8.0,
           "over_8_5_sot": {
-            "prob_over": 46.3,
-            "fair_odd": 2.16
+            "prob_over": 40.7,
+            "fair_odd": 2.45
           }
         },
         "cards": {
@@ -1282,6 +1510,18 @@
       "kickoff": "2026-10-10T18:45Z",
       "referee": "Não divulgado",
       "data_confidence": "Alta",
+      "team_profiles": {
+        "home": {
+          "shots": 9.7,
+          "sot": 3.2,
+          "corners": 3.9
+        },
+        "away": {
+          "shots": 11.2,
+          "sot": 3.7,
+          "corners": 4.5
+        }
+      },
       "markets": {
         "goals": {
           "expected_total": 1.49,
@@ -1303,29 +1543,29 @@
           }
         },
         "corners": {
-          "expected_total": 10.2,
+          "expected_total": 9.5,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.4,
-            "fair_odd_over": 1.53
+            "prob_over": 58.1,
+            "fair_odd_over": 1.72
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.5,
-            "fair_odd_over": 1.83
+            "prob_over": 46.8,
+            "fair_odd_over": 2.14
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.8,
-            "fair_odd_over": 2.29
+            "prob_over": 36.2,
+            "fair_odd_over": 2.76
           }
         },
         "shots": {
-          "expected_shots": 25.0,
-          "expected_sot": 8.4,
+          "expected_shots": 23.0,
+          "expected_sot": 8.0,
           "over_8_5_sot": {
-            "prob_over": 46.3,
-            "fair_odd": 2.16
+            "prob_over": 40.7,
+            "fair_odd": 2.45
           }
         },
         "cards": {
@@ -1349,6 +1589,18 @@
       "kickoff": "2026-10-10T18:45Z",
       "referee": "Não divulgado",
       "data_confidence": "Alta",
+      "team_profiles": {
+        "home": {
+          "shots": 15.3,
+          "sot": 5.1,
+          "corners": 6.1
+        },
+        "away": {
+          "shots": 12.5,
+          "sot": 4.1,
+          "corners": 5.0
+        }
+      },
       "markets": {
         "goals": {
           "expected_total": 3.53,
@@ -1370,29 +1622,29 @@
           }
         },
         "corners": {
-          "expected_total": 10.2,
+          "expected_total": 9.5,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.4,
-            "fair_odd_over": 1.53
+            "prob_over": 58.1,
+            "fair_odd_over": 1.72
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.5,
-            "fair_odd_over": 1.83
+            "prob_over": 46.8,
+            "fair_odd_over": 2.14
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.8,
-            "fair_odd_over": 2.29
+            "prob_over": 36.2,
+            "fair_odd_over": 2.76
           }
         },
         "shots": {
-          "expected_shots": 25.0,
-          "expected_sot": 8.4,
+          "expected_shots": 23.0,
+          "expected_sot": 8.0,
           "over_8_5_sot": {
-            "prob_over": 46.3,
-            "fair_odd": 2.16
+            "prob_over": 40.7,
+            "fair_odd": 2.45
           }
         },
         "cards": {
@@ -1416,6 +1668,18 @@
       "kickoff": "2026-10-10T21:00Z",
       "referee": "Não divulgado",
       "data_confidence": "Alta",
+      "team_profiles": {
+        "home": {
+          "shots": 10.1,
+          "sot": 3.3,
+          "corners": 4.0
+        },
+        "away": {
+          "shots": 9.6,
+          "sot": 3.2,
+          "corners": 3.8
+        }
+      },
       "markets": {
         "goals": {
           "expected_total": 2.46,
@@ -1437,29 +1701,29 @@
           }
         },
         "corners": {
-          "expected_total": 10.2,
+          "expected_total": 9.5,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.4,
-            "fair_odd_over": 1.53
+            "prob_over": 58.1,
+            "fair_odd_over": 1.72
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.5,
-            "fair_odd_over": 1.83
+            "prob_over": 46.8,
+            "fair_odd_over": 2.14
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.8,
-            "fair_odd_over": 2.29
+            "prob_over": 36.2,
+            "fair_odd_over": 2.76
           }
         },
         "shots": {
-          "expected_shots": 25.0,
-          "expected_sot": 8.4,
+          "expected_shots": 23.0,
+          "expected_sot": 8.0,
           "over_8_5_sot": {
-            "prob_over": 46.3,
-            "fair_odd": 2.16
+            "prob_over": 40.7,
+            "fair_odd": 2.45
           }
         },
         "cards": {
@@ -1483,6 +1747,18 @@
       "kickoff": "2026-10-11T00:00Z",
       "referee": "Não divulgado",
       "data_confidence": "Alta",
+      "team_profiles": {
+        "home": {
+          "shots": 15.0,
+          "sot": 4.9,
+          "corners": 6.0
+        },
+        "away": {
+          "shots": 10.4,
+          "sot": 3.4,
+          "corners": 4.2
+        }
+      },
       "markets": {
         "goals": {
           "expected_total": 2.51,
@@ -1504,29 +1780,29 @@
           }
         },
         "corners": {
-          "expected_total": 10.2,
+          "expected_total": 9.5,
           "over_8_5": {
             "line": 8.5,
-            "prob_over": 65.4,
-            "fair_odd_over": 1.53
+            "prob_over": 58.1,
+            "fair_odd_over": 1.72
           },
           "over_9_5": {
             "line": 9.5,
-            "prob_over": 54.5,
-            "fair_odd_over": 1.83
+            "prob_over": 46.8,
+            "fair_odd_over": 2.14
           },
           "over_10_5": {
             "line": 10.5,
-            "prob_over": 43.8,
-            "fair_odd_over": 2.29
+            "prob_over": 36.2,
+            "fair_odd_over": 2.76
           }
         },
         "shots": {
-          "expected_shots": 25.0,
-          "expected_sot": 8.4,
+          "expected_shots": 23.0,
+          "expected_sot": 8.0,
           "over_8_5_sot": {
-            "prob_over": 46.3,
-            "fair_odd": 2.16
+            "prob_over": 40.7,
+            "fair_odd": 2.45
           }
         },
         "cards": {

@@ -13,23 +13,20 @@ def get_current_shift() -> str:
     now = datetime.now()
     return "manha" if now.hour < 13 else "tarde_noite"
 
-def build_stats_from_last_5(history: dict) -> dict:
+def build_team_profile(history: dict, is_home: bool) -> dict:
     scored = history.get("goals_scored", [])
     conceded = history.get("goals_conceded", [])
     sample_size = history.get("sample_size", 0)
     
-    league_baseline = 1.35
-    
-    # Se tiver menos de 3 jogos reais registrados, aplica suavização pesada para a média da liga
+    baseline_goals = 1.35
     if sample_size < 3:
         return {
             "attack_strength": 1.0,
             "defense_vulnerability": 1.0,
-            "avg_corners_for": 5.0,
-            "avg_shots": 12.0,
-            "avg_shots_target": 4.0,
-            "avg_cards": 2.1,
-            "confidence": "Baixa (Amostra Reduzida)"
+            "exp_shots": 13.0 if is_home else 10.5,
+            "exp_sot": 4.5 if is_home else 3.5,
+            "exp_corners": 5.5 if is_home else 4.0,
+            "confidence": "Amostra Reduzida"
         }
         
     weights = np.array([0.10, 0.15, 0.20, 0.25, 0.30])[-len(scored):]
@@ -38,43 +35,41 @@ def build_stats_from_last_5(history: dict) -> dict:
     avg_scored = float(np.sum(np.array(scored) * weights))
     avg_conceded = float(np.sum(np.array(conceded) * weights))
     
-    # Encolhimento Bayesiano: pondera amostra com prior da liga (peso = sample / (sample + 2))
+    # Encolhimento Bayesiano
     shrinkage = sample_size / (sample_size + 2.0)
-    att_strength = (avg_scored / league_baseline) * shrinkage + (1.0 * (1.0 - shrinkage))
-    def_vulner = (avg_conceded / league_baseline) * shrinkage + (1.0 * (1.0 - shrinkage))
+    att = float(np.clip((avg_scored / baseline_goals) * shrinkage + (1.0 - shrinkage), 0.5, 2.5))
+    defn = float(np.clip((avg_conceded / baseline_goals) * shrinkage + (1.0 - shrinkage), 0.5, 2.5))
+    
+    # Volume com fator de mando (Arsenal em casa chuta mais)
+    bias = 1.15 if is_home else 0.88
+    shots = round(att * 11.5 * bias, 1)
+    sot = round(att * 3.8 * bias, 1)
+    corners = round(att * 4.6 * bias, 1)
     
     conf = "Alta" if sample_size >= 5 else "Média"
-    
     return {
-        "attack_strength": float(att_strength),
-        "defense_vulnerability": float(def_vulner),
-        "avg_corners_for": 5.1,
-        "avg_shots": 12.5,
-        "avg_shots_target": 4.2,
-        "avg_cards": 2.1,
+        "attack_strength": att,
+        "defense_vulnerability": defn,
+        "exp_shots": shots,
+        "exp_sot": sot,
+        "exp_corners": corners,
         "confidence": conf
     }
 
 def run_pipeline():
     shift = get_current_shift()
-    print(f"[*] Executando calibração quantitativa - Turno: {shift.upper()}")
+    print(f"[*] Executando pipeline com perfis volumétricos - Turno: {shift.upper()}")
     os.makedirs("data", exist_ok=True)
 
     fixtures = fetch_espn_fixtures()
-    print(f"[*] Jogos identificados: {len(fixtures)}")
-
     predictions = []
+
     for fix in fixtures:
-        h_stats = build_stats_from_last_5(fix["home_history_5"])
-        a_stats = build_stats_from_last_5(fix["away_history_5"])
+        h_profile = build_team_profile(fix["home_history_5"], is_home=True)
+        a_profile = build_team_profile(fix["away_history_5"], is_home=False)
         ref_info = {"league_avg_cards": 4.8, "referee_avg_cards": 5.0}
 
-        mkts = analyze_match_markets(h_stats, a_stats, ref_info)
-        
-        # Confiança geral do confronto
-        data_conf = "Alta" if (h_stats["confidence"] == "Alta" and a_stats["confidence"] == "Alta") else "Média"
-        if "Baixa" in (h_stats["confidence"], a_stats["confidence"]):
-            data_conf = "Amostra Limitada"
+        mkts = analyze_match_markets(h_profile, a_profile, ref_info)
 
         predictions.append({
             "league": fix["league"],
@@ -82,7 +77,19 @@ def run_pipeline():
             "away_team": fix["away_team"],
             "kickoff": fix.get("kickoff", ""),
             "referee": fix.get("referee", "Não divulgado"),
-            "data_confidence": data_conf,
+            "data_confidence": "Alta" if (h_profile["confidence"] == "Alta" and a_profile["confidence"] == "Alta") else "Média",
+            "team_profiles": {
+                "home": {
+                    "shots": h_profile["exp_shots"],
+                    "sot": h_profile["exp_sot"],
+                    "corners": h_profile["exp_corners"]
+                },
+                "away": {
+                    "shots": a_profile["exp_shots"],
+                    "sot": a_profile["exp_sot"],
+                    "corners": a_profile["exp_corners"]
+                }
+            },
             "markets": mkts
         })
 
@@ -90,7 +97,7 @@ def run_pipeline():
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump({"updated_at": datetime.now().isoformat(), "shift": shift, "matches": predictions}, f, indent=2, ensure_ascii=False)
 
-    print(f"[+] Base calibrada com sucesso: {output_path}")
+    print(f"[+] Concluído com métricas volumétricas: {output_path}")
 
 if __name__ == "__main__":
     run_pipeline()
