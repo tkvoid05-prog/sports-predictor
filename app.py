@@ -110,7 +110,7 @@ for m in filtered:
                 }).set_index("Métrica")
                 
                 st.write("**Projeção Volumétrica por Equipe:**")
-                st.bar_chart(chart_df)
+                st.bar_chart(chart_df, horizontal=True, stack=False)
             else:
                 st.info("Dados de perfil individual não disponíveis para esta partida.")
 
