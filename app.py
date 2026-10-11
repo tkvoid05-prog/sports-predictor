@@ -49,9 +49,22 @@ def show_match_summary_dialog(m):
     cd = mkts.get("cards", {})
     combo = g.get("btts_or_over25", {})
     profiles = m.get("team_profiles", {})
+    badges = m.get("ai_badges", [])
 
     st.subheader(f"{home} vs {away}")
     st.caption(f"Liga: {m.get('league')} | Árbitro: {m.get('referee', 'Não divulgado')} | Confiança: {m.get('data_confidence', 'Média')}")
+
+    # --- Dicas da IA no Modal ---
+    if badges:
+        st.markdown("#### 💡 Parecer Preditivo da IA")
+        for b in badges:
+            if b.get("tipo") == "green":
+                st.success(b.get("texto"))
+            elif b.get("tipo") == "orange":
+                st.warning(b.get("texto"))
+            elif b.get("tipo") == "red":
+                st.error(b.get("texto"))
+        st.divider()
 
     st.markdown("#### ⚽ Gols & Mercados Principais")
     col1, col2, col3 = st.columns(3)
@@ -82,9 +95,9 @@ def show_match_summary_dialog(m):
         h_data = profiles.get("home", {})
         a_data = profiles.get("away", {})
         chart_df = pd.DataFrame({
-            "Métrica": ["Finalizações", "No Alvo", "Cantos"],
-            f"{home} (Casa)": [h_data.get("shots", 0), h_data.get("sot", 0), h_data.get("corners", 0)],
-            f"{away} (Fora)": [a_data.get("shots", 0), a_data.get("sot", 0), a_data.get("corners", 0)],
+            "Métrica": ["Finalizações", "No Alvo", "Cantos", "Cartões"],
+            f"{home} (Casa)": [h_data.get("shots", 0), h_data.get("sot", 0), h_data.get("corners", 0), h_data.get("cards", 0)],
+            f"{away} (Fora)": [a_data.get("shots", 0), a_data.get("sot", 0), a_data.get("corners", 0), a_data.get("cards", 0)],
         }).set_index("Métrica")
         st.bar_chart(chart_df, horizontal=True, stack=False)
 
@@ -120,6 +133,7 @@ for idx, m in enumerate(filtered):
     referee = m.get("referee", "Não divulgado")
     conf = m.get("data_confidence", "Média")
     profiles = m.get("team_profiles", {})
+    badges = m.get("ai_badges", [])
 
     with st.expander(f"{home} vs {away}", expanded=True):
         col_hdr, col_btn = st.columns([3, 1])
@@ -132,6 +146,16 @@ for idx, m in enumerate(filtered):
         with col_btn:
             if st.button("📋 Resumo (Print)", key=f"btn_pop_{idx}"):
                 show_match_summary_dialog(m)
+
+        # --- Dicas da IA no Card Principal ---
+        if badges:
+            for b in badges:
+                if b.get("tipo") == "green":
+                    st.success(b.get("texto"))
+                elif b.get("tipo") == "orange":
+                    st.warning(b.get("texto"))
+                elif b.get("tipo") == "red":
+                    st.error(b.get("texto"))
 
         tab_gols, tab_combo, tab_grafico, tab_cantos, tab_chutes, tab_cards = st.tabs([
             "Gols", "BTTS ou +2.5", "Comparativo 📊", "Cantos", "Chutes", "Cartões"
@@ -158,9 +182,9 @@ for idx, m in enumerate(filtered):
                 h_data = profiles.get("home", {})
                 a_data = profiles.get("away", {})
                 chart_df = pd.DataFrame({
-                    "Métrica": ["Finalizações", "Chutes no Alvo", "Escanteios"],
-                    f"{home} (Casa)": [h_data.get("shots", 0), h_data.get("sot", 0), h_data.get("corners", 0)],
-                    f"{away} (Fora)": [a_data.get("shots", 0), a_data.get("sot", 0), a_data.get("corners", 0)],
+                    "Métrica": ["Finalizações", "Chutes no Alvo", "Escanteios", "Cartões"],
+                    f"{home} (Casa)": [h_data.get("shots", 0), h_data.get("sot", 0), h_data.get("corners", 0), h_data.get("cards", 0)],
+                    f"{away} (Fora)": [a_data.get("shots", 0), a_data.get("sot", 0), a_data.get("corners", 0), a_data.get("cards", 0)],
                 }).set_index("Métrica")
                 st.write("**Projeção Volumétrica por Equipe:**")
                 st.bar_chart(chart_df, horizontal=True, stack=False)
@@ -170,9 +194,16 @@ for idx, m in enumerate(filtered):
         with tab_cantos:
             c = mkts.get("corners", {})
             st.write(f"Média Esperada: **{c.get('expected_total', 0)} cantos**")
+            
+            # Médias individuais por mando adicionadas
+            if profiles:
+                h_c = profiles.get("home", {}).get("corners", 0)
+                a_c = profiles.get("away", {}).get("corners", 0)
+                st.caption(f"🚩 **{home} (Casa):** ~{h_c} cantos | **{away} (Fora):** ~{a_c} cantos")
+
             c1, c2 = st.columns(2)
             c1.metric("+8.5 Cantos", f"{c.get('over_8_5', {}).get('prob_over', 0)}%", f"Odd: @{c.get('over_8_5', {}).get('fair_odd_over', 0)}")
-            c2.metric("+10.5 Cantos", f"{c.get('over_10_5', {}).get('prob_over', 0)}%", f"Odd: @{c.get('over_10_5', {}).get('fair_odd_over', 0)}")
+            c2.metric("+10.5 Cantos", f"{c.get('over_10_5', {}).get('prob_over', 0)}%", f"Odd: @{c.get('over_10_5', {}).get('fair_odd', 0)}")
 
         with tab_chutes:
             s = mkts.get("shots", {})
@@ -183,6 +214,13 @@ for idx, m in enumerate(filtered):
         with tab_cards:
             cd = mkts.get("cards", {})
             st.write(f"Fator Árbitro: **{cd.get('referee_factor', 1.0)}x** | Média Esperada: **{cd.get('expected_total', 0)}**")
+            
+            # Médias individuais de cartões por mando adicionadas
+            if profiles:
+                h_cd = profiles.get("home", {}).get("cards", 0)
+                a_cd = profiles.get("away", {}).get("cards", 0)
+                st.caption(f"🟨 **{home} (Casa):** ~{h_cd} cartões | **{away} (Fora):** ~{a_cd} cartões")
+
             c1, c2 = st.columns(2)
             c1.metric("+3.5 Cartões", f"{cd.get('over_3_5', {}).get('prob_over', 0)}%", f"Odd: @{cd.get('over_3_5', {}).get('fair_odd', 0)}")
             c2.metric("+4.5 Cartões", f"{cd.get('over_4_5', {}).get('prob_over', 0)}%", f"Odd: @{cd.get('over_4_5', {}).get('fair_odd', 0)}")
