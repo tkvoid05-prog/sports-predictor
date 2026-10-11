@@ -111,9 +111,15 @@ if not os.path.exists(data_file):
 with open(data_file, "r", encoding="utf-8") as f:
     payload = json.load(f)
 
-shift = payload.get("shift", "").upper()
-updated = payload.get("updated_at", "")[:16].replace("T", " ")
-matches = payload.get("matches", [])
+# Blindagem: suporta tanto dicionário envelopado quanto lista direta de jogos
+if isinstance(payload, dict):
+    shift = payload.get("shift", "").upper()
+    updated = payload.get("updated_at", "")[:16].replace("T", " ")
+    matches = payload.get("matches", [])
+else:
+    shift = "RODADA DIÁRIA"
+    updated = "Hoje"
+    matches = payload if isinstance(payload, list) else []
 
 st.caption(f"Turno: **{shift}** | Atualizado em: {updated}")
 
@@ -195,7 +201,7 @@ for idx, m in enumerate(filtered):
             c = mkts.get("corners", {})
             st.write(f"Média Esperada: **{c.get('expected_total', 0)} cantos**")
             
-            # Médias individuais por mando adicionadas
+            # Médias individuais por mando
             if profiles:
                 h_c = profiles.get("home", {}).get("corners", 0)
                 a_c = profiles.get("away", {}).get("corners", 0)
@@ -215,7 +221,7 @@ for idx, m in enumerate(filtered):
             cd = mkts.get("cards", {})
             st.write(f"Fator Árbitro: **{cd.get('referee_factor', 1.0)}x** | Média Esperada: **{cd.get('expected_total', 0)}**")
             
-            # Médias individuais de cartões por mando adicionadas
+            # Médias individuais de cartões por mando
             if profiles:
                 h_cd = profiles.get("home", {}).get("cards", 0)
                 a_cd = profiles.get("away", {}).get("cards", 0)
