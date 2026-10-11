@@ -4,6 +4,7 @@ import math
 from datetime import datetime, timezone, timedelta
 from engine.fetchers import fetch_espn_fixtures
 
+# Camada de Calibração por Competição (Benchmark empírico)
 LEAGUE_PROFILES = {
     "Premier League": {
         "tag": "⚡ Ritmo Alto | 🚩 +Cantos | 🟨 -Cartões",
@@ -13,8 +14,8 @@ LEAGUE_PROFILES = {
         "desc_cantos": "Ritmo vertical e transição rápida da Premier League.",
         "desc_cards": "Árbitros ingleses mais permissivos em faltas táticas."
     },
-    "Brasileirão": {
-        "tag": "🛑 Jogo Picado 🟨 +Cartões | ⏱️ Ritmo Médio",
+    "Brasileirão Série A": {
+        "tag": "🛑 Jogo Picardado | 🟨 +Cartões | ⏱️ Ritmo Médio",
         "pace_mult": 0.95,
         "corner_mult": 0.97,
         "card_mult": 1.25,
@@ -28,6 +29,22 @@ LEAGUE_PROFILES = {
         "card_mult": 1.20,
         "desc_cantos": "Circulação paciente reduz cantos de transição.",
         "desc_cards": "Critério disciplinar rígido da La Liga."
+    },
+    "Bundesliga": {
+        "tag": "⚡ Transição Direta | ⚽ +Gols",
+        "pace_mult": 1.08,
+        "corner_mult": 1.02,
+        "card_mult": 0.90,
+        "desc_cantos": "Transição veloz da Bundesliga.",
+        "desc_cards": "Critério disciplinar alemão moderado."
+    },
+    "Ligue 1": {
+        "tag": "🛡️ Físico / Equilibrado",
+        "pace_mult": 0.98,
+        "corner_mult": 0.98,
+        "card_mult": 1.05,
+        "desc_cantos": "Padrão equilibrado da Ligue 1.",
+        "desc_cards": "Critério disciplinar padrão francês."
     },
     "DEFAULT": {
         "tag": "⚖️ Padrão Equilibrado",
@@ -83,39 +100,46 @@ def generate_ai_badges(prob_o15, prob_btts, expected_corners, expected_cards, le
     badges = []
 
     # Gols
-    if prob_o15 >= 70.0:
+    if prob_o15 >= 72.0:
         badges.append({
             "tipo": "green",
             "texto": f"Dica IA: Forte tendência +1.5 Gols ({prob_o15}%)"
         })
-    elif prob_o15 >= 60.0:
+    elif prob_o15 <= 58.0:
         badges.append({
             "tipo": "orange",
-            "texto": f"Atenção IA: Tendência Moderada de Gols ({prob_o15}%)"
+            "texto": f"Atenção IA: Jogo Amarrado / Tendência Under ({prob_o15}% para +1.5)"
         })
 
-    # Cantos
-    if expected_corners >= 10.0:
+    # Ambas Marcam
+    if prob_btts >= 55.0:
+        badges.append({
+            "tipo": "green",
+            "texto": f"Dica IA: Alta probabilidade de BTTS / Ambas Marcam ({prob_btts}%)"
+        })
+
+    # Escanteios
+    if expected_corners >= 10.2:
         badges.append({
             "tipo": "green",
             "texto": f"Dica IA: Volume Alto de Cantos (+8.5 / +9.5) — {league_profile['desc_cantos']}"
         })
-    elif expected_corners >= 9.0:
+    elif expected_corners <= 8.8:
         badges.append({
             "tipo": "orange",
-            "texto": "Atenção IA: Volume Médio de Cantos (+8.5 justo)"
+            "texto": "Atenção IA: Volume Baixo a Moderado de Cantos"
         })
 
     # Cartões
-    if expected_cards >= 4.5:
+    if expected_cards >= 4.8:
         badges.append({
             "tipo": "green",
             "texto": f"Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões) — {league_profile['desc_cards']}"
         })
-    elif expected_cards <= 3.2:
+    elif expected_cards <= 3.3:
         badges.append({
             "tipo": "orange",
-            "texto": f"Atenção IA: Jogo Limpo / Poucos Cartões (Abaixo de 3.5) — {league_profile['desc_cards']}"
+            "texto": f"Atenção IA: Jogo Limpo / Poucos Cartões — {league_profile['desc_cards']}"
         })
 
     return badges
@@ -129,56 +153,73 @@ def run_pipeline():
         home = f.get("home_team", "")
         away = f.get("away_team", "")
         referee = f.get("referee", "Não divulgado")
-        ref_factor = f.get("referee_factor", 1.0)
 
         profile = get_league_profile(league)
 
-        # 1. Projeção de Gols
-        exp_home_goals = f.get("home_exp_goals", 1.4)
-        exp_away_goals = f.get("away_exp_goals", 1.1)
+        # Consome os dados reais retornados pelo fetchers.py
+        h_hist = f.get("home_history_5", {})
+        a_hist = f.get("away_history_5", {})
+
+        h_scored = h_hist.get("goals_scored", [])
+        h_conceded = h_hist.get("goals_conceded", [])
+        a_scored = a_hist.get("goals_scored", [])
+        a_conceded = a_hist.get("goals_conceded", [])
+
+        # Médias reais calculadas em cima dos últimos 5 jogos
+        avg_h_att = sum(h_scored) / len(h_scored) if h_scored else 1.2
+        avg_h_def = sum(h_conceded) / len(h_conceded) if h_conceded else 1.1
+        avg_a_att = sum(a_scored) / len(a_scored) if a_scored else 1.1
+        avg_a_def = sum(a_conceded) / len(a_conceded) if a_conceded else 1.3
+
+        # 1. Projeção de Gols: Ataque vs Defesa + Fator Mando (1.10 casa / 0.90 fora)
+        exp_home_goals = round(((avg_h_att * 0.6) + (avg_a_def * 0.4)) * 1.10, 2)
+        exp_away_goals = round(((avg_a_att * 0.6) + (avg_h_def * 0.4)) * 0.90, 2)
         exp_total_goals = round(exp_home_goals + exp_away_goals, 1)
 
         p_o15, odd_o15, p_o25, odd_o25, p_btts, odd_btts = calc_poisson_goals(exp_home_goals, exp_away_goals)
         p_combo = round(min(95.0, max(p_btts, p_o25) + 12.0), 1)
         odd_combo = round(100.0 / p_combo, 2) if p_combo > 0 else 0
 
-        # 2. Escanteios (com benchmark)
-        raw_home_corners = f.get("home_avg_corners", 5.6)
-        raw_away_corners = f.get("away_avg_corners", 4.4)
-        h_corners = round(raw_home_corners * profile["corner_mult"], 1)
-        a_corners = round(raw_away_corners * profile["corner_mult"], 1)
+        # 2. Projeção de Escanteios: Volume derivado da força ofensiva real dos times + Mando + Liga
+        raw_h_corners = 4.2 + (avg_h_att * 1.1)
+        raw_a_corners = 3.6 + (avg_a_att * 0.9)
+        h_corners = round(raw_h_corners * profile["corner_mult"], 1)
+        a_corners = round(raw_a_corners * profile["corner_mult"], 1)
         exp_corners = round(h_corners + a_corners, 1)
 
-        p_c85 = round(min(92.0, max(45.0, (exp_corners / 9.5) * 65.0)), 1)
+        p_c85 = round(min(92.0, max(40.0, (exp_corners / 9.5) * 65.0)), 1)
         odd_c85 = round(100.0 / p_c85, 2) if p_c85 > 0 else 0
-        p_c105 = round(max(20.0, p_c85 - 24.0), 1)
+        p_c105 = round(max(18.0, p_c85 - 24.0), 1)
         odd_c105 = round(100.0 / p_c105, 2) if p_c105 > 0 else 0
 
-        # 3. Finalizações (com benchmark)
-        raw_home_shots = f.get("home_avg_shots", 14.5)
-        raw_away_shots = f.get("away_avg_shots", 11.2)
-        h_shots = round(raw_home_shots * profile["pace_mult"], 1)
-        a_shots = round(raw_away_shots * profile["pace_mult"], 1)
+        # 3. Projeção de Finalizações: Derivado do volume de gols esperados e ritmo da liga
+        h_shots = round((exp_home_goals * 6.5 + 4.5) * profile["pace_mult"], 1)
+        a_shots = round((exp_away_goals * 6.0 + 4.0) * profile["pace_mult"], 1)
         exp_shots = round(h_shots + a_shots, 1)
 
-        h_sot = round(f.get("home_avg_sot", h_shots * 0.35), 1)
-        a_sot = round(f.get("away_avg_sot", a_shots * 0.35), 1)
-        p_sot = round(min(88.0, max(40.0, (exp_shots / 24.0) * 62.0)), 1)
+        h_sot = round(h_shots * 0.35, 1)
+        a_sot = round(a_shots * 0.33, 1)
+        p_sot = round(min(88.0, max(38.0, (exp_shots / 24.0) * 62.0)), 1)
         odd_sot = round(100.0 / p_sot, 2) if p_sot > 0 else 0
 
-        # 4. Cartões (com benchmark e árbitro)
-        raw_home_cards = f.get("home_avg_cards", 2.2)
-        raw_away_cards = f.get("away_avg_cards", 2.5)
-        h_cards = round(raw_home_cards * profile["card_mult"] * ref_factor, 1)
-        a_cards = round(raw_away_cards * profile["card_mult"] * ref_factor, 1)
+        # 4. Projeção de Cartões: Derivado do perfil disciplinar da liga
+        base_h_cards = 2.0
+        base_a_cards = 2.2
+        h_cards = round(base_h_cards * profile["card_mult"], 1)
+        a_cards = round(base_a_cards * profile["card_mult"], 1)
         exp_cards = round(h_cards + a_cards, 1)
 
-        p_cd35 = round(min(92.0, max(45.0, (exp_cards / 4.5) * 68.0)), 1)
+        p_cd35 = round(min(92.0, max(40.0, (exp_cards / 4.5) * 68.0)), 1)
         odd_cd35 = round(100.0 / p_cd35, 2) if p_cd35 > 0 else 0
-        p_cd45 = round(max(22.0, p_cd35 - 23.0), 1)
+        p_cd45 = round(max(20.0, p_cd35 - 23.0), 1)
         odd_cd45 = round(100.0 / p_cd45, 2) if p_cd45 > 0 else 0
 
         badges = generate_ai_badges(p_o15, p_btts, exp_corners, exp_cards, profile)
+
+        # Confiança baseada na integridade da amostra real coletada
+        h_sample = h_hist.get("sample_size", 0)
+        a_sample = a_hist.get("sample_size", 0)
+        confidence = "Alta" if (h_sample == 5 and a_sample == 5) else "Média"
 
         match_obj = {
             "league": league,
@@ -186,7 +227,7 @@ def run_pipeline():
             "home_team": home,
             "away_team": away,
             "referee": referee,
-            "data_confidence": "Média",
+            "data_confidence": confidence,
             "ai_badges": badges,
             "team_profiles": {
                 "home": {"shots": h_shots, "sot": h_sot, "corners": h_corners, "cards": h_cards},
@@ -220,14 +261,14 @@ def run_pipeline():
                 "corners": {
                     "expected_total": exp_corners,
                     "over_8_5": {"prob_over": p_c85, "fair_odd_over": odd_c85},
-                    "over_10_5": {"prob_over": p_c105, "fair_odd": odd_c105}
+                    "over_10_5": {"prob_over": p_c105, "fair_odd_over": odd_c105}
                 },
                 "shots": {
                     "expected_shots": exp_shots,
                     "over_8_5_sot": {"prob_over": p_sot, "fair_odd": odd_sot}
                 },
                 "cards": {
-                    "referee_factor": ref_factor,
+                    "referee_factor": 1.0,
                     "expected_total": exp_cards,
                     "over_3_5": {"prob_over": p_cd35, "fair_odd": odd_cd35},
                     "over_4_5": {"prob_over": p_cd45, "fair_odd": odd_cd45}
