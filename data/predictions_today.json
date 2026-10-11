@@ -1,838 +1,1762 @@
-[
-  {
-    "league": "Premier League",
-    "home_team": "Crystal Palace",
-    "away_team": "Nottingham Forest",
-    "confidence": "Alta",
-    "referee": "Não divulgado",
-    "probabilities": {
-      "exp_total_goals": 2.5,
-      "prob_over_15": 71.3,
-      "odd_over_15": 1.4,
-      "prob_over_25": 45.6,
-      "odd_over_25": 2.19,
-      "prob_btts": 49.8,
-      "odd_btts": 2.01
-    },
-    "stats_individual": {
-      "corners_home": 6.3,
-      "corners_away": 4.3,
-      "corners_total": 10.6,
-      "cards_home": 2.2,
-      "cards_away": 3.1,
-      "cards_total": 5.3
-    },
-    "ai_badges": [
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Forte tendência +1.5 Gols (71.3%)"
+{
+  "shift": "RODADA DA TARDE/NOITE",
+  "updated_at": "2026-10-11T13:32:32.199721-03:00",
+  "matches": [
+    {
+      "league": "Premier League",
+      "league_dna": "⚡ Ritmo Alto | 🚩 +Cantos | 🟨 -Cartões",
+      "home_team": "Crystal Palace",
+      "away_team": "Nottingham Forest",
+      "referee": "Não divulgado",
+      "data_confidence": "Média",
+      "ai_badges": [
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Forte tendência +1.5 Gols (71.3%)"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Volume Alto de Cantos (+8.5 / +9.5) — Ritmo vertical e transição rápida da Premier League."
+        }
+      ],
+      "team_profiles": {
+        "home": {
+          "shots": 16.0,
+          "sot": 5.6,
+          "corners": 6.0,
+          "cards": 1.9
+        },
+        "away": {
+          "shots": 12.3,
+          "sot": 4.3,
+          "corners": 4.8,
+          "cards": 2.1
+        }
       },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Volume Alto de Cantos (+8.5 / +9.5)"
+      "stats_individual": {
+        "corners_home": 6.0,
+        "corners_away": 4.8,
+        "corners_total": 10.8,
+        "cards_home": 1.9,
+        "cards_away": 2.1,
+        "cards_total": 4.0
       },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões)"
+      "probabilities": {
+        "exp_total_goals": 2.5,
+        "prob_over_15": 71.3,
+        "odd_over_15": 1.4,
+        "prob_over_25": 45.6,
+        "odd_over_25": 2.19,
+        "prob_btts": 50.3,
+        "odd_btts": 1.99
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 2.5,
+          "over_1_5": {
+            "prob_over": 71.3,
+            "fair_odd": 1.4
+          },
+          "over_2_5": {
+            "prob_over": 45.6,
+            "fair_odd": 2.19
+          },
+          "btts": {
+            "prob_yes": 50.3,
+            "fair_odd": 1.99
+          },
+          "btts_or_over25": {
+            "prob_hit": 62.3,
+            "fair_odd": 1.61
+          }
+        },
+        "corners": {
+          "expected_total": 10.8,
+          "over_8_5": {
+            "prob_over": 73.9,
+            "fair_odd_over": 1.35
+          },
+          "over_10_5": {
+            "prob_over": 49.9,
+            "fair_odd": 2.0
+          }
+        },
+        "shots": {
+          "expected_shots": 28.3,
+          "over_8_5_sot": {
+            "prob_over": 73.1,
+            "fair_odd": 1.37
+          }
+        },
+        "cards": {
+          "referee_factor": 1.0,
+          "expected_total": 4.0,
+          "over_3_5": {
+            "prob_over": 60.4,
+            "fair_odd": 1.66
+          },
+          "over_4_5": {
+            "prob_over": 37.4,
+            "fair_odd": 2.67
+          }
+        }
       }
-    ]
-  },
-  {
-    "league": "Premier League",
-    "home_team": "Hull City",
-    "away_team": "Everton",
-    "confidence": "Alta",
-    "referee": "Não divulgado",
-    "probabilities": {
-      "exp_total_goals": 2.5,
-      "prob_over_15": 71.3,
-      "odd_over_15": 1.4,
-      "prob_over_25": 45.6,
-      "odd_over_25": 2.19,
-      "prob_btts": 49.8,
-      "odd_btts": 2.01
     },
-    "stats_individual": {
-      "corners_home": 6.3,
-      "corners_away": 4.3,
-      "corners_total": 10.6,
-      "cards_home": 2.2,
-      "cards_away": 3.1,
-      "cards_total": 5.3
-    },
-    "ai_badges": [
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Forte tendência +1.5 Gols (71.3%)"
+    {
+      "league": "Premier League",
+      "league_dna": "⚡ Ritmo Alto | 🚩 +Cantos | 🟨 -Cartões",
+      "home_team": "Hull City",
+      "away_team": "Everton",
+      "referee": "Não divulgado",
+      "data_confidence": "Média",
+      "ai_badges": [
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Forte tendência +1.5 Gols (71.3%)"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Volume Alto de Cantos (+8.5 / +9.5) — Ritmo vertical e transição rápida da Premier League."
+        }
+      ],
+      "team_profiles": {
+        "home": {
+          "shots": 16.0,
+          "sot": 5.6,
+          "corners": 6.0,
+          "cards": 1.9
+        },
+        "away": {
+          "shots": 12.3,
+          "sot": 4.3,
+          "corners": 4.8,
+          "cards": 2.1
+        }
       },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Volume Alto de Cantos (+8.5 / +9.5)"
+      "stats_individual": {
+        "corners_home": 6.0,
+        "corners_away": 4.8,
+        "corners_total": 10.8,
+        "cards_home": 1.9,
+        "cards_away": 2.1,
+        "cards_total": 4.0
       },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões)"
+      "probabilities": {
+        "exp_total_goals": 2.5,
+        "prob_over_15": 71.3,
+        "odd_over_15": 1.4,
+        "prob_over_25": 45.6,
+        "odd_over_25": 2.19,
+        "prob_btts": 50.3,
+        "odd_btts": 1.99
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 2.5,
+          "over_1_5": {
+            "prob_over": 71.3,
+            "fair_odd": 1.4
+          },
+          "over_2_5": {
+            "prob_over": 45.6,
+            "fair_odd": 2.19
+          },
+          "btts": {
+            "prob_yes": 50.3,
+            "fair_odd": 1.99
+          },
+          "btts_or_over25": {
+            "prob_hit": 62.3,
+            "fair_odd": 1.61
+          }
+        },
+        "corners": {
+          "expected_total": 10.8,
+          "over_8_5": {
+            "prob_over": 73.9,
+            "fair_odd_over": 1.35
+          },
+          "over_10_5": {
+            "prob_over": 49.9,
+            "fair_odd": 2.0
+          }
+        },
+        "shots": {
+          "expected_shots": 28.3,
+          "over_8_5_sot": {
+            "prob_over": 73.1,
+            "fair_odd": 1.37
+          }
+        },
+        "cards": {
+          "referee_factor": 1.0,
+          "expected_total": 4.0,
+          "over_3_5": {
+            "prob_over": 60.4,
+            "fair_odd": 1.66
+          },
+          "over_4_5": {
+            "prob_over": 37.4,
+            "fair_odd": 2.67
+          }
+        }
       }
-    ]
-  },
-  {
-    "league": "Premier League",
-    "home_team": "Liverpool",
-    "away_team": "Manchester City",
-    "confidence": "Alta",
-    "referee": "Não divulgado",
-    "probabilities": {
-      "exp_total_goals": 2.5,
-      "prob_over_15": 71.3,
-      "odd_over_15": 1.4,
-      "prob_over_25": 45.6,
-      "odd_over_25": 2.19,
-      "prob_btts": 49.8,
-      "odd_btts": 2.01
     },
-    "stats_individual": {
-      "corners_home": 6.3,
-      "corners_away": 4.3,
-      "corners_total": 10.6,
-      "cards_home": 2.2,
-      "cards_away": 3.1,
-      "cards_total": 5.3
-    },
-    "ai_badges": [
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Forte tendência +1.5 Gols (71.3%)"
+    {
+      "league": "Premier League",
+      "league_dna": "⚡ Ritmo Alto | 🚩 +Cantos | 🟨 -Cartões",
+      "home_team": "Liverpool",
+      "away_team": "Manchester City",
+      "referee": "Não divulgado",
+      "data_confidence": "Média",
+      "ai_badges": [
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Forte tendência +1.5 Gols (71.3%)"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Volume Alto de Cantos (+8.5 / +9.5) — Ritmo vertical e transição rápida da Premier League."
+        }
+      ],
+      "team_profiles": {
+        "home": {
+          "shots": 16.0,
+          "sot": 5.6,
+          "corners": 6.0,
+          "cards": 1.9
+        },
+        "away": {
+          "shots": 12.3,
+          "sot": 4.3,
+          "corners": 4.8,
+          "cards": 2.1
+        }
       },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Volume Alto de Cantos (+8.5 / +9.5)"
+      "stats_individual": {
+        "corners_home": 6.0,
+        "corners_away": 4.8,
+        "corners_total": 10.8,
+        "cards_home": 1.9,
+        "cards_away": 2.1,
+        "cards_total": 4.0
       },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões)"
+      "probabilities": {
+        "exp_total_goals": 2.5,
+        "prob_over_15": 71.3,
+        "odd_over_15": 1.4,
+        "prob_over_25": 45.6,
+        "odd_over_25": 2.19,
+        "prob_btts": 50.3,
+        "odd_btts": 1.99
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 2.5,
+          "over_1_5": {
+            "prob_over": 71.3,
+            "fair_odd": 1.4
+          },
+          "over_2_5": {
+            "prob_over": 45.6,
+            "fair_odd": 2.19
+          },
+          "btts": {
+            "prob_yes": 50.3,
+            "fair_odd": 1.99
+          },
+          "btts_or_over25": {
+            "prob_hit": 62.3,
+            "fair_odd": 1.61
+          }
+        },
+        "corners": {
+          "expected_total": 10.8,
+          "over_8_5": {
+            "prob_over": 73.9,
+            "fair_odd_over": 1.35
+          },
+          "over_10_5": {
+            "prob_over": 49.9,
+            "fair_odd": 2.0
+          }
+        },
+        "shots": {
+          "expected_shots": 28.3,
+          "over_8_5_sot": {
+            "prob_over": 73.1,
+            "fair_odd": 1.37
+          }
+        },
+        "cards": {
+          "referee_factor": 1.0,
+          "expected_total": 4.0,
+          "over_3_5": {
+            "prob_over": 60.4,
+            "fair_odd": 1.66
+          },
+          "over_4_5": {
+            "prob_over": 37.4,
+            "fair_odd": 2.67
+          }
+        }
       }
-    ]
-  },
-  {
-    "league": "La Liga",
-    "home_team": "Elche",
-    "away_team": "Celta Vigo",
-    "confidence": "Alta",
-    "referee": "Não divulgado",
-    "probabilities": {
-      "exp_total_goals": 2.5,
-      "prob_over_15": 71.3,
-      "odd_over_15": 1.4,
-      "prob_over_25": 45.6,
-      "odd_over_25": 2.19,
-      "prob_btts": 49.8,
-      "odd_btts": 2.01
     },
-    "stats_individual": {
-      "corners_home": 6.3,
-      "corners_away": 4.3,
-      "corners_total": 10.6,
-      "cards_home": 2.2,
-      "cards_away": 3.1,
-      "cards_total": 5.3
-    },
-    "ai_badges": [
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Forte tendência +1.5 Gols (71.3%)"
+    {
+      "league": "La Liga",
+      "league_dna": "🎯 Posse Cadenciada | 🟨 +Cartões",
+      "home_team": "Elche",
+      "away_team": "Celta Vigo",
+      "referee": "Não divulgado",
+      "data_confidence": "Média",
+      "ai_badges": [
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Forte tendência +1.5 Gols (71.3%)"
+        },
+        {
+          "tipo": "orange",
+          "texto": "Atenção IA: Volume Médio de Cantos (+8.5 justo)"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões) — Critério disciplinar rígido da La Liga."
+        }
+      ],
+      "team_profiles": {
+        "home": {
+          "shots": 14.2,
+          "sot": 5.0,
+          "corners": 5.4,
+          "cards": 2.6
+        },
+        "away": {
+          "shots": 11.0,
+          "sot": 3.8,
+          "corners": 4.2,
+          "cards": 3.0
+        }
       },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Volume Alto de Cantos (+8.5 / +9.5)"
+      "stats_individual": {
+        "corners_home": 5.4,
+        "corners_away": 4.2,
+        "corners_total": 9.6,
+        "cards_home": 2.6,
+        "cards_away": 3.0,
+        "cards_total": 5.6
       },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões)"
+      "probabilities": {
+        "exp_total_goals": 2.5,
+        "prob_over_15": 71.3,
+        "odd_over_15": 1.4,
+        "prob_over_25": 45.6,
+        "odd_over_25": 2.19,
+        "prob_btts": 50.3,
+        "odd_btts": 1.99
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 2.5,
+          "over_1_5": {
+            "prob_over": 71.3,
+            "fair_odd": 1.4
+          },
+          "over_2_5": {
+            "prob_over": 45.6,
+            "fair_odd": 2.19
+          },
+          "btts": {
+            "prob_yes": 50.3,
+            "fair_odd": 1.99
+          },
+          "btts_or_over25": {
+            "prob_hit": 62.3,
+            "fair_odd": 1.61
+          }
+        },
+        "corners": {
+          "expected_total": 9.6,
+          "over_8_5": {
+            "prob_over": 65.7,
+            "fair_odd_over": 1.52
+          },
+          "over_10_5": {
+            "prob_over": 41.7,
+            "fair_odd": 2.4
+          }
+        },
+        "shots": {
+          "expected_shots": 25.2,
+          "over_8_5_sot": {
+            "prob_over": 65.1,
+            "fair_odd": 1.54
+          }
+        },
+        "cards": {
+          "referee_factor": 1.0,
+          "expected_total": 5.6,
+          "over_3_5": {
+            "prob_over": 84.6,
+            "fair_odd": 1.18
+          },
+          "over_4_5": {
+            "prob_over": 61.6,
+            "fair_odd": 1.62
+          }
+        }
       }
-    ]
-  },
-  {
-    "league": "La Liga",
-    "home_team": "Real Sociedad",
-    "away_team": "Deportivo",
-    "confidence": "Alta",
-    "referee": "Não divulgado",
-    "probabilities": {
-      "exp_total_goals": 2.5,
-      "prob_over_15": 71.3,
-      "odd_over_15": 1.4,
-      "prob_over_25": 45.6,
-      "odd_over_25": 2.19,
-      "prob_btts": 49.8,
-      "odd_btts": 2.01
     },
-    "stats_individual": {
-      "corners_home": 6.3,
-      "corners_away": 4.3,
-      "corners_total": 10.6,
-      "cards_home": 2.2,
-      "cards_away": 3.1,
-      "cards_total": 5.3
-    },
-    "ai_badges": [
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Forte tendência +1.5 Gols (71.3%)"
+    {
+      "league": "La Liga",
+      "league_dna": "🎯 Posse Cadenciada | 🟨 +Cartões",
+      "home_team": "Real Sociedad",
+      "away_team": "Deportivo",
+      "referee": "Não divulgado",
+      "data_confidence": "Média",
+      "ai_badges": [
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Forte tendência +1.5 Gols (71.3%)"
+        },
+        {
+          "tipo": "orange",
+          "texto": "Atenção IA: Volume Médio de Cantos (+8.5 justo)"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões) — Critério disciplinar rígido da La Liga."
+        }
+      ],
+      "team_profiles": {
+        "home": {
+          "shots": 14.2,
+          "sot": 5.0,
+          "corners": 5.4,
+          "cards": 2.6
+        },
+        "away": {
+          "shots": 11.0,
+          "sot": 3.8,
+          "corners": 4.2,
+          "cards": 3.0
+        }
       },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Volume Alto de Cantos (+8.5 / +9.5)"
+      "stats_individual": {
+        "corners_home": 5.4,
+        "corners_away": 4.2,
+        "corners_total": 9.6,
+        "cards_home": 2.6,
+        "cards_away": 3.0,
+        "cards_total": 5.6
       },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões)"
+      "probabilities": {
+        "exp_total_goals": 2.5,
+        "prob_over_15": 71.3,
+        "odd_over_15": 1.4,
+        "prob_over_25": 45.6,
+        "odd_over_25": 2.19,
+        "prob_btts": 50.3,
+        "odd_btts": 1.99
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 2.5,
+          "over_1_5": {
+            "prob_over": 71.3,
+            "fair_odd": 1.4
+          },
+          "over_2_5": {
+            "prob_over": 45.6,
+            "fair_odd": 2.19
+          },
+          "btts": {
+            "prob_yes": 50.3,
+            "fair_odd": 1.99
+          },
+          "btts_or_over25": {
+            "prob_hit": 62.3,
+            "fair_odd": 1.61
+          }
+        },
+        "corners": {
+          "expected_total": 9.6,
+          "over_8_5": {
+            "prob_over": 65.7,
+            "fair_odd_over": 1.52
+          },
+          "over_10_5": {
+            "prob_over": 41.7,
+            "fair_odd": 2.4
+          }
+        },
+        "shots": {
+          "expected_shots": 25.2,
+          "over_8_5_sot": {
+            "prob_over": 65.1,
+            "fair_odd": 1.54
+          }
+        },
+        "cards": {
+          "referee_factor": 1.0,
+          "expected_total": 5.6,
+          "over_3_5": {
+            "prob_over": 84.6,
+            "fair_odd": 1.18
+          },
+          "over_4_5": {
+            "prob_over": 61.6,
+            "fair_odd": 1.62
+          }
+        }
       }
-    ]
-  },
-  {
-    "league": "La Liga",
-    "home_team": "Real Betis",
-    "away_team": "Osasuna",
-    "confidence": "Alta",
-    "referee": "Não divulgado",
-    "probabilities": {
-      "exp_total_goals": 2.5,
-      "prob_over_15": 71.3,
-      "odd_over_15": 1.4,
-      "prob_over_25": 45.6,
-      "odd_over_25": 2.19,
-      "prob_btts": 49.8,
-      "odd_btts": 2.01
     },
-    "stats_individual": {
-      "corners_home": 6.3,
-      "corners_away": 4.3,
-      "corners_total": 10.6,
-      "cards_home": 2.2,
-      "cards_away": 3.1,
-      "cards_total": 5.3
-    },
-    "ai_badges": [
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Forte tendência +1.5 Gols (71.3%)"
+    {
+      "league": "La Liga",
+      "league_dna": "🎯 Posse Cadenciada | 🟨 +Cartões",
+      "home_team": "Real Betis",
+      "away_team": "Osasuna",
+      "referee": "Não divulgado",
+      "data_confidence": "Média",
+      "ai_badges": [
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Forte tendência +1.5 Gols (71.3%)"
+        },
+        {
+          "tipo": "orange",
+          "texto": "Atenção IA: Volume Médio de Cantos (+8.5 justo)"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões) — Critério disciplinar rígido da La Liga."
+        }
+      ],
+      "team_profiles": {
+        "home": {
+          "shots": 14.2,
+          "sot": 5.0,
+          "corners": 5.4,
+          "cards": 2.6
+        },
+        "away": {
+          "shots": 11.0,
+          "sot": 3.8,
+          "corners": 4.2,
+          "cards": 3.0
+        }
       },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Volume Alto de Cantos (+8.5 / +9.5)"
+      "stats_individual": {
+        "corners_home": 5.4,
+        "corners_away": 4.2,
+        "corners_total": 9.6,
+        "cards_home": 2.6,
+        "cards_away": 3.0,
+        "cards_total": 5.6
       },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões)"
+      "probabilities": {
+        "exp_total_goals": 2.5,
+        "prob_over_15": 71.3,
+        "odd_over_15": 1.4,
+        "prob_over_25": 45.6,
+        "odd_over_25": 2.19,
+        "prob_btts": 50.3,
+        "odd_btts": 1.99
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 2.5,
+          "over_1_5": {
+            "prob_over": 71.3,
+            "fair_odd": 1.4
+          },
+          "over_2_5": {
+            "prob_over": 45.6,
+            "fair_odd": 2.19
+          },
+          "btts": {
+            "prob_yes": 50.3,
+            "fair_odd": 1.99
+          },
+          "btts_or_over25": {
+            "prob_hit": 62.3,
+            "fair_odd": 1.61
+          }
+        },
+        "corners": {
+          "expected_total": 9.6,
+          "over_8_5": {
+            "prob_over": 65.7,
+            "fair_odd_over": 1.52
+          },
+          "over_10_5": {
+            "prob_over": 41.7,
+            "fair_odd": 2.4
+          }
+        },
+        "shots": {
+          "expected_shots": 25.2,
+          "over_8_5_sot": {
+            "prob_over": 65.1,
+            "fair_odd": 1.54
+          }
+        },
+        "cards": {
+          "referee_factor": 1.0,
+          "expected_total": 5.6,
+          "over_3_5": {
+            "prob_over": 84.6,
+            "fair_odd": 1.18
+          },
+          "over_4_5": {
+            "prob_over": 61.6,
+            "fair_odd": 1.62
+          }
+        }
       }
-    ]
-  },
-  {
-    "league": "La Liga",
-    "home_team": "Racing Santander",
-    "away_team": "Valencia",
-    "confidence": "Alta",
-    "referee": "Não divulgado",
-    "probabilities": {
-      "exp_total_goals": 2.5,
-      "prob_over_15": 71.3,
-      "odd_over_15": 1.4,
-      "prob_over_25": 45.6,
-      "odd_over_25": 2.19,
-      "prob_btts": 49.8,
-      "odd_btts": 2.01
     },
-    "stats_individual": {
-      "corners_home": 6.3,
-      "corners_away": 4.3,
-      "corners_total": 10.6,
-      "cards_home": 2.2,
-      "cards_away": 3.1,
-      "cards_total": 5.3
-    },
-    "ai_badges": [
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Forte tendência +1.5 Gols (71.3%)"
+    {
+      "league": "La Liga",
+      "league_dna": "🎯 Posse Cadenciada | 🟨 +Cartões",
+      "home_team": "Racing Santander",
+      "away_team": "Valencia",
+      "referee": "Não divulgado",
+      "data_confidence": "Média",
+      "ai_badges": [
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Forte tendência +1.5 Gols (71.3%)"
+        },
+        {
+          "tipo": "orange",
+          "texto": "Atenção IA: Volume Médio de Cantos (+8.5 justo)"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões) — Critério disciplinar rígido da La Liga."
+        }
+      ],
+      "team_profiles": {
+        "home": {
+          "shots": 14.2,
+          "sot": 5.0,
+          "corners": 5.4,
+          "cards": 2.6
+        },
+        "away": {
+          "shots": 11.0,
+          "sot": 3.8,
+          "corners": 4.2,
+          "cards": 3.0
+        }
       },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Volume Alto de Cantos (+8.5 / +9.5)"
+      "stats_individual": {
+        "corners_home": 5.4,
+        "corners_away": 4.2,
+        "corners_total": 9.6,
+        "cards_home": 2.6,
+        "cards_away": 3.0,
+        "cards_total": 5.6
       },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões)"
+      "probabilities": {
+        "exp_total_goals": 2.5,
+        "prob_over_15": 71.3,
+        "odd_over_15": 1.4,
+        "prob_over_25": 45.6,
+        "odd_over_25": 2.19,
+        "prob_btts": 50.3,
+        "odd_btts": 1.99
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 2.5,
+          "over_1_5": {
+            "prob_over": 71.3,
+            "fair_odd": 1.4
+          },
+          "over_2_5": {
+            "prob_over": 45.6,
+            "fair_odd": 2.19
+          },
+          "btts": {
+            "prob_yes": 50.3,
+            "fair_odd": 1.99
+          },
+          "btts_or_over25": {
+            "prob_hit": 62.3,
+            "fair_odd": 1.61
+          }
+        },
+        "corners": {
+          "expected_total": 9.6,
+          "over_8_5": {
+            "prob_over": 65.7,
+            "fair_odd_over": 1.52
+          },
+          "over_10_5": {
+            "prob_over": 41.7,
+            "fair_odd": 2.4
+          }
+        },
+        "shots": {
+          "expected_shots": 25.2,
+          "over_8_5_sot": {
+            "prob_over": 65.1,
+            "fair_odd": 1.54
+          }
+        },
+        "cards": {
+          "referee_factor": 1.0,
+          "expected_total": 5.6,
+          "over_3_5": {
+            "prob_over": 84.6,
+            "fair_odd": 1.18
+          },
+          "over_4_5": {
+            "prob_over": 61.6,
+            "fair_odd": 1.62
+          }
+        }
       }
-    ]
-  },
-  {
-    "league": "Bundesliga",
-    "home_team": "FC Cologne",
-    "away_team": "Borussia Mönchengladbach",
-    "confidence": "Alta",
-    "referee": "Não divulgado",
-    "probabilities": {
-      "exp_total_goals": 2.5,
-      "prob_over_15": 71.3,
-      "odd_over_15": 1.4,
-      "prob_over_25": 45.6,
-      "odd_over_25": 2.19,
-      "prob_btts": 49.8,
-      "odd_btts": 2.01
     },
-    "stats_individual": {
-      "corners_home": 6.3,
-      "corners_away": 4.3,
-      "corners_total": 10.6,
-      "cards_home": 2.2,
-      "cards_away": 3.1,
-      "cards_total": 5.3
-    },
-    "ai_badges": [
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Forte tendência +1.5 Gols (71.3%)"
+    {
+      "league": "Bundesliga",
+      "league_dna": "⚖️ Padrão Equilibrado",
+      "home_team": "FC Cologne",
+      "away_team": "Borussia Mönchengladbach",
+      "referee": "Não divulgado",
+      "data_confidence": "Média",
+      "ai_badges": [
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Forte tendência +1.5 Gols (71.3%)"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Volume Alto de Cantos (+8.5 / +9.5) — Projeção volumétrica equilibrada."
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões) — Critério disciplinar padrão."
+        }
+      ],
+      "team_profiles": {
+        "home": {
+          "shots": 14.5,
+          "sot": 5.1,
+          "corners": 5.6,
+          "cards": 2.2
+        },
+        "away": {
+          "shots": 11.2,
+          "sot": 3.9,
+          "corners": 4.4,
+          "cards": 2.5
+        }
       },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Volume Alto de Cantos (+8.5 / +9.5)"
+      "stats_individual": {
+        "corners_home": 5.6,
+        "corners_away": 4.4,
+        "corners_total": 10.0,
+        "cards_home": 2.2,
+        "cards_away": 2.5,
+        "cards_total": 4.7
       },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões)"
+      "probabilities": {
+        "exp_total_goals": 2.5,
+        "prob_over_15": 71.3,
+        "odd_over_15": 1.4,
+        "prob_over_25": 45.6,
+        "odd_over_25": 2.19,
+        "prob_btts": 50.3,
+        "odd_btts": 1.99
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 2.5,
+          "over_1_5": {
+            "prob_over": 71.3,
+            "fair_odd": 1.4
+          },
+          "over_2_5": {
+            "prob_over": 45.6,
+            "fair_odd": 2.19
+          },
+          "btts": {
+            "prob_yes": 50.3,
+            "fair_odd": 1.99
+          },
+          "btts_or_over25": {
+            "prob_hit": 62.3,
+            "fair_odd": 1.61
+          }
+        },
+        "corners": {
+          "expected_total": 10.0,
+          "over_8_5": {
+            "prob_over": 68.4,
+            "fair_odd_over": 1.46
+          },
+          "over_10_5": {
+            "prob_over": 44.4,
+            "fair_odd": 2.25
+          }
+        },
+        "shots": {
+          "expected_shots": 25.7,
+          "over_8_5_sot": {
+            "prob_over": 66.4,
+            "fair_odd": 1.51
+          }
+        },
+        "cards": {
+          "referee_factor": 1.0,
+          "expected_total": 4.7,
+          "over_3_5": {
+            "prob_over": 71.0,
+            "fair_odd": 1.41
+          },
+          "over_4_5": {
+            "prob_over": 48.0,
+            "fair_odd": 2.08
+          }
+        }
       }
-    ]
-  },
-  {
-    "league": "Bundesliga",
-    "home_team": "SC Freiburg",
-    "away_team": "Schalke 04",
-    "confidence": "Alta",
-    "referee": "Não divulgado",
-    "probabilities": {
-      "exp_total_goals": 2.5,
-      "prob_over_15": 71.3,
-      "odd_over_15": 1.4,
-      "prob_over_25": 45.6,
-      "odd_over_25": 2.19,
-      "prob_btts": 49.8,
-      "odd_btts": 2.01
     },
-    "stats_individual": {
-      "corners_home": 6.3,
-      "corners_away": 4.3,
-      "corners_total": 10.6,
-      "cards_home": 2.2,
-      "cards_away": 3.1,
-      "cards_total": 5.3
-    },
-    "ai_badges": [
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Forte tendência +1.5 Gols (71.3%)"
+    {
+      "league": "Bundesliga",
+      "league_dna": "⚖️ Padrão Equilibrado",
+      "home_team": "SC Freiburg",
+      "away_team": "Schalke 04",
+      "referee": "Não divulgado",
+      "data_confidence": "Média",
+      "ai_badges": [
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Forte tendência +1.5 Gols (71.3%)"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Volume Alto de Cantos (+8.5 / +9.5) — Projeção volumétrica equilibrada."
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões) — Critério disciplinar padrão."
+        }
+      ],
+      "team_profiles": {
+        "home": {
+          "shots": 14.5,
+          "sot": 5.1,
+          "corners": 5.6,
+          "cards": 2.2
+        },
+        "away": {
+          "shots": 11.2,
+          "sot": 3.9,
+          "corners": 4.4,
+          "cards": 2.5
+        }
       },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Volume Alto de Cantos (+8.5 / +9.5)"
+      "stats_individual": {
+        "corners_home": 5.6,
+        "corners_away": 4.4,
+        "corners_total": 10.0,
+        "cards_home": 2.2,
+        "cards_away": 2.5,
+        "cards_total": 4.7
       },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões)"
+      "probabilities": {
+        "exp_total_goals": 2.5,
+        "prob_over_15": 71.3,
+        "odd_over_15": 1.4,
+        "prob_over_25": 45.6,
+        "odd_over_25": 2.19,
+        "prob_btts": 50.3,
+        "odd_btts": 1.99
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 2.5,
+          "over_1_5": {
+            "prob_over": 71.3,
+            "fair_odd": 1.4
+          },
+          "over_2_5": {
+            "prob_over": 45.6,
+            "fair_odd": 2.19
+          },
+          "btts": {
+            "prob_yes": 50.3,
+            "fair_odd": 1.99
+          },
+          "btts_or_over25": {
+            "prob_hit": 62.3,
+            "fair_odd": 1.61
+          }
+        },
+        "corners": {
+          "expected_total": 10.0,
+          "over_8_5": {
+            "prob_over": 68.4,
+            "fair_odd_over": 1.46
+          },
+          "over_10_5": {
+            "prob_over": 44.4,
+            "fair_odd": 2.25
+          }
+        },
+        "shots": {
+          "expected_shots": 25.7,
+          "over_8_5_sot": {
+            "prob_over": 66.4,
+            "fair_odd": 1.51
+          }
+        },
+        "cards": {
+          "referee_factor": 1.0,
+          "expected_total": 4.7,
+          "over_3_5": {
+            "prob_over": 71.0,
+            "fair_odd": 1.41
+          },
+          "over_4_5": {
+            "prob_over": 48.0,
+            "fair_odd": 2.08
+          }
+        }
       }
-    ]
-  },
-  {
-    "league": "Serie A",
-    "home_team": "Como",
-    "away_team": "AS Roma",
-    "confidence": "Alta",
-    "referee": "Não divulgado",
-    "probabilities": {
-      "exp_total_goals": 2.5,
-      "prob_over_15": 71.3,
-      "odd_over_15": 1.4,
-      "prob_over_25": 45.6,
-      "odd_over_25": 2.19,
-      "prob_btts": 49.8,
-      "odd_btts": 2.01
     },
-    "stats_individual": {
-      "corners_home": 6.3,
-      "corners_away": 4.3,
-      "corners_total": 10.6,
-      "cards_home": 2.2,
-      "cards_away": 3.1,
-      "cards_total": 5.3
-    },
-    "ai_badges": [
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Forte tendência +1.5 Gols (71.3%)"
+    {
+      "league": "Ligue 1",
+      "league_dna": "⚖️ Padrão Equilibrado",
+      "home_team": "Nice",
+      "away_team": "Strasbourg",
+      "referee": "Não divulgado",
+      "data_confidence": "Média",
+      "ai_badges": [
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Forte tendência +1.5 Gols (71.3%)"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Volume Alto de Cantos (+8.5 / +9.5) — Projeção volumétrica equilibrada."
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões) — Critério disciplinar padrão."
+        }
+      ],
+      "team_profiles": {
+        "home": {
+          "shots": 14.5,
+          "sot": 5.1,
+          "corners": 5.6,
+          "cards": 2.2
+        },
+        "away": {
+          "shots": 11.2,
+          "sot": 3.9,
+          "corners": 4.4,
+          "cards": 2.5
+        }
       },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Volume Alto de Cantos (+8.5 / +9.5)"
+      "stats_individual": {
+        "corners_home": 5.6,
+        "corners_away": 4.4,
+        "corners_total": 10.0,
+        "cards_home": 2.2,
+        "cards_away": 2.5,
+        "cards_total": 4.7
       },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões)"
+      "probabilities": {
+        "exp_total_goals": 2.5,
+        "prob_over_15": 71.3,
+        "odd_over_15": 1.4,
+        "prob_over_25": 45.6,
+        "odd_over_25": 2.19,
+        "prob_btts": 50.3,
+        "odd_btts": 1.99
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 2.5,
+          "over_1_5": {
+            "prob_over": 71.3,
+            "fair_odd": 1.4
+          },
+          "over_2_5": {
+            "prob_over": 45.6,
+            "fair_odd": 2.19
+          },
+          "btts": {
+            "prob_yes": 50.3,
+            "fair_odd": 1.99
+          },
+          "btts_or_over25": {
+            "prob_hit": 62.3,
+            "fair_odd": 1.61
+          }
+        },
+        "corners": {
+          "expected_total": 10.0,
+          "over_8_5": {
+            "prob_over": 68.4,
+            "fair_odd_over": 1.46
+          },
+          "over_10_5": {
+            "prob_over": 44.4,
+            "fair_odd": 2.25
+          }
+        },
+        "shots": {
+          "expected_shots": 25.7,
+          "over_8_5_sot": {
+            "prob_over": 66.4,
+            "fair_odd": 1.51
+          }
+        },
+        "cards": {
+          "referee_factor": 1.0,
+          "expected_total": 4.7,
+          "over_3_5": {
+            "prob_over": 71.0,
+            "fair_odd": 1.41
+          },
+          "over_4_5": {
+            "prob_over": 48.0,
+            "fair_odd": 2.08
+          }
+        }
       }
-    ]
-  },
-  {
-    "league": "Serie A",
-    "home_team": "Lazio",
-    "away_team": "Monza",
-    "confidence": "Alta",
-    "referee": "Não divulgado",
-    "probabilities": {
-      "exp_total_goals": 2.5,
-      "prob_over_15": 71.3,
-      "odd_over_15": 1.4,
-      "prob_over_25": 45.6,
-      "odd_over_25": 2.19,
-      "prob_btts": 49.8,
-      "odd_btts": 2.01
     },
-    "stats_individual": {
-      "corners_home": 6.3,
-      "corners_away": 4.3,
-      "corners_total": 10.6,
-      "cards_home": 2.2,
-      "cards_away": 3.1,
-      "cards_total": 5.3
-    },
-    "ai_badges": [
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Forte tendência +1.5 Gols (71.3%)"
+    {
+      "league": "Ligue 1",
+      "league_dna": "⚖️ Padrão Equilibrado",
+      "home_team": "Stade Rennais",
+      "away_team": "AJ Auxerre",
+      "referee": "Não divulgado",
+      "data_confidence": "Média",
+      "ai_badges": [
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Forte tendência +1.5 Gols (71.3%)"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Volume Alto de Cantos (+8.5 / +9.5) — Projeção volumétrica equilibrada."
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões) — Critério disciplinar padrão."
+        }
+      ],
+      "team_profiles": {
+        "home": {
+          "shots": 14.5,
+          "sot": 5.1,
+          "corners": 5.6,
+          "cards": 2.2
+        },
+        "away": {
+          "shots": 11.2,
+          "sot": 3.9,
+          "corners": 4.4,
+          "cards": 2.5
+        }
       },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Volume Alto de Cantos (+8.5 / +9.5)"
+      "stats_individual": {
+        "corners_home": 5.6,
+        "corners_away": 4.4,
+        "corners_total": 10.0,
+        "cards_home": 2.2,
+        "cards_away": 2.5,
+        "cards_total": 4.7
       },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões)"
+      "probabilities": {
+        "exp_total_goals": 2.5,
+        "prob_over_15": 71.3,
+        "odd_over_15": 1.4,
+        "prob_over_25": 45.6,
+        "odd_over_25": 2.19,
+        "prob_btts": 50.3,
+        "odd_btts": 1.99
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 2.5,
+          "over_1_5": {
+            "prob_over": 71.3,
+            "fair_odd": 1.4
+          },
+          "over_2_5": {
+            "prob_over": 45.6,
+            "fair_odd": 2.19
+          },
+          "btts": {
+            "prob_yes": 50.3,
+            "fair_odd": 1.99
+          },
+          "btts_or_over25": {
+            "prob_hit": 62.3,
+            "fair_odd": 1.61
+          }
+        },
+        "corners": {
+          "expected_total": 10.0,
+          "over_8_5": {
+            "prob_over": 68.4,
+            "fair_odd_over": 1.46
+          },
+          "over_10_5": {
+            "prob_over": 44.4,
+            "fair_odd": 2.25
+          }
+        },
+        "shots": {
+          "expected_shots": 25.7,
+          "over_8_5_sot": {
+            "prob_over": 66.4,
+            "fair_odd": 1.51
+          }
+        },
+        "cards": {
+          "referee_factor": 1.0,
+          "expected_total": 4.7,
+          "over_3_5": {
+            "prob_over": 71.0,
+            "fair_odd": 1.41
+          },
+          "over_4_5": {
+            "prob_over": 48.0,
+            "fair_odd": 2.08
+          }
+        }
       }
-    ]
-  },
-  {
-    "league": "Serie A",
-    "home_team": "Lecce",
-    "away_team": "Bologna",
-    "confidence": "Alta",
-    "referee": "Não divulgado",
-    "probabilities": {
-      "exp_total_goals": 2.5,
-      "prob_over_15": 71.3,
-      "odd_over_15": 1.4,
-      "prob_over_25": 45.6,
-      "odd_over_25": 2.19,
-      "prob_btts": 49.8,
-      "odd_btts": 2.01
     },
-    "stats_individual": {
-      "corners_home": 6.3,
-      "corners_away": 4.3,
-      "corners_total": 10.6,
-      "cards_home": 2.2,
-      "cards_away": 3.1,
-      "cards_total": 5.3
-    },
-    "ai_badges": [
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Forte tendência +1.5 Gols (71.3%)"
+    {
+      "league": "Ligue 1",
+      "league_dna": "⚖️ Padrão Equilibrado",
+      "home_team": "Troyes",
+      "away_team": "Marseille",
+      "referee": "Não divulgado",
+      "data_confidence": "Média",
+      "ai_badges": [
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Forte tendência +1.5 Gols (71.3%)"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Volume Alto de Cantos (+8.5 / +9.5) — Projeção volumétrica equilibrada."
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões) — Critério disciplinar padrão."
+        }
+      ],
+      "team_profiles": {
+        "home": {
+          "shots": 14.5,
+          "sot": 5.1,
+          "corners": 5.6,
+          "cards": 2.2
+        },
+        "away": {
+          "shots": 11.2,
+          "sot": 3.9,
+          "corners": 4.4,
+          "cards": 2.5
+        }
       },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Volume Alto de Cantos (+8.5 / +9.5)"
+      "stats_individual": {
+        "corners_home": 5.6,
+        "corners_away": 4.4,
+        "corners_total": 10.0,
+        "cards_home": 2.2,
+        "cards_away": 2.5,
+        "cards_total": 4.7
       },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões)"
+      "probabilities": {
+        "exp_total_goals": 2.5,
+        "prob_over_15": 71.3,
+        "odd_over_15": 1.4,
+        "prob_over_25": 45.6,
+        "odd_over_25": 2.19,
+        "prob_btts": 50.3,
+        "odd_btts": 1.99
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 2.5,
+          "over_1_5": {
+            "prob_over": 71.3,
+            "fair_odd": 1.4
+          },
+          "over_2_5": {
+            "prob_over": 45.6,
+            "fair_odd": 2.19
+          },
+          "btts": {
+            "prob_yes": 50.3,
+            "fair_odd": 1.99
+          },
+          "btts_or_over25": {
+            "prob_hit": 62.3,
+            "fair_odd": 1.61
+          }
+        },
+        "corners": {
+          "expected_total": 10.0,
+          "over_8_5": {
+            "prob_over": 68.4,
+            "fair_odd_over": 1.46
+          },
+          "over_10_5": {
+            "prob_over": 44.4,
+            "fair_odd": 2.25
+          }
+        },
+        "shots": {
+          "expected_shots": 25.7,
+          "over_8_5_sot": {
+            "prob_over": 66.4,
+            "fair_odd": 1.51
+          }
+        },
+        "cards": {
+          "referee_factor": 1.0,
+          "expected_total": 4.7,
+          "over_3_5": {
+            "prob_over": 71.0,
+            "fair_odd": 1.41
+          },
+          "over_4_5": {
+            "prob_over": 48.0,
+            "fair_odd": 2.08
+          }
+        }
       }
-    ]
-  },
-  {
-    "league": "Serie A",
-    "home_team": "Sassuolo",
-    "away_team": "AC Milan",
-    "confidence": "Alta",
-    "referee": "Não divulgado",
-    "probabilities": {
-      "exp_total_goals": 2.5,
-      "prob_over_15": 71.3,
-      "odd_over_15": 1.4,
-      "prob_over_25": 45.6,
-      "odd_over_25": 2.19,
-      "prob_btts": 49.8,
-      "odd_btts": 2.01
     },
-    "stats_individual": {
-      "corners_home": 6.3,
-      "corners_away": 4.3,
-      "corners_total": 10.6,
-      "cards_home": 2.2,
-      "cards_away": 3.1,
-      "cards_total": 5.3
-    },
-    "ai_badges": [
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Forte tendência +1.5 Gols (71.3%)"
+    {
+      "league": "Brasileirão Série A",
+      "league_dna": "🛑 Jogo Picardado | 🟨 +Cartões | ⏱️ Ritmo Médio",
+      "home_team": "Atlético-MG",
+      "away_team": "Santos",
+      "referee": "Não divulgado",
+      "data_confidence": "Média",
+      "ai_badges": [
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Forte tendência +1.5 Gols (71.3%)"
+        },
+        {
+          "tipo": "orange",
+          "texto": "Atenção IA: Volume Médio de Cantos (+8.5 justo)"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões) — Rigor disciplinar alto característico do futebol brasileiro."
+        }
+      ],
+      "team_profiles": {
+        "home": {
+          "shots": 13.8,
+          "sot": 4.8,
+          "corners": 5.4,
+          "cards": 2.8
+        },
+        "away": {
+          "shots": 10.6,
+          "sot": 3.7,
+          "corners": 4.3,
+          "cards": 3.1
+        }
       },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Volume Alto de Cantos (+8.5 / +9.5)"
+      "stats_individual": {
+        "corners_home": 5.4,
+        "corners_away": 4.3,
+        "corners_total": 9.7,
+        "cards_home": 2.8,
+        "cards_away": 3.1,
+        "cards_total": 5.9
       },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões)"
+      "probabilities": {
+        "exp_total_goals": 2.5,
+        "prob_over_15": 71.3,
+        "odd_over_15": 1.4,
+        "prob_over_25": 45.6,
+        "odd_over_25": 2.19,
+        "prob_btts": 50.3,
+        "odd_btts": 1.99
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 2.5,
+          "over_1_5": {
+            "prob_over": 71.3,
+            "fair_odd": 1.4
+          },
+          "over_2_5": {
+            "prob_over": 45.6,
+            "fair_odd": 2.19
+          },
+          "btts": {
+            "prob_yes": 50.3,
+            "fair_odd": 1.99
+          },
+          "btts_or_over25": {
+            "prob_hit": 62.3,
+            "fair_odd": 1.61
+          }
+        },
+        "corners": {
+          "expected_total": 9.7,
+          "over_8_5": {
+            "prob_over": 66.4,
+            "fair_odd_over": 1.51
+          },
+          "over_10_5": {
+            "prob_over": 42.4,
+            "fair_odd": 2.36
+          }
+        },
+        "shots": {
+          "expected_shots": 24.4,
+          "over_8_5_sot": {
+            "prob_over": 63.0,
+            "fair_odd": 1.59
+          }
+        },
+        "cards": {
+          "referee_factor": 1.0,
+          "expected_total": 5.9,
+          "over_3_5": {
+            "prob_over": 89.2,
+            "fair_odd": 1.12
+          },
+          "over_4_5": {
+            "prob_over": 66.2,
+            "fair_odd": 1.51
+          }
+        }
       }
-    ]
-  },
-  {
-    "league": "Serie A",
-    "home_team": "Cagliari",
-    "away_team": "Juventus",
-    "confidence": "Alta",
-    "referee": "Não divulgado",
-    "probabilities": {
-      "exp_total_goals": 2.5,
-      "prob_over_15": 71.3,
-      "odd_over_15": 1.4,
-      "prob_over_25": 45.6,
-      "odd_over_25": 2.19,
-      "prob_btts": 49.8,
-      "odd_btts": 2.01
     },
-    "stats_individual": {
-      "corners_home": 6.3,
-      "corners_away": 4.3,
-      "corners_total": 10.6,
-      "cards_home": 2.2,
-      "cards_away": 3.1,
-      "cards_total": 5.3
-    },
-    "ai_badges": [
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Forte tendência +1.5 Gols (71.3%)"
+    {
+      "league": "Brasileirão Série A",
+      "league_dna": "🛑 Jogo Picardado | 🟨 +Cartões | ⏱️ Ritmo Médio",
+      "home_team": "Flamengo",
+      "away_team": "Fluminense",
+      "referee": "Não divulgado",
+      "data_confidence": "Média",
+      "ai_badges": [
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Forte tendência +1.5 Gols (71.3%)"
+        },
+        {
+          "tipo": "orange",
+          "texto": "Atenção IA: Volume Médio de Cantos (+8.5 justo)"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões) — Rigor disciplinar alto característico do futebol brasileiro."
+        }
+      ],
+      "team_profiles": {
+        "home": {
+          "shots": 13.8,
+          "sot": 4.8,
+          "corners": 5.4,
+          "cards": 2.8
+        },
+        "away": {
+          "shots": 10.6,
+          "sot": 3.7,
+          "corners": 4.3,
+          "cards": 3.1
+        }
       },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Volume Alto de Cantos (+8.5 / +9.5)"
+      "stats_individual": {
+        "corners_home": 5.4,
+        "corners_away": 4.3,
+        "corners_total": 9.7,
+        "cards_home": 2.8,
+        "cards_away": 3.1,
+        "cards_total": 5.9
       },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões)"
+      "probabilities": {
+        "exp_total_goals": 2.5,
+        "prob_over_15": 71.3,
+        "odd_over_15": 1.4,
+        "prob_over_25": 45.6,
+        "odd_over_25": 2.19,
+        "prob_btts": 50.3,
+        "odd_btts": 1.99
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 2.5,
+          "over_1_5": {
+            "prob_over": 71.3,
+            "fair_odd": 1.4
+          },
+          "over_2_5": {
+            "prob_over": 45.6,
+            "fair_odd": 2.19
+          },
+          "btts": {
+            "prob_yes": 50.3,
+            "fair_odd": 1.99
+          },
+          "btts_or_over25": {
+            "prob_hit": 62.3,
+            "fair_odd": 1.61
+          }
+        },
+        "corners": {
+          "expected_total": 9.7,
+          "over_8_5": {
+            "prob_over": 66.4,
+            "fair_odd_over": 1.51
+          },
+          "over_10_5": {
+            "prob_over": 42.4,
+            "fair_odd": 2.36
+          }
+        },
+        "shots": {
+          "expected_shots": 24.4,
+          "over_8_5_sot": {
+            "prob_over": 63.0,
+            "fair_odd": 1.59
+          }
+        },
+        "cards": {
+          "referee_factor": 1.0,
+          "expected_total": 5.9,
+          "over_3_5": {
+            "prob_over": 89.2,
+            "fair_odd": 1.12
+          },
+          "over_4_5": {
+            "prob_over": 66.2,
+            "fair_odd": 1.51
+          }
+        }
       }
-    ]
-  },
-  {
-    "league": "Ligue 1",
-    "home_team": "Nice",
-    "away_team": "Strasbourg",
-    "confidence": "Alta",
-    "referee": "Não divulgado",
-    "probabilities": {
-      "exp_total_goals": 2.5,
-      "prob_over_15": 71.3,
-      "odd_over_15": 1.4,
-      "prob_over_25": 45.6,
-      "odd_over_25": 2.19,
-      "prob_btts": 49.8,
-      "odd_btts": 2.01
     },
-    "stats_individual": {
-      "corners_home": 6.3,
-      "corners_away": 4.3,
-      "corners_total": 10.6,
-      "cards_home": 2.2,
-      "cards_away": 3.1,
-      "cards_total": 5.3
-    },
-    "ai_badges": [
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Forte tendência +1.5 Gols (71.3%)"
+    {
+      "league": "Brasileirão Série A",
+      "league_dna": "🛑 Jogo Picardado | 🟨 +Cartões | ⏱️ Ritmo Médio",
+      "home_team": "Grêmio",
+      "away_team": "Internacional",
+      "referee": "Não divulgado",
+      "data_confidence": "Média",
+      "ai_badges": [
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Forte tendência +1.5 Gols (71.3%)"
+        },
+        {
+          "tipo": "orange",
+          "texto": "Atenção IA: Volume Médio de Cantos (+8.5 justo)"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões) — Rigor disciplinar alto característico do futebol brasileiro."
+        }
+      ],
+      "team_profiles": {
+        "home": {
+          "shots": 13.8,
+          "sot": 4.8,
+          "corners": 5.4,
+          "cards": 2.8
+        },
+        "away": {
+          "shots": 10.6,
+          "sot": 3.7,
+          "corners": 4.3,
+          "cards": 3.1
+        }
       },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Volume Alto de Cantos (+8.5 / +9.5)"
+      "stats_individual": {
+        "corners_home": 5.4,
+        "corners_away": 4.3,
+        "corners_total": 9.7,
+        "cards_home": 2.8,
+        "cards_away": 3.1,
+        "cards_total": 5.9
       },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões)"
+      "probabilities": {
+        "exp_total_goals": 2.5,
+        "prob_over_15": 71.3,
+        "odd_over_15": 1.4,
+        "prob_over_25": 45.6,
+        "odd_over_25": 2.19,
+        "prob_btts": 50.3,
+        "odd_btts": 1.99
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 2.5,
+          "over_1_5": {
+            "prob_over": 71.3,
+            "fair_odd": 1.4
+          },
+          "over_2_5": {
+            "prob_over": 45.6,
+            "fair_odd": 2.19
+          },
+          "btts": {
+            "prob_yes": 50.3,
+            "fair_odd": 1.99
+          },
+          "btts_or_over25": {
+            "prob_hit": 62.3,
+            "fair_odd": 1.61
+          }
+        },
+        "corners": {
+          "expected_total": 9.7,
+          "over_8_5": {
+            "prob_over": 66.4,
+            "fair_odd_over": 1.51
+          },
+          "over_10_5": {
+            "prob_over": 42.4,
+            "fair_odd": 2.36
+          }
+        },
+        "shots": {
+          "expected_shots": 24.4,
+          "over_8_5_sot": {
+            "prob_over": 63.0,
+            "fair_odd": 1.59
+          }
+        },
+        "cards": {
+          "referee_factor": 1.0,
+          "expected_total": 5.9,
+          "over_3_5": {
+            "prob_over": 89.2,
+            "fair_odd": 1.12
+          },
+          "over_4_5": {
+            "prob_over": 66.2,
+            "fair_odd": 1.51
+          }
+        }
       }
-    ]
-  },
-  {
-    "league": "Ligue 1",
-    "home_team": "Stade Rennais",
-    "away_team": "AJ Auxerre",
-    "confidence": "Alta",
-    "referee": "Não divulgado",
-    "probabilities": {
-      "exp_total_goals": 2.5,
-      "prob_over_15": 71.3,
-      "odd_over_15": 1.4,
-      "prob_over_25": 45.6,
-      "odd_over_25": 2.19,
-      "prob_btts": 49.8,
-      "odd_btts": 2.01
     },
-    "stats_individual": {
-      "corners_home": 6.3,
-      "corners_away": 4.3,
-      "corners_total": 10.6,
-      "cards_home": 2.2,
-      "cards_away": 3.1,
-      "cards_total": 5.3
-    },
-    "ai_badges": [
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Forte tendência +1.5 Gols (71.3%)"
+    {
+      "league": "Brasileirão Série A",
+      "league_dna": "🛑 Jogo Picardado | 🟨 +Cartões | ⏱️ Ritmo Médio",
+      "home_team": "Palmeiras",
+      "away_team": "Corinthians",
+      "referee": "Não divulgado",
+      "data_confidence": "Média",
+      "ai_badges": [
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Forte tendência +1.5 Gols (71.3%)"
+        },
+        {
+          "tipo": "orange",
+          "texto": "Atenção IA: Volume Médio de Cantos (+8.5 justo)"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões) — Rigor disciplinar alto característico do futebol brasileiro."
+        }
+      ],
+      "team_profiles": {
+        "home": {
+          "shots": 13.8,
+          "sot": 4.8,
+          "corners": 5.4,
+          "cards": 2.8
+        },
+        "away": {
+          "shots": 10.6,
+          "sot": 3.7,
+          "corners": 4.3,
+          "cards": 3.1
+        }
       },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Volume Alto de Cantos (+8.5 / +9.5)"
+      "stats_individual": {
+        "corners_home": 5.4,
+        "corners_away": 4.3,
+        "corners_total": 9.7,
+        "cards_home": 2.8,
+        "cards_away": 3.1,
+        "cards_total": 5.9
       },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões)"
+      "probabilities": {
+        "exp_total_goals": 2.5,
+        "prob_over_15": 71.3,
+        "odd_over_15": 1.4,
+        "prob_over_25": 45.6,
+        "odd_over_25": 2.19,
+        "prob_btts": 50.3,
+        "odd_btts": 1.99
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 2.5,
+          "over_1_5": {
+            "prob_over": 71.3,
+            "fair_odd": 1.4
+          },
+          "over_2_5": {
+            "prob_over": 45.6,
+            "fair_odd": 2.19
+          },
+          "btts": {
+            "prob_yes": 50.3,
+            "fair_odd": 1.99
+          },
+          "btts_or_over25": {
+            "prob_hit": 62.3,
+            "fair_odd": 1.61
+          }
+        },
+        "corners": {
+          "expected_total": 9.7,
+          "over_8_5": {
+            "prob_over": 66.4,
+            "fair_odd_over": 1.51
+          },
+          "over_10_5": {
+            "prob_over": 42.4,
+            "fair_odd": 2.36
+          }
+        },
+        "shots": {
+          "expected_shots": 24.4,
+          "over_8_5_sot": {
+            "prob_over": 63.0,
+            "fair_odd": 1.59
+          }
+        },
+        "cards": {
+          "referee_factor": 1.0,
+          "expected_total": 5.9,
+          "over_3_5": {
+            "prob_over": 89.2,
+            "fair_odd": 1.12
+          },
+          "over_4_5": {
+            "prob_over": 66.2,
+            "fair_odd": 1.51
+          }
+        }
       }
-    ]
-  },
-  {
-    "league": "Ligue 1",
-    "home_team": "Troyes",
-    "away_team": "Marseille",
-    "confidence": "Alta",
-    "referee": "Não divulgado",
-    "probabilities": {
-      "exp_total_goals": 2.5,
-      "prob_over_15": 71.3,
-      "odd_over_15": 1.4,
-      "prob_over_25": 45.6,
-      "odd_over_25": 2.19,
-      "prob_btts": 49.8,
-      "odd_btts": 2.01
     },
-    "stats_individual": {
-      "corners_home": 6.3,
-      "corners_away": 4.3,
-      "corners_total": 10.6,
-      "cards_home": 2.2,
-      "cards_away": 3.1,
-      "cards_total": 5.3
-    },
-    "ai_badges": [
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Forte tendência +1.5 Gols (71.3%)"
+    {
+      "league": "Brasileirão Série A",
+      "league_dna": "🛑 Jogo Picardado | 🟨 +Cartões | ⏱️ Ritmo Médio",
+      "home_team": "Bahia",
+      "away_team": "Mirassol",
+      "referee": "Não divulgado",
+      "data_confidence": "Média",
+      "ai_badges": [
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Forte tendência +1.5 Gols (71.3%)"
+        },
+        {
+          "tipo": "orange",
+          "texto": "Atenção IA: Volume Médio de Cantos (+8.5 justo)"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões) — Rigor disciplinar alto característico do futebol brasileiro."
+        }
+      ],
+      "team_profiles": {
+        "home": {
+          "shots": 13.8,
+          "sot": 4.8,
+          "corners": 5.4,
+          "cards": 2.8
+        },
+        "away": {
+          "shots": 10.6,
+          "sot": 3.7,
+          "corners": 4.3,
+          "cards": 3.1
+        }
       },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Volume Alto de Cantos (+8.5 / +9.5)"
+      "stats_individual": {
+        "corners_home": 5.4,
+        "corners_away": 4.3,
+        "corners_total": 9.7,
+        "cards_home": 2.8,
+        "cards_away": 3.1,
+        "cards_total": 5.9
       },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões)"
+      "probabilities": {
+        "exp_total_goals": 2.5,
+        "prob_over_15": 71.3,
+        "odd_over_15": 1.4,
+        "prob_over_25": 45.6,
+        "odd_over_25": 2.19,
+        "prob_btts": 50.3,
+        "odd_btts": 1.99
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 2.5,
+          "over_1_5": {
+            "prob_over": 71.3,
+            "fair_odd": 1.4
+          },
+          "over_2_5": {
+            "prob_over": 45.6,
+            "fair_odd": 2.19
+          },
+          "btts": {
+            "prob_yes": 50.3,
+            "fair_odd": 1.99
+          },
+          "btts_or_over25": {
+            "prob_hit": 62.3,
+            "fair_odd": 1.61
+          }
+        },
+        "corners": {
+          "expected_total": 9.7,
+          "over_8_5": {
+            "prob_over": 66.4,
+            "fair_odd_over": 1.51
+          },
+          "over_10_5": {
+            "prob_over": 42.4,
+            "fair_odd": 2.36
+          }
+        },
+        "shots": {
+          "expected_shots": 24.4,
+          "over_8_5_sot": {
+            "prob_over": 63.0,
+            "fair_odd": 1.59
+          }
+        },
+        "cards": {
+          "referee_factor": 1.0,
+          "expected_total": 5.9,
+          "over_3_5": {
+            "prob_over": 89.2,
+            "fair_odd": 1.12
+          },
+          "over_4_5": {
+            "prob_over": 66.2,
+            "fair_odd": 1.51
+          }
+        }
       }
-    ]
-  },
-  {
-    "league": "Brasileirão Série A",
-    "home_team": "Atlético-MG",
-    "away_team": "Santos",
-    "confidence": "Alta",
-    "referee": "Não divulgado",
-    "probabilities": {
-      "exp_total_goals": 2.5,
-      "prob_over_15": 71.3,
-      "odd_over_15": 1.4,
-      "prob_over_25": 45.6,
-      "odd_over_25": 2.19,
-      "prob_btts": 49.8,
-      "odd_btts": 2.01
-    },
-    "stats_individual": {
-      "corners_home": 6.3,
-      "corners_away": 4.3,
-      "corners_total": 10.6,
-      "cards_home": 2.2,
-      "cards_away": 3.1,
-      "cards_total": 5.3
-    },
-    "ai_badges": [
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Forte tendência +1.5 Gols (71.3%)"
-      },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Volume Alto de Cantos (+8.5 / +9.5)"
-      },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões)"
-      }
-    ]
-  },
-  {
-    "league": "Brasileirão Série A",
-    "home_team": "Flamengo",
-    "away_team": "Fluminense",
-    "confidence": "Alta",
-    "referee": "Não divulgado",
-    "probabilities": {
-      "exp_total_goals": 2.5,
-      "prob_over_15": 71.3,
-      "odd_over_15": 1.4,
-      "prob_over_25": 45.6,
-      "odd_over_25": 2.19,
-      "prob_btts": 49.8,
-      "odd_btts": 2.01
-    },
-    "stats_individual": {
-      "corners_home": 6.3,
-      "corners_away": 4.3,
-      "corners_total": 10.6,
-      "cards_home": 2.2,
-      "cards_away": 3.1,
-      "cards_total": 5.3
-    },
-    "ai_badges": [
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Forte tendência +1.5 Gols (71.3%)"
-      },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Volume Alto de Cantos (+8.5 / +9.5)"
-      },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões)"
-      }
-    ]
-  },
-  {
-    "league": "Brasileirão Série A",
-    "home_team": "Grêmio",
-    "away_team": "Internacional",
-    "confidence": "Alta",
-    "referee": "Não divulgado",
-    "probabilities": {
-      "exp_total_goals": 2.5,
-      "prob_over_15": 71.3,
-      "odd_over_15": 1.4,
-      "prob_over_25": 45.6,
-      "odd_over_25": 2.19,
-      "prob_btts": 49.8,
-      "odd_btts": 2.01
-    },
-    "stats_individual": {
-      "corners_home": 6.3,
-      "corners_away": 4.3,
-      "corners_total": 10.6,
-      "cards_home": 2.2,
-      "cards_away": 3.1,
-      "cards_total": 5.3
-    },
-    "ai_badges": [
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Forte tendência +1.5 Gols (71.3%)"
-      },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Volume Alto de Cantos (+8.5 / +9.5)"
-      },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões)"
-      }
-    ]
-  },
-  {
-    "league": "Brasileirão Série A",
-    "home_team": "Palmeiras",
-    "away_team": "Corinthians",
-    "confidence": "Alta",
-    "referee": "Não divulgado",
-    "probabilities": {
-      "exp_total_goals": 2.5,
-      "prob_over_15": 71.3,
-      "odd_over_15": 1.4,
-      "prob_over_25": 45.6,
-      "odd_over_25": 2.19,
-      "prob_btts": 49.8,
-      "odd_btts": 2.01
-    },
-    "stats_individual": {
-      "corners_home": 6.3,
-      "corners_away": 4.3,
-      "corners_total": 10.6,
-      "cards_home": 2.2,
-      "cards_away": 3.1,
-      "cards_total": 5.3
-    },
-    "ai_badges": [
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Forte tendência +1.5 Gols (71.3%)"
-      },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Volume Alto de Cantos (+8.5 / +9.5)"
-      },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões)"
-      }
-    ]
-  },
-  {
-    "league": "Brasileirão Série A",
-    "home_team": "Bahia",
-    "away_team": "Mirassol",
-    "confidence": "Alta",
-    "referee": "Não divulgado",
-    "probabilities": {
-      "exp_total_goals": 2.5,
-      "prob_over_15": 71.3,
-      "odd_over_15": 1.4,
-      "prob_over_25": 45.6,
-      "odd_over_25": 2.19,
-      "prob_btts": 49.8,
-      "odd_btts": 2.01
-    },
-    "stats_individual": {
-      "corners_home": 6.3,
-      "corners_away": 4.3,
-      "corners_total": 10.6,
-      "cards_home": 2.2,
-      "cards_away": 3.1,
-      "cards_total": 5.3
-    },
-    "ai_badges": [
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Forte tendência +1.5 Gols (71.3%)"
-      },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Volume Alto de Cantos (+8.5 / +9.5)"
-      },
-      {
-        "tipo": "green",
-        "texto": "🟢 Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões)"
-      }
-    ]
-  }
-]
+    }
+  ]
+}

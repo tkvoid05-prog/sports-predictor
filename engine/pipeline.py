@@ -2,9 +2,8 @@ import os
 import json
 import math
 from datetime import datetime, timezone, timedelta
-from engine.fetchers import fetch_espn_fixtures, fetch_team_recent_stats
+from engine.fetchers import fetch_espn_fixtures
 
-# Benchmark e DNA específico por competição
 LEAGUE_PROFILES = {
     "Premier League": {
         "tag": "⚡ Ritmo Alto | 🚩 +Cantos | 🟨 -Cartões",
@@ -14,7 +13,7 @@ LEAGUE_PROFILES = {
         "desc_cantos": "Ritmo vertical e transição rápida da Premier League.",
         "desc_cards": "Árbitros ingleses mais permissivos em faltas táticas."
     },
-    "Brasileirão Série A": {
+    "Brasileirão": {
         "tag": "🛑 Jogo Picardado | 🟨 +Cartões | ⏱️ Ritmo Médio",
         "pace_mult": 0.95,
         "corner_mult": 0.97,
@@ -95,7 +94,7 @@ def generate_ai_badges(prob_o15, prob_btts, expected_corners, expected_cards, le
             "texto": f"Atenção IA: Tendência Moderada de Gols ({prob_o15}%)"
         })
 
-    # Escanteios (Calibrado pelo DNA da Liga)
+    # Cantos
     if expected_corners >= 10.0:
         badges.append({
             "tipo": "green",
@@ -107,7 +106,7 @@ def generate_ai_badges(prob_o15, prob_btts, expected_corners, expected_cards, le
             "texto": "Atenção IA: Volume Médio de Cantos (+8.5 justo)"
         })
 
-    # Cartões (Calibrado pelo DNA da Liga e Árbitro)
+    # Cartões
     if expected_cards >= 4.5:
         badges.append({
             "tipo": "green",
@@ -132,14 +131,11 @@ def run_pipeline():
         referee = f.get("referee", "Não divulgado")
         ref_factor = f.get("referee_factor", 1.0)
 
-        home_stats = fetch_team_recent_stats(home, is_home=True)
-        away_stats = fetch_team_recent_stats(away, is_home=False)
-
         profile = get_league_profile(league)
 
         # 1. Projeção de Gols
-        exp_home_goals = home_stats.get("avg_scored", 1.3)
-        exp_away_goals = away_stats.get("avg_scored", 1.1)
+        exp_home_goals = f.get("home_exp_goals", 1.4)
+        exp_away_goals = f.get("away_exp_goals", 1.1)
         exp_total_goals = round(exp_home_goals + exp_away_goals, 1)
 
         p_o15, odd_o15, p_o25, odd_o25, p_btts, odd_btts = calc_poisson_goals(exp_home_goals, exp_away_goals)
@@ -147,8 +143,8 @@ def run_pipeline():
         odd_combo = round(100.0 / p_combo, 2) if p_combo > 0 else 0
 
         # 2. Escanteios (com benchmark)
-        raw_home_corners = home_stats.get("avg_corners", 5.5)
-        raw_away_corners = away_stats.get("avg_corners", 4.3)
+        raw_home_corners = f.get("home_avg_corners", 5.6)
+        raw_away_corners = f.get("away_avg_corners", 4.4)
         h_corners = round(raw_home_corners * profile["corner_mult"], 1)
         a_corners = round(raw_away_corners * profile["corner_mult"], 1)
         exp_corners = round(h_corners + a_corners, 1)
@@ -159,20 +155,20 @@ def run_pipeline():
         odd_c105 = round(100.0 / p_c105, 2) if p_c105 > 0 else 0
 
         # 3. Finalizações (com benchmark)
-        raw_home_shots = home_stats.get("avg_shots", 14.0)
-        raw_away_shots = away_stats.get("avg_shots", 11.0)
+        raw_home_shots = f.get("home_avg_shots", 14.5)
+        raw_away_shots = f.get("away_avg_shots", 11.2)
         h_shots = round(raw_home_shots * profile["pace_mult"], 1)
         a_shots = round(raw_away_shots * profile["pace_mult"], 1)
         exp_shots = round(h_shots + a_shots, 1)
 
-        h_sot = round(home_stats.get("avg_sot", h_shots * 0.35), 1)
-        a_sot = round(away_stats.get("avg_sot", a_shots * 0.35), 1)
+        h_sot = round(f.get("home_avg_sot", h_shots * 0.35), 1)
+        a_sot = round(f.get("away_avg_sot", a_shots * 0.35), 1)
         p_sot = round(min(88.0, max(40.0, (exp_shots / 24.0) * 62.0)), 1)
         odd_sot = round(100.0 / p_sot, 2) if p_sot > 0 else 0
 
         # 4. Cartões (com benchmark e árbitro)
-        raw_home_cards = home_stats.get("avg_cards", 2.2)
-        raw_away_cards = away_stats.get("avg_cards", 2.4)
+        raw_home_cards = f.get("home_avg_cards", 2.2)
+        raw_away_cards = f.get("away_avg_cards", 2.5)
         h_cards = round(raw_home_cards * profile["card_mult"] * ref_factor, 1)
         a_cards = round(raw_away_cards * profile["card_mult"] * ref_factor, 1)
         exp_cards = round(h_cards + a_cards, 1)
@@ -240,7 +236,6 @@ def run_pipeline():
         }
         matches_payload.append(match_obj)
 
-    # Identificação do turno no horário de Brasília (UTC-3)
     br_tz = timezone(timedelta(hours=-3))
     now = datetime.now(br_tz)
     shift = "RODADA DA MANHÃ" if now.hour < 13 else "RODADA DA TARDE/NOITE"
