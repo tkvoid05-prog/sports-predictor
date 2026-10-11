@@ -35,8 +35,30 @@ st.markdown("""
         font-size: 0.72rem;
         font-weight: 600;
     }
+    .badge-dna {
+        background-color: #374151;
+        color: #e5e7eb;
+        padding: 2px 7px;
+        border-radius: 4px;
+        font-size: 0.70rem;
+        font-weight: 600;
+        margin-left: 6px;
+        border: 1px solid #4b5563;
+    }
     </style>
 """, unsafe_allow_html=True)
+
+def resolve_league_dna(m):
+    if m.get("league_dna"):
+        return m.get("league_dna")
+    lg = m.get("league", "").lower()
+    if "premier league" in lg:
+        return "⚡ Ritmo Alto | 🚩 +Cantos | 🟨 -Cartões"
+    elif "brasileir" in lg:
+        return "🛑 Jogo Picardado | 🟨 +Cartões | ⏱️ Ritmo Médio"
+    elif "la liga" in lg:
+        return "🎯 Posse Cadenciada | 🟨 +Cartões"
+    return "⚖️ Padrão Equilibrado"
 
 @st.dialog("Diagnóstico Completo da Partida")
 def show_match_summary_dialog(m):
@@ -47,6 +69,7 @@ def show_match_summary_dialog(m):
     badges = m.get("ai_badges", [])
     home = m.get("home_team", "")
     away = m.get("away_team", "")
+    dna = resolve_league_dna(m)
 
     # Gols
     g = mkts.get("goals", {})
@@ -95,7 +118,7 @@ def show_match_summary_dialog(m):
         odd_cd35 = round(100.0 / p_cd35, 2) if p_cd35 > 0 else 0
 
     st.subheader(f"{home} vs {away}")
-    st.caption(f"Liga: {m.get('league')} | Árbitro: {m.get('referee', 'Não divulgado')} | Confiança: {m.get('data_confidence', 'Média')}")
+    st.caption(f"Liga: **{m.get('league')}** | Perfil: `{dna}` | Árbitro: {m.get('referee', 'Não divulgado')} | Confiança: {m.get('data_confidence', 'Média')}")
 
     if badges:
         st.markdown("#### 💡 Parecer Preditivo da IA")
@@ -112,10 +135,8 @@ def show_match_summary_dialog(m):
     col1, col2, col3 = st.columns(3)
     col1.metric("Média Gols", exp_gols)
     col1.metric("+1.5 Gols", f"{p_o15}%", f"@{odd_o15}")
-    
     col2.metric("+2.5 Gols", f"{p_o25}%", f"@{odd_o25}")
     col2.metric("BTTS (Sim)", f"{p_btts}%", f"@{odd_btts}")
-
     col3.metric("BTTS ou +2.5", f"{prob_combo}%", f"@{fair_odd_combo}")
 
     st.divider()
@@ -124,14 +145,11 @@ def show_match_summary_dialog(m):
     col_v1, col_v2, col_v3 = st.columns(3)
     col_v1.metric("Cantos Totais", exp_cantos)
     col_v1.metric("+8.5 Cantos", f"{p_c85}%", f"@{odd_c85}")
-
     col_v2.metric("Finalizações", exp_shots)
     col_v2.metric("+8.5 no Alvo", f"{p_sot}%", f"@{odd_sot}")
-
     col_v3.metric("Cartões Totais", exp_cards)
     col_v3.metric("+3.5 Cartões", f"{p_cd35}%", f"@{odd_cd35}")
 
-    # Gráfico Comparativo
     h_shots = profiles.get("home", {}).get("shots", round(exp_shots * 0.55, 1))
     a_shots = profiles.get("away", {}).get("shots", round(exp_shots * 0.45, 1))
     h_sot = profiles.get("home", {}).get("sot", round(h_shots * 0.35, 1))
@@ -190,6 +208,7 @@ for idx, m in enumerate(filtered):
     away = m.get("away_team", "")
     referee = m.get("referee", "Não divulgado")
     conf = m.get("data_confidence", "Média")
+    dna = resolve_league_dna(m)
 
     # Gols
     g = mkts.get("goals", {})
@@ -247,7 +266,7 @@ for idx, m in enumerate(filtered):
         p_cd45 = round(max(22.0, p_cd35 - 23.0), 1)
         odd_cd45 = round(100.0 / p_cd45, 2) if p_cd45 > 0 else 0
 
-    # Dados individuais de Mando para Cantos e Cartões
+    # Mando individual
     h_c = profiles.get("home", {}).get("corners", ind.get("corners_home", round(exp_cantos * 0.58, 1)))
     a_c = profiles.get("away", {}).get("corners", ind.get("corners_away", round(exp_cantos * 0.42, 1)))
     h_cd = profiles.get("home", {}).get("cards", ind.get("cards_home", round(exp_cards * 0.45, 1)))
@@ -257,7 +276,8 @@ for idx, m in enumerate(filtered):
         col_hdr, col_btn = st.columns([3, 1])
         with col_hdr:
             st.markdown(
-                f"<span class='badge-league'>{m.get('league')}</span> "
+                f"<span class='badge-league'>{m.get('league')}</span>"
+                f"<span class='badge-dna'>{dna}</span>"
                 f"<span class='badge-conf'>Amostra: {conf}</span> | Árbitro: **{referee}**",
                 unsafe_allow_html=True
             )
