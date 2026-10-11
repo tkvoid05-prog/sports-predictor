@@ -14,7 +14,7 @@ LEAGUE_PROFILES = {
         "desc_cards": "Árbitros ingleses mais permissivos em faltas táticas."
     },
     "Brasileirão": {
-        "tag": "🛑 Jogo Picardado | 🟨 +Cartões | ⏱️ Ritmo Médio",
+        "tag": "🛑 Jogo Picado 🟨 +Cartões | ⏱️ Ritmo Médio",
         "pace_mult": 0.95,
         "corner_mult": 0.97,
         "card_mult": 1.25,
