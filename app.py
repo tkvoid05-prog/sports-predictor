@@ -41,9 +41,20 @@ st.markdown("""
 @st.dialog("Diagnóstico Completo da Partida")
 def show_match_summary_dialog(m):
     mkts = m.get("markets", {})
+    probs = m.get("probabilities", {})
     home = m.get("home_team", "")
     away = m.get("away_team", "")
+    
+    # Compatibilidade mista (markets ou probabilities)
     g = mkts.get("goals", {})
+    exp_gols = g.get("expected_total", probs.get("exp_total_goals", 0))
+    p_o15 = g.get("over_1_5", {}).get("prob_over", probs.get("prob_over_15", 0))
+    odd_o15 = g.get("over_1_5", {}).get("fair_odd", probs.get("odd_over_15", 0))
+    p_o25 = g.get("over_2_5", {}).get("prob_over", probs.get("prob_over_25", 0))
+    odd_o25 = g.get("over_2_5", {}).get("fair_odd", probs.get("odd_over_25", 0))
+    p_btts = g.get("btts", {}).get("prob_yes", probs.get("prob_btts", 0))
+    odd_btts = g.get("btts", {}).get("fair_odd", probs.get("odd_btts", 0))
+
     c = mkts.get("corners", {})
     s = mkts.get("shots", {})
     cd = mkts.get("cards", {})
@@ -68,11 +79,11 @@ def show_match_summary_dialog(m):
 
     st.markdown("#### ⚽ Gols & Mercados Principais")
     col1, col2, col3 = st.columns(3)
-    col1.metric("Média Gols", g.get("expected_total", 0))
-    col1.metric("+1.5 Gols", f"{g.get('over_1_5', {}).get('prob_over', 0)}%", f"@{g.get('over_1_5', {}).get('fair_odd', 0)}")
+    col1.metric("Média Gols", exp_gols)
+    col1.metric("+1.5 Gols", f"{p_o15}%", f"@{odd_o15}")
     
-    col2.metric("+2.5 Gols", f"{g.get('over_2_5', {}).get('prob_over', 0)}%", f"@{g.get('over_2_5', {}).get('fair_odd', 0)}")
-    col2.metric("BTTS (Sim)", f"{g.get('btts', {}).get('prob_yes', 0)}%", f"@{g.get('btts', {}).get('fair_odd', 0)}")
+    col2.metric("+2.5 Gols", f"{p_o25}%", f"@{odd_o25}")
+    col2.metric("BTTS (Sim)", f"{p_btts}%", f"@{odd_btts}")
 
     col3.metric("BTTS ou +2.5", f"{combo.get('prob_hit', 0)}%", f"@{combo.get('fair_odd', 0)}")
 
@@ -111,7 +122,7 @@ if not os.path.exists(data_file):
 with open(data_file, "r", encoding="utf-8") as f:
     payload = json.load(f)
 
-# Blindagem: suporta tanto dicionário envelopado quanto lista direta de jogos
+# Blindagem de tipo: suporta dicionário envelopado ou lista direta de partidas
 if isinstance(payload, dict):
     shift = payload.get("shift", "").upper()
     updated = payload.get("updated_at", "")[:16].replace("T", " ")
@@ -134,12 +145,23 @@ filtered = [m for m in matches if selected_league == "Todas" or m.get("league") 
 
 for idx, m in enumerate(filtered):
     mkts = m.get("markets", {})
+    probs = m.get("probabilities", {})
     home = m.get("home_team", "")
     away = m.get("away_team", "")
     referee = m.get("referee", "Não divulgado")
     conf = m.get("data_confidence", "Média")
     profiles = m.get("team_profiles", {})
     badges = m.get("ai_badges", [])
+
+    # Extração compatível com fallback
+    g = mkts.get("goals", {})
+    exp_gols = g.get("expected_total", probs.get("exp_total_goals", 0))
+    p_o15 = g.get("over_1_5", {}).get("prob_over", probs.get("prob_over_15", 0))
+    odd_o15 = g.get("over_1_5", {}).get("fair_odd", probs.get("odd_over_15", 0))
+    p_o25 = g.get("over_2_5", {}).get("prob_over", probs.get("prob_over_25", 0))
+    odd_o25 = g.get("over_2_5", {}).get("fair_odd", probs.get("odd_over_25", 0))
+    p_btts = g.get("btts", {}).get("prob_yes", probs.get("prob_btts", 0))
+    odd_btts = g.get("btts", {}).get("fair_odd", probs.get("odd_btts", 0))
 
     with st.expander(f"{home} vs {away}", expanded=True):
         col_hdr, col_btn = st.columns([3, 1])
@@ -168,12 +190,11 @@ for idx, m in enumerate(filtered):
         ])
 
         with tab_gols:
-            g = mkts.get("goals", {})
-            st.write(f"Média Esperada de Gols: **{g.get('expected_total', 0)}**")
+            st.write(f"Média Esperada de Gols: **{exp_gols}**")
             c1, c2 = st.columns(2)
-            c1.metric("+1.5 Gols", f"{g.get('over_1_5', {}).get('prob_over', 0)}%", f"Odd Justa: @{g.get('over_1_5', {}).get('fair_odd', 0)}")
-            c2.metric("+2.5 Gols", f"{g.get('over_2_5', {}).get('prob_over', 0)}%", f"Odd Justa: @{g.get('over_2_5', {}).get('fair_odd', 0)}")
-            st.metric("Ambas Marcam (Sim)", f"{g.get('btts', {}).get('prob_yes', 0)}%", f"Odd Justa: @{g.get('btts', {}).get('fair_odd', 0)}")
+            c1.metric("+1.5 Gols", f"{p_o15}%", f"Odd Justa: @{odd_o15}")
+            c2.metric("+2.5 Gols", f"{p_o25}%", f"Odd Justa: @{odd_o25}")
+            st.metric("Ambas Marcam (Sim)", f"{p_btts}%", f"Odd Justa: @{odd_btts}")
 
         with tab_combo:
             combo = mkts.get("goals", {}).get("btts_or_over25", {})
