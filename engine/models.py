@@ -1,7 +1,20 @@
+import logging
 import numpy as np
 from scipy.stats import poisson, nbinom
+from typing import Dict, Any, Optional
+
+logger = logging.getLogger(__name__)
+
+class InsufficientDataError(Exception):
+    """Exceção lançada quando a amostra de jogos é insuficiente para modelagem estatística."""
+    pass
+
 
 def dixon_coles_tau(x: int, y: int, lambda_h: float, mu_a: float, rho: float = -0.11) -> float:
+    """
+    Função de ajuste de Dixon-Coles para corrigir a subestimação de placares baixos.
+    rho = -0.11 é o valor empiricamente validado para futebol.
+    """
     if x == 0 and y == 0:
         return 1.0 - (lambda_h * mu_a * rho)
     elif x == 0 and y == 1:
@@ -12,36 +25,45 @@ def dixon_coles_tau(x: int, y: int, lambda_h: float, mu_a: float, rho: float = -
         return 1.0 - rho
     return 1.0
 
+
 def calculate_score_matrix(lambda_h: float, mu_a: float, max_goals: int = 7, rho: float = -0.11) -> np.ndarray:
+    """
+    Gera a matriz de probabilidade bivariada de placares (0-0 até max_goals-max_goals).
+    Aplica o ajuste de Dixon-Coles e normaliza para garantir que a soma das probabilidades seja 1.0.
+    """
     matrix = np.zeros((max_goals + 1, max_goals + 1))
+    
     for x in range(max_goals + 1):
         p_x = poisson.pmf(x, lambda_h)
         for y in range(max_goals + 1):
             p_y = poisson.pmf(y, mu_a)
             adj = dixon_coles_tau(x, y, lambda_h, mu_a, rho)
+            # Garante que nenhuma probabilidade seja negativa devido a ajustes numéricos extremos
             matrix[x, y] = max(0.0, p_x * p_y * adj)
             
     total_prob = np.sum(matrix)
     if total_prob > 0:
         matrix /= total_prob
+        
     return matrix
 
-def calc_nbinom_over_under(mean: float, variance: float, line: float) -> dict:
-    if variance <= mean:
+
+def calc_nbinom_over_under(mean: float, variance: float, line: float) -> Optional[Dict[str, Any]]:
+    """
+    Calcula probabilidades de Over/Under usando Distribuição Binomial Negativa.
+    Ideal para mercados com superdispersão (variância > média), como escanteios.
+    """
+    if variance <= mean or mean <= 0:
+        # Fallback seguro para Poisson se não houver superdispersão
         k = int(np.floor(line))
         p_under = float(poisson.cdf(k, mean))
         p_over = max(0.01, 1.0 - p_under)
-        return {
-            "line": line,
-            "prob_over": round(p_over * 100, 1),
-            "fair_odd_over": round(1.0 / p_over, 2)
-        }
-    
-    p = mean / variance
-    n = (mean ** 2) / (variance - mean)
-    k = int(np.floor(line))
-    p_under = float(nbinom.cdf(k, n, p))
-    p_over = max(0.01, 1.0 - p_under)
+    else:
+        p = mean / variance
+        n = (mean ** 2) / (variance - mean)
+        k = int(np.floor(line))
+        p_under = float(nbinom.cdf(k, n, p))
+        p_over = max(0.01, 1.0 - p_under)
     
     return {
         "line": line,
@@ -49,75 +71,74 @@ def calc_nbinom_over_under(mean: float, variance: float, line: float) -> dict:
         "fair_odd_over": round(1.0 / p_over, 2)
     }
 
-def analyze_match_markets(home_stats: dict, away_stats: dict, referee_data: dict = None) -> dict:
-    # 1. Regressão à Média e Clipping de Gols
-    # Trava entre 0.45 e 2.95 para evitar distorções
-    lambda_raw = home_stats.get("attack_strength", 1.0) * away_stats.get("defense_vulnerability", 1.0) * 1.35
-    mu_raw = away_stats.get("attack_strength", 1.0) * home_stats.get("defense_vulnerability", 1.0) * 1.05
+
+def analyze_match_markets(home_stats: Dict[str, Any], away_stats: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Motor principal de análise. Recebe dados brutos reais e retorna probabilidades exatas.
+    """
+    # 1. Validação de Integridade dos Dados (Defesa em Profundidade)
+    h_sample = home_stats.get("sample_size", 0)
+    a_sample = away_stats.get("sample_size", 0)
     
-    lambda_h = float(np.clip(lambda_raw, 0.45, 2.95))
-    mu_a = float(np.clip(mu_raw, 0.45, 2.70))
-    
+    if h_sample < 3 or a_sample < 3:
+        raise InsufficientDataError(f"Amostra insuficiente: Home={h_sample}, Away={a_sample}. Mínimo 3 jogos.")
+
+    # 2. Cálculo de Gols Esperados (Lambda e Mu)
+    # Estimador robusto: Média entre o ataque do time e a defesa do oponente
+    h_scored_mean = float(np.mean(home_stats["goals_scored"]))
+    a_conceded_mean = float(np.mean(away_stats["goals_conceded"]))
+    lambda_h = float(np.clip((h_scored_mean + a_conceded_mean) / 2.0, 0.3, 3.5))
+
+    a_scored_mean = float(np.mean(away_stats["goals_scored"]))
+    h_conceded_mean = float(np.mean(home_stats["goals_conceded"]))
+    mu_a = float(np.clip((a_scored_mean + h_conceded_mean) / 2.0, 0.3, 3.5))
+
+    # 3. Geração da Matriz de Probabilidades (Dixon-Coles)
     matrix = calculate_score_matrix(lambda_h, mu_a)
-    
-    # Gols
+
+    # 4. Cálculo Exato dos Mercados de Gols a partir da Matriz
+    # Over 1.5: Soma de todas as células onde x + y > 1.5
     p_over_1_5 = float(np.sum([matrix[x, y] for x in range(matrix.shape[0]) for y in range(matrix.shape[1]) if x + y > 1.5]))
+    
+    # Over 2.5: Soma de todas as células onde x + y > 2.5
     p_over_2_5 = float(np.sum([matrix[x, y] for x in range(matrix.shape[0]) for y in range(matrix.shape[1]) if x + y > 2.5]))
+    
+    # BTTS (Ambas Marcam): Soma da submatriz onde x >= 1 e y >= 1
     p_btts = float(np.sum(matrix[1:, 1:]))
     
-    # Mercado Composto: BTTS OU Over 2.5
+    # Combo BTTS ou Over 2.5: 1 - P(Placares que perdem em ambos os critérios)
+    # Placares perdedores: 0-0, 1-0, 2-0, 0-1, 0-2
     losing_scores = [(0,0), (1,0), (2,0), (0,1), (0,2)]
     p_losing = sum(matrix[x, y] for x, y in losing_scores if x < matrix.shape[0] and y < matrix.shape[1])
     p_btts_or_over25 = float(np.clip(1.0 - p_losing, 0.05, 0.98))
-    
-    exp_goals = round(lambda_h + mu_a, 2)
+
     goals_analysis = {
-        "expected_total": exp_goals,
-        "over_1_5": {"prob_over": round(p_over_1_5 * 100, 1), "fair_odd": round(1.0 / max(p_over_1_5, 0.01), 2)},
-        "over_2_5": {"prob_over": round(p_over_2_5 * 100, 1), "fair_odd": round(1.0 / max(p_over_2_5, 0.01), 2)},
-        "btts": {"prob_yes": round(p_btts * 100, 1), "fair_odd": round(1.0 / max(p_btts, 0.01), 2)},
-        "btts_or_over25": {"prob_hit": round(p_btts_or_over25 * 100, 1), "fair_odd": round(1.0 / p_btts_or_over25, 2)}
+        "expected_total": round(lambda_h + mu_a, 2),
+        "lambda_h": round(lambda_h, 2), # Exposto para auditoria
+        "mu_a": round(mu_a, 2),         # Exposto para auditoria
+        "over_1_5": {"prob": round(p_over_1_5 * 100, 1), "fair_odd": round(1.0 / max(p_over_1_5, 0.01), 2)},
+        "over_2_5": {"prob": round(p_over_2_5 * 100, 1), "fair_odd": round(1.0 / max(p_over_2_5, 0.01), 2)},
+        "btts": {"prob": round(p_btts * 100, 1), "fair_odd": round(1.0 / max(p_btts, 0.01), 2)},
+        "btts_or_over25": {"prob": round(p_btts_or_over25 * 100, 1), "fair_odd": round(1.0 / p_btts_or_over25, 2)}
     }
-    
-    # 2. Cantos
-    exp_corners = float(np.clip(home_stats.get("avg_corners_for", 5.0) + away_stats.get("avg_corners_for", 4.5), 6.5, 14.5))
-    var_corners = exp_corners * 1.35
-    corners_analysis = {
-        "expected_total": round(exp_corners, 1),
-        "over_8_5": calc_nbinom_over_under(exp_corners, var_corners, 8.5),
-        "over_9_5": calc_nbinom_over_under(exp_corners, var_corners, 9.5),
-        "over_10_5": calc_nbinom_over_under(exp_corners, var_corners, 10.5),
+
+    # 5. Mercados Secundários (Desativados temporariamente por ausência de dados reais na API /schedule)
+    # Conforme acordado na Fase 1: Zero alucinação. Retornamos null com motivo explícito.
+    secondary_markets_placeholder = {
+        "status": "awaiting_real_data",
+        "reason": "Endpoint /schedule da ESPN não fornece dados de cantos/chutes/cartões. Coleta via /summary será implementada na Fase 2.",
+        "corners": None,
+        "shots": None,
+        "cards": None
     }
-    
-    # 3. Finalizações
-    exp_shots = round(home_stats.get("avg_shots", 12.0) + away_stats.get("avg_shots", 11.0), 1)
-    exp_sot = round(home_stats.get("avg_shots_target", 4.2) + away_stats.get("avg_shots_target", 3.8), 1)
-    p_sot_85 = max(0.01, 1.0 - float(poisson.cdf(8, exp_sot)))
-    shots_analysis = {
-        "expected_shots": exp_shots,
-        "expected_sot": exp_sot,
-        "over_8_5_sot": {"prob_over": round(p_sot_85 * 100, 1), "fair_odd": round(1.0 / p_sot_85, 2)}
-    }
-    
-    # 4. Cartões Calibrados
-    base_cards = home_stats.get("avg_cards", 2.1) + away_stats.get("avg_cards", 2.1)
-    ref_factor = 1.0
-    if referee_data and referee_data.get("league_avg_cards", 0) > 0:
-        ref_factor = float(np.clip(referee_data.get("referee_avg_cards", 4.8) / referee_data["league_avg_cards"], 0.75, 1.35))
-    
-    exp_cards = float(np.clip(base_cards * ref_factor, 2.0, 7.5))
-    p_cards_35 = max(0.01, 1.0 - float(poisson.cdf(3, exp_cards)))
-    p_cards_45 = max(0.01, 1.0 - float(poisson.cdf(4, exp_cards)))
-    cards_analysis = {
-        "expected_total": round(exp_cards, 2),
-        "referee_factor": round(ref_factor, 2),
-        "over_3_5": {"prob_over": round(p_cards_35 * 100, 1), "fair_odd": round(1.0 / p_cards_35, 2)},
-        "over_4_5": {"prob_over": round(p_cards_45 * 100, 1), "fair_odd": round(1.0 / p_cards_45, 2)}
-    }
-    
+
     return {
         "goals": goals_analysis,
-        "corners": corners_analysis,
-        "shots": shots_analysis,
-        "cards": cards_analysis
+        "secondary_markets": secondary_markets_placeholder,
+        "model_info": {
+            "algorithm": "Dixon-Coles Bivariate Poisson",
+            "rho": -0.11,
+            "home_sample_size": h_sample,
+            "away_sample_size": a_sample
+        }
     }

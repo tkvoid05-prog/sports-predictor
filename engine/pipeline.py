@@ -1,281 +1,163 @@
 import os
 import json
-import math
+import logging
 from datetime import datetime, timezone, timedelta
+
 from engine.fetchers import fetch_espn_fixtures
+from engine.models import analyze_match_markets, InsufficientDataError
 
-# Camada de Calibração por Competição (Benchmark empírico)
-LEAGUE_PROFILES = {
-    "Premier League": {
-        "tag": "⚡ Ritmo Alto | 🚩 +Cantos | 🟨 -Cartões",
-        "pace_mult": 1.10,
-        "corner_mult": 1.08,
-        "card_mult": 0.85,
-        "desc_cantos": "Ritmo vertical e transição rápida da Premier League.",
-        "desc_cards": "Árbitros ingleses mais permissivos em faltas táticas."
-    },
-    "Brasileirão Série A": {
-        "tag": "🛑 Jogo Picardado | 🟨 +Cartões | ⏱️ Ritmo Médio",
-        "pace_mult": 0.95,
-        "corner_mult": 0.97,
-        "card_mult": 1.25,
-        "desc_cantos": "Padrão de volume lateral da Série A.",
-        "desc_cards": "Rigor disciplinar alto característico do futebol brasileiro."
-    },
-    "La Liga": {
-        "tag": "🎯 Posse Cadenciada | 🟨 +Cartões",
-        "pace_mult": 0.98,
-        "corner_mult": 0.96,
-        "card_mult": 1.20,
-        "desc_cantos": "Circulação paciente reduz cantos de transição.",
-        "desc_cards": "Critério disciplinar rígido da La Liga."
-    },
-    "Bundesliga": {
-        "tag": "⚡ Transição Direta | ⚽ +Gols",
-        "pace_mult": 1.08,
-        "corner_mult": 1.02,
-        "card_mult": 0.90,
-        "desc_cantos": "Transição veloz da Bundesliga.",
-        "desc_cards": "Critério disciplinar alemão moderado."
-    },
-    "Ligue 1": {
-        "tag": "🛡️ Físico / Equilibrado",
-        "pace_mult": 0.98,
-        "corner_mult": 0.98,
-        "card_mult": 1.05,
-        "desc_cantos": "Padrão equilibrado da Ligue 1.",
-        "desc_cards": "Critério disciplinar padrão francês."
-    },
-    "DEFAULT": {
-        "tag": "⚖️ Padrão Equilibrado",
-        "pace_mult": 1.0,
-        "corner_mult": 1.0,
-        "card_mult": 1.0,
-        "desc_cantos": "Projeção volumétrica equilibrada.",
-        "desc_cards": "Critério disciplinar padrão."
-    }
-}
+logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
+logger = logging.getLogger(__name__)
 
-def get_league_profile(league_name):
-    for key, data in LEAGUE_PROFILES.items():
-        if key.lower() in league_name.lower():
-            return data
-    return LEAGUE_PROFILES["DEFAULT"]
 
-def poisson_prob(lmbda, k):
-    if lmbda <= 0:
-        return 1.0 if k == 0 else 0.0
-    return (math.exp(-lmbda) * (lmbda ** k)) / math.factorial(k)
-
-def calc_poisson_goals(exp_home, exp_away):
-    p_home = [poisson_prob(exp_home, k) for k in range(10)]
-    p_away = [poisson_prob(exp_away, k) for k in range(10)]
-
-    p_over_15 = 0.0
-    p_over_25 = 0.0
-    p_btts = 0.0
-
-    for i in range(10):
-        for j in range(10):
-            prob = p_home[i] * p_away[j]
-            total_goals = i + j
-            if total_goals > 1.5:
-                p_over_15 += prob
-            if total_goals > 2.5:
-                p_over_25 += prob
-            if i > 0 and j > 0:
-                p_btts += prob
-
-    prob_o15 = round(p_over_15 * 100, 1)
-    prob_o25 = round(p_over_25 * 100, 1)
-    prob_btts = round(p_btts * 100, 1)
-
-    odd_o15 = round(100.0 / prob_o15, 2) if prob_o15 > 0 else 0
-    odd_o25 = round(100.0 / prob_o25, 2) if prob_o25 > 0 else 0
-    odd_btts = round(100.0 / prob_btts, 2) if prob_btts > 0 else 0
-
-    return prob_o15, odd_o15, prob_o25, odd_o25, prob_btts, odd_btts
-
-def generate_ai_badges(prob_o15, prob_btts, expected_corners, expected_cards, league_profile):
+def generate_ai_badges(goals_analysis: dict) -> list:
+    """Gera badges baseadas exclusivamente em probabilidades reais de gols (Dixon-Coles)."""
     badges = []
+    p_o15 = goals_analysis["over_1_5"]["prob"]
+    p_btts = goals_analysis["btts"]["prob"]
+    p_combo = goals_analysis["btts_or_over25"]["prob"]
 
-    # Gols
-    if prob_o15 >= 72.0:
+    if p_o15 >= 72.0:
         badges.append({
             "tipo": "green",
-            "texto": f"Dica IA: Forte tendência +1.5 Gols ({prob_o15}%)"
+            "texto": f"Dica IA: Forte tendência +1.5 Gols ({p_o15}%) — Modelo Dixon-Coles"
         })
-    elif prob_o15 <= 58.0:
+    elif p_o15 <= 58.0:
         badges.append({
             "tipo": "orange",
-            "texto": f"Atenção IA: Jogo Amarrado / Tendência Under ({prob_o15}% para +1.5)"
+            "texto": f"Atenção IA: Jogo Amarrado / Tendência Under ({p_o15}% para +1.5)"
         })
 
-    # Ambas Marcam
-    if prob_btts >= 55.0:
+    if p_btts >= 55.0:
         badges.append({
             "tipo": "green",
-            "texto": f"Dica IA: Alta probabilidade de BTTS / Ambas Marcam ({prob_btts}%)"
+            "texto": f"Dica IA: Alta probabilidade de BTTS / Ambas Marcam ({p_btts}%)"
         })
 
-    # Escanteios
-    if expected_corners >= 10.2:
+    if p_combo >= 75.0:
         badges.append({
             "tipo": "green",
-            "texto": f"Dica IA: Volume Alto de Cantos (+8.5 / +9.5) — {league_profile['desc_cantos']}"
-        })
-    elif expected_corners <= 8.8:
-        badges.append({
-            "tipo": "orange",
-            "texto": "Atenção IA: Volume Baixo a Moderado de Cantos"
-        })
-
-    # Cartões
-    if expected_cards >= 4.8:
-        badges.append({
-            "tipo": "green",
-            "texto": f"Dica IA: Tendência Disciplinar Alta (+3.5 / +4.5 Cartões) — {league_profile['desc_cards']}"
-        })
-    elif expected_cards <= 3.3:
-        badges.append({
-            "tipo": "orange",
-            "texto": f"Atenção IA: Jogo Limpo / Poucos Cartões — {league_profile['desc_cards']}"
+            "texto": f"Dica IA: Combo BTTS ou Over 2.5 com forte aderência estatística ({p_combo}%)"
         })
 
     return badges
 
+
 def run_pipeline():
     fixtures = fetch_espn_fixtures()
     matches_payload = []
+    skipped_count = 0
 
     for f in fixtures:
         league = f.get("league", "Outros")
         home = f.get("home_team", "")
         away = f.get("away_team", "")
         referee = f.get("referee", "Não divulgado")
+        kickoff = f.get("kickoff", "")
 
-        profile = get_league_profile(league)
+        h_hist = f.get("home_history_5")
+        a_hist = f.get("away_history_5")
 
-        # Consome os dados reais retornados pelo fetchers.py
-        h_hist = f.get("home_history_5", {})
-        a_hist = f.get("away_history_5", {})
+        # Regra de integridade: sem histórico real, a partida não é analisável
+        if not h_hist or not a_hist:
+            logger.warning(f"Partida descartada (histórico ausente): {home} vs {away}")
+            skipped_count += 1
+            continue
 
-        h_scored = h_hist.get("goals_scored", [])
-        h_conceded = h_hist.get("goals_conceded", [])
-        a_scored = a_hist.get("goals_scored", [])
-        a_conceded = a_hist.get("goals_conceded", [])
+        try:
+            result = analyze_match_markets(h_hist, a_hist)
+        except InsufficientDataError as e:
+            logger.warning(f"Partida descartada pelo modelo: {home} vs {away} | {e}")
+            skipped_count += 1
+            continue
+        except Exception as e:
+            logger.error(f"Erro inesperado no modelo para {home} vs {away}: {e}")
+            skipped_count += 1
+            continue
 
-        # Médias reais calculadas em cima dos últimos 5 jogos
-        avg_h_att = sum(h_scored) / len(h_scored) if h_scored else 1.2
-        avg_h_def = sum(h_conceded) / len(h_conceded) if h_conceded else 1.1
-        avg_a_att = sum(a_scored) / len(a_scored) if a_scored else 1.1
-        avg_a_def = sum(a_conceded) / len(a_conceded) if a_conceded else 1.3
+        goals = result["goals"]
+        model_info = result["model_info"]
 
-        # 1. Projeção de Gols: Ataque vs Defesa + Fator Mando (1.10 casa / 0.90 fora)
-        exp_home_goals = round(((avg_h_att * 0.6) + (avg_a_def * 0.4)) * 1.10, 2)
-        exp_away_goals = round(((avg_a_att * 0.6) + (avg_h_def * 0.4)) * 0.90, 2)
-        exp_total_goals = round(exp_home_goals + exp_away_goals, 1)
+        h_sample = model_info["home_sample_size"]
+        a_sample = model_info["away_sample_size"]
+        confidence = "Alta" if (h_sample >= 5 and a_sample >= 5) else "Média"
 
-        p_o15, odd_o15, p_o25, odd_o25, p_btts, odd_btts = calc_poisson_goals(exp_home_goals, exp_away_goals)
-        p_combo = round(min(95.0, max(p_btts, p_o25) + 12.0), 1)
-        odd_combo = round(100.0 / p_combo, 2) if p_combo > 0 else 0
+        badges = generate_ai_badges(goals)
 
-        # 2. Projeção de Escanteios: Volume derivado da força ofensiva real dos times + Mando + Liga
-        raw_h_corners = 4.2 + (avg_h_att * 1.1)
-        raw_a_corners = 3.6 + (avg_a_att * 0.9)
-        h_corners = round(raw_h_corners * profile["corner_mult"], 1)
-        a_corners = round(raw_a_corners * profile["corner_mult"], 1)
-        exp_corners = round(h_corners + a_corners, 1)
-
-        p_c85 = round(min(92.0, max(40.0, (exp_corners / 9.5) * 65.0)), 1)
-        odd_c85 = round(100.0 / p_c85, 2) if p_c85 > 0 else 0
-        p_c105 = round(max(18.0, p_c85 - 24.0), 1)
-        odd_c105 = round(100.0 / p_c105, 2) if p_c105 > 0 else 0
-
-        # 3. Projeção de Finalizações: Derivado do volume de gols esperados e ritmo da liga
-        h_shots = round((exp_home_goals * 6.5 + 4.5) * profile["pace_mult"], 1)
-        a_shots = round((exp_away_goals * 6.0 + 4.0) * profile["pace_mult"], 1)
-        exp_shots = round(h_shots + a_shots, 1)
-
-        h_sot = round(h_shots * 0.35, 1)
-        a_sot = round(a_shots * 0.33, 1)
-        p_sot = round(min(88.0, max(38.0, (exp_shots / 24.0) * 62.0)), 1)
-        odd_sot = round(100.0 / p_sot, 2) if p_sot > 0 else 0
-
-        # 4. Projeção de Cartões: Derivado do perfil disciplinar da liga
-        base_h_cards = 2.0
-        base_a_cards = 2.2
-        h_cards = round(base_h_cards * profile["card_mult"], 1)
-        a_cards = round(base_a_cards * profile["card_mult"], 1)
-        exp_cards = round(h_cards + a_cards, 1)
-
-        p_cd35 = round(min(92.0, max(40.0, (exp_cards / 4.5) * 68.0)), 1)
-        odd_cd35 = round(100.0 / p_cd35, 2) if p_cd35 > 0 else 0
-        p_cd45 = round(max(20.0, p_cd35 - 23.0), 1)
-        odd_cd45 = round(100.0 / p_cd45, 2) if p_cd45 > 0 else 0
-
-        badges = generate_ai_badges(p_o15, p_btts, exp_corners, exp_cards, profile)
-
-        # Confiança baseada na integridade da amostra real coletada
-        h_sample = h_hist.get("sample_size", 0)
-        a_sample = a_hist.get("sample_size", 0)
-        confidence = "Alta" if (h_sample == 5 and a_sample == 5) else "Média"
-
+        # Schema de saída preservado para compatibilidade com o app.py.
+        # Mercados secundários retornam None explícito até a Fase 2 (dados reais via endpoint summary/boxscore).
         match_obj = {
             "league": league,
-            "league_dna": profile["tag"],
+            "league_dna": league,  # mantido como identificador neutro (dado real: nome da liga)
             "home_team": home,
             "away_team": away,
             "referee": referee,
+            "kickoff": kickoff,
             "data_confidence": confidence,
             "ai_badges": badges,
-            "team_profiles": {
-                "home": {"shots": h_shots, "sot": h_sot, "corners": h_corners, "cards": h_cards},
-                "away": {"shots": a_shots, "sot": a_sot, "corners": a_corners, "cards": a_cards}
-            },
-            "stats_individual": {
-                "corners_home": h_corners,
-                "corners_away": a_corners,
-                "corners_total": exp_corners,
-                "cards_home": h_cards,
-                "cards_away": a_cards,
-                "cards_total": exp_cards
-            },
+
+            # Compatibilidade com o formato legado consumido pelo app.py
             "probabilities": {
-                "exp_total_goals": exp_total_goals,
-                "prob_over_15": p_o15,
-                "odd_over_15": odd_o15,
-                "prob_over_25": p_o25,
-                "odd_over_25": odd_o25,
-                "prob_btts": p_btts,
-                "odd_btts": odd_btts
+                "exp_total_goals": goals["expected_total"],
+                "prob_over_15": goals["over_1_5"]["prob"],
+                "odd_over_15": goals["over_1_5"]["fair_odd"],
+                "prob_over_25": goals["over_2_5"]["prob"],
+                "odd_over_25": goals["over_2_5"]["fair_odd"],
+                "prob_btts": goals["btts"]["prob"],
+                "odd_btts": goals["btts"]["fair_odd"],
             },
+
             "markets": {
                 "goals": {
-                    "expected_total": exp_total_goals,
-                    "over_1_5": {"prob_over": p_o15, "fair_odd": odd_o15},
-                    "over_2_5": {"prob_over": p_o25, "fair_odd": odd_o25},
-                    "btts": {"prob_yes": p_btts, "fair_odd": odd_btts},
-                    "btts_or_over25": {"prob_hit": p_combo, "fair_odd": odd_combo}
+                    "expected_total": goals["expected_total"],
+                    "lambda_h": goals["lambda_h"],
+                    "mu_a": goals["mu_a"],
+                    "over_1_5": {"prob_over": goals["over_1_5"]["prob"], "fair_odd": goals["over_1_5"]["fair_odd"]},
+                    "over_2_5": {"prob_over": goals["over_2_5"]["prob"], "fair_odd": goals["over_2_5"]["fair_odd"]},
+                    "btts": {"prob_yes": goals["btts"]["prob"], "fair_odd": goals["btts"]["fair_odd"]},
+                    "btts_or_over25": {"prob_hit": goals["btts_or_over25"]["prob"], "fair_odd": goals["btts_or_over25"]["fair_odd"]},
                 },
+                # Fase 1: mercados secundários desativados por ausência de dados reais na API /schedule
                 "corners": {
-                    "expected_total": exp_corners,
-                    "over_8_5": {"prob_over": p_c85, "fair_odd_over": odd_c85},
-                    "over_10_5": {"prob_over": p_c105, "fair_odd_over": odd_c105}
+                    "status": "awaiting_real_data",
+                    "expected_total": None,
+                    "over_8_5": {"prob_over": None, "fair_odd_over": None},
+                    "over_10_5": {"prob_over": None, "fair_odd_over": None},
                 },
                 "shots": {
-                    "expected_shots": exp_shots,
-                    "over_8_5_sot": {"prob_over": p_sot, "fair_odd": odd_sot}
+                    "status": "awaiting_real_data",
+                    "expected_shots": None,
+                    "over_8_5_sot": {"prob_over": None, "fair_odd": None},
                 },
                 "cards": {
-                    "referee_factor": 1.0,
-                    "expected_total": exp_cards,
-                    "over_3_5": {"prob_over": p_cd35, "fair_odd": odd_cd35},
-                    "over_4_5": {"prob_over": p_cd45, "fair_odd": odd_cd45}
-                }
-            }
+                    "status": "awaiting_real_data",
+                    "referee_factor": None,
+                    "expected_total": None,
+                    "over_3_5": {"prob_over": None, "fair_odd": None},
+                    "over_4_5": {"prob_over": None, "fair_odd": None},
+                },
+            },
+
+            # Estruturas preservadas com None para não quebrar o app.py até a Fase 4
+            "team_profiles": {
+                "home": {"shots": None, "sot": None, "corners": None, "cards": None},
+                "away": {"shots": None, "sot": None, "corners": None, "cards": None},
+            },
+            "stats_individual": {
+                "corners_home": None,
+                "corners_away": None,
+                "corners_total": None,
+                "cards_home": None,
+                "cards_away": None,
+                "cards_total": None,
+            },
+
+            "model_info": model_info,
         }
+
         matches_payload.append(match_obj)
+
+    logger.info(f"Pipeline concluído. Partidas analisadas: {len(matches_payload)} | Descartadas: {skipped_count}")
 
     br_tz = timezone(timedelta(hours=-3))
     now = datetime.now(br_tz)
@@ -284,12 +166,13 @@ def run_pipeline():
     output_data = {
         "shift": shift,
         "updated_at": now.isoformat(),
-        "matches": matches_payload
+        "matches": matches_payload,
     }
 
     os.makedirs("data", exist_ok=True)
     with open(os.path.join("data", "predictions_today.json"), "w", encoding="utf-8") as f:
         json.dump(output_data, f, ensure_ascii=False, indent=2)
+
 
 if __name__ == "__main__":
     run_pipeline()

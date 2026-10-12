@@ -30,7 +30,7 @@ jobs:
 
       - name: Executar Pipeline de Previsões
         run: |
-          python engine/pipeline.py
+          python -m engine.pipeline
 
       - name: Commit e Push dos Dados Atualizados
         run: |
