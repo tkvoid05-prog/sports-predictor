@@ -10,35 +10,34 @@ logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
 
 
-def generate_ai_badges(goals_analysis: dict) -> list:
-    """Gera badges baseadas exclusivamente em probabilidades reais de gols (Dixon-Coles)."""
+def generate_ai_badges(goals_analysis: dict, corners_analysis: dict = None, shots_analysis: dict = None) -> list:
+    """Gera badges baseadas em probabilidades reais."""
     badges = []
     p_o15 = goals_analysis["over_1_5"]["prob"]
     p_btts = goals_analysis["btts"]["prob"]
     p_combo = goals_analysis["btts_or_over25"]["prob"]
 
     if p_o15 >= 72.0:
-        badges.append({
-            "tipo": "green",
-            "texto": f"Dica IA: Forte tendência +1.5 Gols ({p_o15}%) — Modelo Dixon-Coles"
-        })
+        badges.append({"tipo": "green", "texto": f"Dica IA: Forte tendência +1.5 Gols ({p_o15}%) — Modelo Dixon-Coles"})
     elif p_o15 <= 58.0:
-        badges.append({
-            "tipo": "orange",
-            "texto": f"Atenção IA: Jogo Amarrado / Tendência Under ({p_o15}% para +1.5)"
-        })
+        badges.append({"tipo": "orange", "texto": f"Atenção IA: Jogo Amarrado / Tendência Under ({p_o15}% para +1.5)"})
 
     if p_btts >= 55.0:
-        badges.append({
-            "tipo": "green",
-            "texto": f"Dica IA: Alta probabilidade de BTTS / Ambas Marcam ({p_btts}%)"
-        })
+        badges.append({"tipo": "green", "texto": f"Dica IA: Alta probabilidade de BTTS / Ambas Marcam ({p_btts}%)"})
 
     if p_combo >= 75.0:
-        badges.append({
-            "tipo": "green",
-            "texto": f"Dica IA: Combo BTTS ou Over 2.5 com forte aderência estatística ({p_combo}%)"
-        })
+        badges.append({"tipo": "green", "texto": f"Dica IA: Combo BTTS ou Over 2.5 com forte aderência estatística ({p_combo}%)"})
+
+    # Badges para mercados secundários (se existirem)
+    if corners_analysis and corners_analysis.get("expected_total") is not None:
+        exp_c = corners_analysis["expected_total"]
+        if exp_c >= 10.5:
+            badges.append({"tipo": "green", "texto": f"Dica IA: Volume Alto de Cantos (Média {exp_c})"})
+            
+    if shots_analysis and shots_analysis.get("expected_sot") is not None:
+        exp_sot = shots_analysis["expected_sot"]
+        if exp_sot >= 9.5:
+            badges.append({"tipo": "green", "texto": f"Dica IA: Alta precisão ofensiva (Média {exp_sot} no alvo)"})
 
     return badges
 
@@ -55,17 +54,18 @@ def run_pipeline():
         referee = f.get("referee", "Não divulgado")
         kickoff = f.get("kickoff", "")
 
-        h_hist = f.get("home_history_5")
-        a_hist = f.get("away_history_5")
+        # NOVO: Ler as chaves atualizadas pelo fetchers.py da Fase 2
+        h_stats = f.get("home_stats")
+        a_stats = f.get("away_stats")
 
-        # Regra de integridade: sem histórico real, a partida não é analisável
-        if not h_hist or not a_hist:
-            logger.warning(f"Partida descartada (histórico ausente): {home} vs {away}")
+        if not h_stats or not a_stats:
+            logger.warning(f"Partida descartada (dados ausentes): {home} vs {away}")
             skipped_count += 1
             continue
 
         try:
-            result = analyze_match_markets(h_hist, a_hist)
+            # O models.py agora recebe as listas completas de stats
+            result = analyze_match_markets(h_stats, a_stats)
         except InsufficientDataError as e:
             logger.warning(f"Partida descartada pelo modelo: {home} vs {away} | {e}")
             skipped_count += 1
@@ -76,27 +76,26 @@ def run_pipeline():
             continue
 
         goals = result["goals"]
-        model_info = result["model_info"]
+        corners = result.get("corners", {})
+        shots = result.get("shots", {})
+        cards = result.get("cards", {})
+        model_info = result.get("model_info", {})
 
-        h_sample = model_info["home_sample_size"]
-        a_sample = model_info["away_sample_size"]
+        h_sample = model_info.get("home_sample_size", 0)
+        a_sample = model_info.get("away_sample_size", 0)
         confidence = "Alta" if (h_sample >= 5 and a_sample >= 5) else "Média"
 
-        badges = generate_ai_badges(goals)
+        badges = generate_ai_badges(goals, corners, shots)
 
-        # Schema de saída preservado para compatibilidade com o app.py.
-        # Mercados secundários retornam None explícito até a Fase 2 (dados reais via endpoint summary/boxscore).
         match_obj = {
             "league": league,
-            "league_dna": league,  # mantido como identificador neutro (dado real: nome da liga)
+            "league_dna": league,
             "home_team": home,
             "away_team": away,
             "referee": referee,
             "kickoff": kickoff,
             "data_confidence": confidence,
             "ai_badges": badges,
-
-            # Compatibilidade com o formato legado consumido pelo app.py
             "probabilities": {
                 "exp_total_goals": goals["expected_total"],
                 "prob_over_15": goals["over_1_5"]["prob"],
@@ -106,7 +105,6 @@ def run_pipeline():
                 "prob_btts": goals["btts"]["prob"],
                 "odd_btts": goals["btts"]["fair_odd"],
             },
-
             "markets": {
                 "goals": {
                     "expected_total": goals["expected_total"],
@@ -116,42 +114,27 @@ def run_pipeline():
                     "over_2_5": {"prob_over": goals["over_2_5"]["prob"], "fair_odd": goals["over_2_5"]["fair_odd"]},
                     "btts": {"prob_yes": goals["btts"]["prob"], "fair_odd": goals["btts"]["fair_odd"]},
                     "btts_or_over25": {"prob_hit": goals["btts_or_over25"]["prob"], "fair_odd": goals["btts_or_over25"]["fair_odd"]},
+                    # Novos mercados de gols por time (se o models.py retornar)
+                    "home_over_1_5": goals.get("home_over_1_5"),
+                    "away_over_1_5": goals.get("away_over_1_5"),
+                    "home_win_prob": goals.get("home_win_prob"),
+                    "draw_prob": goals.get("draw_prob"),
+                    "away_win_prob": goals.get("away_win_prob"),
                 },
-                # Fase 1: mercados secundários desativados por ausência de dados reais na API /schedule
-                "corners": {
-                    "status": "awaiting_real_data",
-                    "expected_total": None,
-                    "over_8_5": {"prob_over": None, "fair_odd_over": None},
-                    "over_10_5": {"prob_over": None, "fair_odd_over": None},
-                },
-                "shots": {
-                    "status": "awaiting_real_data",
-                    "expected_shots": None,
-                    "over_8_5_sot": {"prob_over": None, "fair_odd": None},
-                },
-                "cards": {
-                    "status": "awaiting_real_data",
-                    "referee_factor": None,
-                    "expected_total": None,
-                    "over_3_5": {"prob_over": None, "fair_odd": None},
-                    "over_4_5": {"prob_over": None, "fair_odd": None},
-                },
+                "corners": corners if corners.get("expected_total") is not None else {"status": "awaiting_real_data", "expected_total": None},
+                "shots": shots if shots.get("expected_total") is not None else {"status": "awaiting_real_data", "expected_shots": None},
+                "cards": cards if cards.get("expected_total") is not None else {"status": "awaiting_real_data", "expected_total": None},
             },
-
-            # Estruturas preservadas com None para não quebrar o app.py até a Fase 4
             "team_profiles": {
-                "home": {"shots": None, "sot": None, "corners": None, "cards": None},
-                "away": {"shots": None, "sot": None, "corners": None, "cards": None},
+                "home": {"shots": h_stats.get("shots"), "sot": h_stats.get("shots_on_target"), "corners": h_stats.get("corners"), "cards": h_stats.get("cards")},
+                "away": {"shots": a_stats.get("shots"), "sot": a_stats.get("shots_on_target"), "corners": a_stats.get("corners"), "cards": a_stats.get("cards")},
             },
             "stats_individual": {
-                "corners_home": None,
-                "corners_away": None,
-                "corners_total": None,
-                "cards_home": None,
-                "cards_away": None,
-                "cards_total": None,
+                "corners_home": h_stats.get("corners"),
+                "corners_away": a_stats.get("corners"),
+                "cards_home": h_stats.get("cards"),
+                "cards_away": a_stats.get("cards"),
             },
-
             "model_info": model_info,
         }
 

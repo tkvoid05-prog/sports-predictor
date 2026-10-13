@@ -34,16 +34,6 @@ st.markdown("""
         font-size: 0.72rem;
         font-weight: 600;
     }
-    .badge-dna {
-        background-color: #374151;
-        color: #e5e7eb;
-        padding: 2px 7px;
-        border-radius: 4px;
-        font-size: 0.70rem;
-        font-weight: 600;
-        margin-left: 6px;
-        border: 1px solid #4b5563;
-    }
     .info-box {
         background-color: #f3f4f6;
         color: #111827;
@@ -58,7 +48,7 @@ st.markdown("""
 
 @st.dialog("Diagnóstico Completo da Partida")
 def show_match_summary_dialog(m):
-    """Modal com análise rigorosa baseada em Dixon-Coles."""
+    """Modal com análise rigorosa baseada em Dixon-Coles e dados reais secundários."""
     mkts = m.get("markets", {})
     badges = m.get("ai_badges", [])
     home = m.get("home_team", "")
@@ -69,17 +59,7 @@ def show_match_summary_dialog(m):
 
     g = mkts.get("goals", {})
     exp_gols = g.get("expected_total", 0.0) or 0.0
-    p_o15 = g.get("over_1_5", {}).get("prob_over", 0.0) or 0.0
-    odd_o15 = g.get("over_1_5", {}).get("fair_odd", 0.0) or 0.0
-    p_o25 = g.get("over_2_5", {}).get("prob_over", 0.0) or 0.0
-    odd_o25 = g.get("over_2_5", {}).get("fair_odd", 0.0) or 0.0
-    p_btts = g.get("btts", {}).get("prob_yes", 0.0) or 0.0
-    odd_btts = g.get("btts", {}).get("fair_odd", 0.0) or 0.0
-
-    combo = g.get("btts_or_over25", {})
-    prob_combo = combo.get("prob_hit", 0.0) or 0.0
-    fair_odd_combo = combo.get("fair_odd", 0.0) or 0.0
-
+    
     st.subheader(f"{home} vs {away}")
     st.caption(f"Liga: **{league}** | Árbitro: {referee} | Confiança: {confidence}")
 
@@ -88,41 +68,41 @@ def show_match_summary_dialog(m):
         for b in badges:
             tipo = b.get("tipo")
             texto = b.get("texto", "")
-            if tipo == "green":
-                st.success(texto)
-            elif tipo == "orange":
-                st.warning(texto)
-            elif tipo == "red":
-                st.error(texto)
+            if tipo == "green": st.success(texto)
+            elif tipo == "orange": st.warning(texto)
+            elif tipo == "red": st.error(texto)
         st.divider()
 
-    st.markdown("#### ⚽ Gols & Mercados Principais (Dixon-Coles)")
+    # 1X2
+    st.markdown("#### 📊 Probabilidade 1X2 (Matriz Dixon-Coles)")
+    c1, c2, c3 = st.columns(3)
+    c1.metric("Vitória Casa", f"{g.get('home_win_prob', 0)}%")
+    c2.metric("Empate", f"{g.get('draw_prob', 0)}%")
+    c3.metric("Vitória Fora", f"{g.get('away_win_prob', 0)}%")
+    st.divider()
+
+    st.markdown("#### ⚽ Gols & Mercados Principais")
     col1, col2, col3 = st.columns(3)
     col1.metric("Média Gols", exp_gols)
-    col1.metric("+1.5 Gols", f"{p_o15}%", f"@{odd_o15}")
-    col2.metric("+2.5 Gols", f"{p_o25}%", f"@{odd_o25}")
-    col2.metric("BTTS (Sim)", f"{p_btts}%", f"@{odd_btts}")
-    col3.metric("BTTS ou +2.5", f"{prob_combo}%", f"@{fair_odd_combo}")
-
+    col1.metric("+1.5 Gols", f"{g.get('over_1_5', {}).get('prob_over', 0)}%", f"@{g.get('over_1_5', {}).get('fair_odd', 0)}")
+    col2.metric("+2.5 Gols", f"{g.get('over_2_5', {}).get('prob_over', 0)}%", f"@{g.get('over_2_5', {}).get('fair_odd', 0)}")
+    col2.metric("BTTS (Sim)", f"{g.get('btts', {}).get('prob_yes', 0)}%", f"@{g.get('btts', {}).get('fair_odd', 0)}")
+    col3.metric("BTTS ou +2.5", f"{g.get('btts_or_over25', {}).get('prob_hit', 0)}%", f"@{g.get('btts_or_over25', {}).get('fair_odd', 0)}")
+    
     st.divider()
-    st.markdown(
-        "<div class='info-box'>"
-        "<strong>Nota Arquitetural:</strong> Mercados de Cantos, Chutes e Cartões estão temporariamente "
-        "desativados (Fase 2) para garantir 100% de precisão estatística baseada em dados reais da ESPN."
-        "</div>",
-        unsafe_allow_html=True
-    )
+    st.markdown("#### 📈 Gols por Time (+1.5)")
+    ic1, ic2 = st.columns(2)
+    ic1.metric(f"{home} +1.5", f"{g.get('home_over_1_5', {}).get('prob', 0)}%", f"@{g.get('home_over_1_5', {}).get('fair_odd', 0)}")
+    ic2.metric(f"{away} +1.5", f"{g.get('away_over_1_5', {}).get('prob', 0)}%", f"@{g.get('away_over_1_5', {}).get('fair_odd', 0)}")
 
 
 @st.cache_data(ttl=3600)
 def load_predictions():
-    """Carrega o JSON com cache de memória para evitar I/O repetitivo."""
     data_file = os.path.join("data", "predictions_today.json")
     if not os.path.exists(data_file):
         return None
     with open(data_file, "r", encoding="utf-8") as f:
-        payload = json.load(f)
-    return payload
+        return json.load(f)
 
 
 st.title("⚽ Preditor Quantitativo")
@@ -159,19 +139,7 @@ for idx, m in enumerate(filtered):
     away = m.get("away_team", "")
     referee = m.get("referee", "Não divulgado")
     conf = m.get("data_confidence", "Média")
-
     g = mkts.get("goals", {})
-    exp_gols = g.get("expected_total", 0.0) or 0.0
-    p_o15 = g.get("over_1_5", {}).get("prob_over", 0.0) or 0.0
-    odd_o15 = g.get("over_1_5", {}).get("fair_odd", 0.0) or 0.0
-    p_o25 = g.get("over_2_5", {}).get("prob_over", 0.0) or 0.0
-    odd_o25 = g.get("over_2_5", {}).get("fair_odd", 0.0) or 0.0
-    p_btts = g.get("btts", {}).get("prob_yes", 0.0) or 0.0
-    odd_btts = g.get("btts", {}).get("fair_odd", 0.0) or 0.0
-
-    combo = g.get("btts_or_over25", {})
-    prob_combo = combo.get("prob_hit", 0.0) or 0.0
-    fair_odd_combo = combo.get("fair_odd", 0.0) or 0.0
 
     with st.expander(f"{home} vs {away}", expanded=True):
         col_hdr, col_btn = st.columns([3, 1])
@@ -182,39 +150,59 @@ for idx, m in enumerate(filtered):
                 unsafe_allow_html=True
             )
         with col_btn:
-            if st.button("📋 Resumo (Print)", key=f"btn_pop_{idx}"):
+            if st.button("📋 Resumo Completo", key=f"btn_pop_{idx}"):
                 show_match_summary_dialog(m)
 
         if badges:
             for b in badges:
                 tipo = b.get("tipo")
                 texto = b.get("texto", "")
-                if tipo == "green":
-                    st.success(texto)
-                elif tipo == "orange":
-                    st.warning(texto)
-                elif tipo == "red":
-                    st.error(texto)
+                if tipo == "green": st.success(texto)
+                elif tipo == "orange": st.warning(texto)
+                elif tipo == "red": st.error(texto)
 
-        tab_gols, tab_combo = st.tabs(["Gols", "BTTS ou +2.5"])
+        # NOVAS ABAS DA FASE 2
+        tab_gols, tab_cantos, tab_chutes, tab_cartoes = st.tabs(["⚽ Gols & 1X2", "🚩 Cantos", "🎯 Chutes", "🟨 Cartões"])
 
         with tab_gols:
-            st.write(f"Média Esperada de Gols: **{exp_gols}**")
-            c1, c2 = st.columns(2)
-            c1.metric("+1.5 Gols", f"{p_o15}%", f"Odd Justa: @{odd_o15}")
-            c2.metric("+2.5 Gols", f"{p_o25}%", f"Odd Justa: @{odd_o25}")
-            st.metric("Ambas Marcam (Sim)", f"{p_btts}%", f"Odd Justa: @{odd_btts}")
+            c1, c2, c3 = st.columns(3)
+            c1.metric("Vitória Casa", f"{g.get('home_win_prob', 0)}%")
+            c2.metric("Empate", f"{g.get('draw_prob', 0)}%")
+            c3.metric("Vitória Fora", f"{g.get('away_win_prob', 0)}%")
+            
+            st.divider()
+            st.markdown(f"**Média Esperada de Gols: {g.get('expected_total', 0)}**")
+            gc1, gc2 = st.columns(2)
+            gc1.metric("+1.5 Gols", f"{g.get('over_1_5', {}).get('prob_over', 0)}%", f"Odd: @{g.get('over_1_5', {}).get('fair_odd', 0)}")
+            gc2.metric("+2.5 Gols", f"{g.get('over_2_5', {}).get('prob_over', 0)}%", f"Odd: @{g.get('over_2_5', {}).get('fair_odd', 0)}")
+            st.metric("Ambas Marcam (Sim)", f"{g.get('btts', {}).get('prob_yes', 0)}%", f"Odd: @{g.get('btts', {}).get('fair_odd', 0)}")
 
-        with tab_combo:
-            if prob_combo >= 75.0:
-                st.markdown("<span class='badge-value'>SINAL QUANTITATIVO: ALTA PROBABILIDADE</span>", unsafe_allow_html=True)
-            st.metric("Ambas Marcam OU +2.5 Gols", f"{prob_combo}%", f"Odd Justa: @{fair_odd_combo}")
-            st.caption("Critério: Placar diferente de 0-0, 1-0, 2-0, 0-1 ou 0-2.")
+        with tab_cantos:
+            corners = mkts.get("corners", {})
+            if corners.get("expected_total") is not None:
+                st.metric("Média Esperada de Cantos", corners["expected_total"])
+                cc1, cc2, cc3 = st.columns(3)
+                cc1.metric("Over 8.5", f"{corners['over_8_5']['prob_over']}%", f"@{corners['over_8_5']['fair_odd']}")
+                cc2.metric("Over 9.5", f"{corners['over_9_5']['prob_over']}%", f"@{corners['over_9_5']['fair_odd']}")
+                cc3.metric("Over 10.5", f"{corners['over_10_5']['prob_over']}%", f"@{corners['over_10_5']['fair_odd']}")
+            else:
+                st.info("Dados de cantos em processamento para esta partida.")
 
-        st.markdown(
-            "<div class='info-box'>"
-            "<strong>Nota Arquitetural:</strong> Mercados de Cantos, Chutes e Cartões estão temporariamente "
-            "desativados (Fase 2) para garantir 100% de precisão estatística baseada em dados reais da ESPN."
-            "</div>",
-            unsafe_allow_html=True
-        )
+        with tab_chutes:
+            shots = mkts.get("shots", {})
+            if shots.get("expected_total") is not None:
+                st.metric("Média Esperada de Chutes no Alvo (Total)", shots["expected_total"])
+                sc1, sc2 = st.columns(2)
+                sc1.metric("Over 8.5", f"{shots['over_8_5']['prob_over']}%", f"@{shots['over_8_5']['fair_odd']}")
+            else:
+                st.info("Dados de chutes em processamento para esta partida.")
+
+        with tab_cartoes:
+            cards = mkts.get("cards", {})
+            if cards.get("expected_total") is not None:
+                st.metric("Média Esperada de Cartões (Total)", cards["expected_total"])
+                k1, k2 = st.columns(2)
+                k1.metric("Over 3.5", f"{cards['over_3_5']['prob_over']}%", f"@{cards['over_3_5']['fair_odd']}")
+                k2.metric("Over 4.5", f"{cards['over_4_5']['prob_over']}%", f"@{cards['over_4_5']['fair_odd']}")
+            else:
+                st.info("Dados de cartões em processamento para esta partida.")
