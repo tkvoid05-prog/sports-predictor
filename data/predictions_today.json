@@ -1,6 +1,6 @@
 {
-  "shift": "RODADA DA MANHÃ",
-  "updated_at": "2026-10-17T10:34:32.437804-03:00",
+  "shift": "RODADA DA TARDE/NOITE",
+  "updated_at": "2026-10-17T15:10:56.991750-03:00",
   "matches": [
     {
       "league": "Premier League",
@@ -1358,7 +1358,7 @@
       "home_team": "Real Betis",
       "away_team": "Barcelona",
       "referee": "Não divulgado",
-      "kickoff": "2026-10-17T16:00Z",
+      "kickoff": "2026-10-17T16:30Z",
       "data_confidence": "Alta",
       "ai_badges": [
         {
