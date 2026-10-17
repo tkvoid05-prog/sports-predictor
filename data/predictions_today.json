@@ -1,191 +1,195 @@
 {
-  "shift": "RODADA DA TARDE/NOITE",
-  "updated_at": "2026-10-16T16:20:14.001661-03:00",
+  "shift": "RODADA DA MANHÃ",
+  "updated_at": "2026-10-17T10:32:15.082423-03:00",
   "matches": [
     {
-      "league": "La Liga",
-      "league_dna": "La Liga",
-      "home_team": "Deportivo",
-      "away_team": "Levante",
+      "league": "Premier League",
+      "league_dna": "Premier League",
+      "home_team": "Everton",
+      "away_team": "Chelsea",
       "referee": "Não divulgado",
-      "kickoff": "2026-10-16T19:00Z",
+      "kickoff": "2026-10-17T11:30Z",
       "data_confidence": "Alta",
       "ai_badges": [
         {
           "tipo": "green",
-          "texto": "Dica IA: Forte tendência +1.5 Gols (72.2%) — Modelo Dixon-Coles"
+          "texto": "Dica IA: Forte tendência +1.5 Gols (72.6%) — Modelo Dixon-Coles"
         },
         {
           "tipo": "green",
-          "texto": "Dica IA: Alta probabilidade de BTTS / Ambas Marcam (63.8%)"
+          "texto": "Dica IA: Alta probabilidade de BTTS / Ambas Marcam (61.3%)"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Volume Alto de Cantos (Média 11.8)"
         }
       ],
       "probabilities": {
         "exp_total_goals": 3.2,
-        "prob_over_15": 72.2,
-        "odd_over_15": 1.39,
-        "prob_over_25": 38.3,
-        "odd_over_25": 2.61,
-        "prob_btts": 63.8,
-        "odd_btts": 1.57
+        "prob_over_15": 72.6,
+        "odd_over_15": 1.38,
+        "prob_over_25": 39.4,
+        "odd_over_25": 2.54,
+        "prob_btts": 61.3,
+        "odd_btts": 1.63
       },
       "markets": {
         "goals": {
           "expected_total": 3.2,
-          "lambda_h": 1.8,
-          "mu_a": 1.4,
+          "lambda_h": 1.2,
+          "mu_a": 2.0,
           "over_1_5": {
-            "prob_over": 72.2,
-            "fair_odd": 1.39
+            "prob_over": 72.6,
+            "fair_odd": 1.38
           },
           "over_2_5": {
-            "prob_over": 38.3,
-            "fair_odd": 2.61
+            "prob_over": 39.4,
+            "fair_odd": 2.54
           },
           "btts": {
-            "prob_yes": 63.8,
-            "fair_odd": 1.57
+            "prob_yes": 61.3,
+            "fair_odd": 1.63
           },
           "btts_or_over25": {
-            "prob_hit": 73.0,
-            "fair_odd": 1.37
+            "prob_hit": 72.4,
+            "fair_odd": 1.38
           },
           "home_over_1_5": {
-            "prob": 53.7,
-            "fair_odd": 1.86
+            "prob": 33.7,
+            "fair_odd": 2.97
           },
           "away_over_1_5": {
-            "prob": 40.8,
-            "fair_odd": 2.45
+            "prob": 59.4,
+            "fair_odd": 1.68
           },
-          "home_win_prob": 45.5,
-          "draw_prob": 25.6,
-          "away_win_prob": 29.0
+          "home_win_prob": 21.7,
+          "draw_prob": 24.1,
+          "away_win_prob": 54.2
         },
         "corners": {
-          "expected_total": 7.4,
+          "expected_total": 11.8,
           "over_8_5": {
-            "prob_over": 33.2,
-            "fair_odd": 3.01
+            "prob_over": 75.3,
+            "fair_odd": 1.33
           },
           "over_9_5": {
-            "prob_over": 22.9,
-            "fair_odd": 4.37
+            "prob_over": 66.9,
+            "fair_odd": 1.49
           },
           "over_10_5": {
-            "prob_over": 15.0,
-            "fair_odd": 6.67
+            "prob_over": 57.9,
+            "fair_odd": 1.73
           }
         },
         "shots": {
-          "expected_total": 7.6,
+          "expected_total": 9.8,
           "over_8_5": {
-            "prob_over": 36.2,
-            "fair_odd": 2.76
+            "prob_over": 64.4,
+            "fair_odd": 1.55
           }
         },
         "cards": {
-          "expected_total": 3.0,
+          "expected_total": 3.6,
           "over_3_5": {
-            "prob_over": 35.3,
-            "fair_odd": 2.83
+            "prob_over": 48.0,
+            "fair_odd": 2.08
           },
           "over_4_5": {
-            "prob_over": 18.5,
-            "fair_odd": 5.41
+            "prob_over": 29.6,
+            "fair_odd": 3.38
           }
         }
       },
       "team_profiles": {
         "home": {
           "shots": [
-            10.0,
-            8.0,
-            11.0,
-            6.0,
-            8.0
+            21.0,
+            12.0,
+            18.0,
+            13.0,
+            16.0
           ],
           "sot": [
+            2.0,
             3.0,
-            3.0,
-            4.0,
-            4.0,
-            3.0
+            6.0,
+            7.0,
+            5.0
           ],
           "corners": [
-            7.0,
-            1.0,
-            5.0,
             4.0,
-            2.0
+            6.0,
+            4.0,
+            7.0,
+            4.0
           ],
           "cards": [
-            1.0,
             2.0,
-            1.0,
-            4.0,
-            2.0
+            2.0,
+            3.0,
+            2.0,
+            0.0
           ]
         },
         "away": {
           "shots": [
+            12.0,
+            12.0,
             13.0,
-            11.0,
-            19.0,
-            11.0,
-            4.0
+            17.0,
+            18.0
           ],
           "sot": [
+            2.0,
             7.0,
-            3.0,
-            10.0,
-            1.0,
-            0.0
+            5.0,
+            6.0,
+            6.0
           ],
           "corners": [
+            12.0,
+            11.0,
             3.0,
             4.0,
-            6.0,
-            4.0,
-            1.0
+            4.0
           ],
           "cards": [
+            0.0,
             1.0,
-            2.0,
+            4.0,
             1.0,
-            1.0,
-            0.0
+            3.0
           ]
         }
       },
       "stats_individual": {
         "corners_home": [
-          7.0,
-          1.0,
-          5.0,
-          4.0,
-          2.0
-        ],
-        "corners_away": [
-          3.0,
           4.0,
           6.0,
           4.0,
-          1.0
+          7.0,
+          4.0
+        ],
+        "corners_away": [
+          12.0,
+          11.0,
+          3.0,
+          4.0,
+          4.0
         ],
         "cards_home": [
-          1.0,
           2.0,
-          1.0,
-          4.0,
-          2.0
+          2.0,
+          3.0,
+          2.0,
+          0.0
         ],
         "cards_away": [
+          0.0,
           1.0,
-          2.0,
+          4.0,
           1.0,
-          1.0,
-          0.0
+          3.0
         ]
       },
       "model_info": {
@@ -196,164 +200,546 @@
       }
     },
     {
-      "league": "Bundesliga",
-      "league_dna": "Bundesliga",
-      "home_team": "Eintracht Frankfurt",
-      "away_team": "FC Cologne",
+      "league": "Premier League",
+      "league_dna": "Premier League",
+      "home_team": "Brentford",
+      "away_team": "Liverpool",
       "referee": "Não divulgado",
-      "kickoff": "2026-10-16T18:30Z",
+      "kickoff": "2026-10-17T14:00Z",
       "data_confidence": "Alta",
       "ai_badges": [
         {
           "tipo": "green",
-          "texto": "Dica IA: Forte tendência +1.5 Gols (75.3%) — Modelo Dixon-Coles"
+          "texto": "Dica IA: Forte tendência +1.5 Gols (75.5%) — Modelo Dixon-Coles"
         },
         {
           "tipo": "green",
-          "texto": "Dica IA: Alta probabilidade de BTTS / Ambas Marcam (67.5%)"
+          "texto": "Dica IA: Alta probabilidade de BTTS / Ambas Marcam (66.0%)"
         },
         {
           "tipo": "green",
-          "texto": "Dica IA: Combo BTTS ou Over 2.5 com forte aderência estatística (76.3%)"
-        },
-        {
-          "tipo": "green",
-          "texto": "Dica IA: Volume Alto de Cantos (Média 11.6)"
+          "texto": "Dica IA: Combo BTTS ou Over 2.5 com forte aderência estatística (75.9%)"
         }
       ],
       "probabilities": {
         "exp_total_goals": 3.4,
-        "prob_over_15": 75.3,
-        "odd_over_15": 1.33,
-        "prob_over_25": 41.8,
-        "odd_over_25": 2.39,
-        "prob_btts": 67.5,
-        "odd_btts": 1.48
+        "prob_over_15": 75.5,
+        "odd_over_15": 1.32,
+        "prob_over_25": 42.5,
+        "odd_over_25": 2.35,
+        "prob_btts": 66.0,
+        "odd_btts": 1.52
       },
       "markets": {
         "goals": {
           "expected_total": 3.4,
-          "lambda_h": 1.8,
-          "mu_a": 1.6,
+          "lambda_h": 2.0,
+          "mu_a": 1.4,
           "over_1_5": {
-            "prob_over": 75.3,
-            "fair_odd": 1.33
+            "prob_over": 75.5,
+            "fair_odd": 1.32
           },
           "over_2_5": {
-            "prob_over": 41.8,
-            "fair_odd": 2.39
+            "prob_over": 42.5,
+            "fair_odd": 2.35
           },
           "btts": {
-            "prob_yes": 67.5,
-            "fair_odd": 1.48
+            "prob_yes": 66.0,
+            "fair_odd": 1.52
           },
           "btts_or_over25": {
-            "prob_hit": 76.3,
-            "fair_odd": 1.31
+            "prob_hit": 75.9,
+            "fair_odd": 1.32
           },
           "home_over_1_5": {
-            "prob": 53.7,
-            "fair_odd": 1.86
+            "prob": 59.4,
+            "fair_odd": 1.68
           },
           "away_over_1_5": {
-            "prob": 47.5,
-            "fair_odd": 2.11
+            "prob": 40.8,
+            "fair_odd": 2.45
           },
-          "home_win_prob": 41.5,
-          "draw_prob": 25.1,
-          "away_win_prob": 33.5
+          "home_win_prob": 49.8,
+          "draw_prob": 24.2,
+          "away_win_prob": 26.0
         },
         "corners": {
-          "expected_total": 11.6,
+          "expected_total": 8.4,
           "over_8_5": {
-            "prob_over": 81.7,
-            "fair_odd": 1.22
+            "prob_over": 46.3,
+            "fair_odd": 2.16
           },
           "over_9_5": {
-            "prob_over": 72.1,
-            "fair_odd": 1.39
+            "prob_over": 33.4,
+            "fair_odd": 2.99
           },
           "over_10_5": {
-            "prob_over": 60.9,
-            "fair_odd": 1.64
+            "prob_over": 22.6,
+            "fair_odd": 4.42
           }
         },
         "shots": {
-          "expected_total": 11.4,
+          "expected_total": 9.4,
           "over_8_5": {
-            "prob_over": 80.2,
-            "fair_odd": 1.25
+            "prob_over": 58.2,
+            "fair_odd": 1.72
           }
         },
         "cards": {
-          "expected_total": 4.2,
+          "expected_total": 4.6,
           "over_3_5": {
-            "prob_over": 60.5,
-            "fair_odd": 1.65
+            "prob_over": 67.4,
+            "fair_odd": 1.48
           },
           "over_4_5": {
-            "prob_over": 41.0,
-            "fair_odd": 2.44
+            "prob_over": 48.7,
+            "fair_odd": 2.05
           }
         }
       },
       "team_profiles": {
         "home": {
           "shots": [
-            18.0,
-            10.0,
-            11.0,
+            13.0,
+            8.0,
+            12.0,
             22.0,
-            12.0
+            26.0
           ],
           "sot": [
-            9.0,
-            3.0,
+            6.0,
+            2.0,
+            2.0,
             5.0,
-            8.0,
-            3.0
+            8.0
           ],
           "corners": [
+            4.0,
+            1.0,
+            4.0,
             6.0,
-            3.0,
-            5.0,
-            9.0,
-            2.0
+            7.0
           ],
           "cards": [
-            3.0,
-            2.0,
             2.0,
             1.0,
-            4.0
+            3.0,
+            4.0,
+            1.0
           ]
         },
         "away": {
           "shots": [
-            20.0,
-            18.0,
-            15.0,
-            18.0,
-            18.0
+            12.0,
+            14.0,
+            10.0,
+            13.0,
+            27.0
           ],
           "sot": [
+            3.0,
+            3.0,
             7.0,
+            4.0,
+            7.0
+          ],
+          "corners": [
+            3.0,
             5.0,
+            3.0,
+            3.0,
+            6.0
+          ],
+          "cards": [
+            2.0,
+            0.0,
+            3.0,
+            4.0,
+            3.0
+          ]
+        }
+      },
+      "stats_individual": {
+        "corners_home": [
+          4.0,
+          1.0,
+          4.0,
+          6.0,
+          7.0
+        ],
+        "corners_away": [
+          3.0,
+          5.0,
+          3.0,
+          3.0,
+          6.0
+        ],
+        "cards_home": [
+          2.0,
+          1.0,
+          3.0,
+          4.0,
+          1.0
+        ],
+        "cards_away": [
+          2.0,
+          0.0,
+          3.0,
+          4.0,
+          3.0
+        ]
+      },
+      "model_info": {
+        "algorithm": "Dixon-Coles Bivariate Poisson + Negative Binomial",
+        "rho": -0.11,
+        "home_sample_size": 5,
+        "away_sample_size": 5
+      }
+    },
+    {
+      "league": "Premier League",
+      "league_dna": "Premier League",
+      "home_team": "Fulham",
+      "away_team": "Hull City",
+      "referee": "Não divulgado",
+      "kickoff": "2026-10-17T14:00Z",
+      "data_confidence": "Alta",
+      "ai_badges": [
+        {
+          "tipo": "orange",
+          "texto": "Atenção IA: Jogo Amarrado / Tendência Under (51.1% para +1.5)"
+        }
+      ],
+      "probabilities": {
+        "exp_total_goals": 2.2,
+        "prob_over_15": 51.1,
+        "odd_over_15": 1.96,
+        "prob_over_25": 18.9,
+        "odd_over_25": 5.29,
+        "prob_btts": 45.6,
+        "odd_btts": 2.19
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 2.2,
+          "lambda_h": 1.0,
+          "mu_a": 1.2,
+          "over_1_5": {
+            "prob_over": 51.1,
+            "fair_odd": 1.96
+          },
+          "over_2_5": {
+            "prob_over": 18.9,
+            "fair_odd": 5.29
+          },
+          "btts": {
+            "prob_yes": 45.6,
+            "fair_odd": 2.19
+          },
+          "btts_or_over25": {
+            "prob_hit": 52.4,
+            "fair_odd": 1.91
+          },
+          "home_over_1_5": {
+            "prob": 26.4,
+            "fair_odd": 3.79
+          },
+          "away_over_1_5": {
+            "prob": 33.7,
+            "fair_odd": 2.97
+          },
+          "home_win_prob": 29.0,
+          "draw_prob": 31.9,
+          "away_win_prob": 39.0
+        },
+        "corners": {
+          "expected_total": 9.0,
+          "over_8_5": {
+            "prob_over": 54.0,
+            "fair_odd": 1.85
+          },
+          "over_9_5": {
+            "prob_over": 41.3,
+            "fair_odd": 2.42
+          },
+          "over_10_5": {
+            "prob_over": 29.8,
+            "fair_odd": 3.36
+          }
+        },
+        "shots": {
+          "expected_total": 8.2,
+          "over_8_5": {
+            "prob_over": 43.5,
+            "fair_odd": 2.3
+          }
+        },
+        "cards": {
+          "expected_total": 5.0,
+          "over_3_5": {
+            "prob_over": 73.5,
+            "fair_odd": 1.36
+          },
+          "over_4_5": {
+            "prob_over": 56.0,
+            "fair_odd": 1.79
+          }
+        }
+      },
+      "team_profiles": {
+        "home": {
+          "shots": [
+            12.0,
+            10.0,
+            25.0,
+            11.0,
+            14.0
+          ],
+          "sot": [
             6.0,
+            4.0,
+            6.0,
+            0.0,
+            6.0
+          ],
+          "corners": [
+            3.0,
+            8.0,
+            7.0,
+            4.0,
+            6.0
+          ],
+          "cards": [
+            3.0,
+            1.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "away": {
+          "shots": [
+            21.0,
+            13.0,
+            11.0,
+            6.0,
+            8.0
+          ],
+          "sot": [
+            4.0,
             5.0,
+            4.0,
+            2.0,
+            4.0
+          ],
+          "corners": [
+            7.0,
+            4.0,
+            3.0,
+            2.0,
+            1.0
+          ],
+          "cards": [
+            4.0,
+            5.0,
+            2.0,
+            4.0,
+            2.0
+          ]
+        }
+      },
+      "stats_individual": {
+        "corners_home": [
+          3.0,
+          8.0,
+          7.0,
+          4.0,
+          6.0
+        ],
+        "corners_away": [
+          7.0,
+          4.0,
+          3.0,
+          2.0,
+          1.0
+        ],
+        "cards_home": [
+          3.0,
+          1.0,
+          0.0,
+          2.0,
+          2.0
+        ],
+        "cards_away": [
+          4.0,
+          5.0,
+          2.0,
+          4.0,
+          2.0
+        ]
+      },
+      "model_info": {
+        "algorithm": "Dixon-Coles Bivariate Poisson + Negative Binomial",
+        "rho": -0.11,
+        "home_sample_size": 5,
+        "away_sample_size": 5
+      }
+    },
+    {
+      "league": "Premier League",
+      "league_dna": "Premier League",
+      "home_team": "Manchester City",
+      "away_team": "Ipswich Town",
+      "referee": "Não divulgado",
+      "kickoff": "2026-10-17T14:00Z",
+      "data_confidence": "Alta",
+      "ai_badges": [
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Forte tendência +1.5 Gols (83.3%) — Modelo Dixon-Coles"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Alta probabilidade de BTTS / Ambas Marcam (70.2%)"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Combo BTTS ou Over 2.5 com forte aderência estatística (82.7%)"
+        }
+      ],
+      "probabilities": {
+        "exp_total_goals": 4.0,
+        "prob_over_15": 83.3,
+        "odd_over_15": 1.2,
+        "prob_over_25": 54.4,
+        "odd_over_25": 1.84,
+        "prob_btts": 70.2,
+        "odd_btts": 1.42
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 4.0,
+          "lambda_h": 2.6,
+          "mu_a": 1.4,
+          "over_1_5": {
+            "prob_over": 83.3,
+            "fair_odd": 1.2
+          },
+          "over_2_5": {
+            "prob_over": 54.4,
+            "fair_odd": 1.84
+          },
+          "btts": {
+            "prob_yes": 70.2,
+            "fair_odd": 1.42
+          },
+          "btts_or_over25": {
+            "prob_hit": 82.7,
+            "fair_odd": 1.21
+          },
+          "home_over_1_5": {
+            "prob": 73.3,
+            "fair_odd": 1.36
+          },
+          "away_over_1_5": {
+            "prob": 40.8,
+            "fair_odd": 2.45
+          },
+          "home_win_prob": 60.8,
+          "draw_prob": 20.2,
+          "away_win_prob": 19.0
+        },
+        "corners": {
+          "expected_total": 9.8,
+          "over_8_5": {
+            "prob_over": 64.4,
+            "fair_odd": 1.55
+          },
+          "over_9_5": {
+            "prob_over": 51.7,
+            "fair_odd": 1.93
+          },
+          "over_10_5": {
+            "prob_over": 39.2,
+            "fair_odd": 2.55
+          }
+        },
+        "shots": {
+          "expected_total": 10.0,
+          "over_8_5": {
+            "prob_over": 66.7,
+            "fair_odd": 1.5
+          }
+        },
+        "cards": {
+          "expected_total": 3.2,
+          "over_3_5": {
+            "prob_over": 39.7,
+            "fair_odd": 2.52
+          },
+          "over_4_5": {
+            "prob_over": 21.9,
+            "fair_odd": 4.57
+          }
+        }
+      },
+      "team_profiles": {
+        "home": {
+          "shots": [
+            16.0,
+            6.0,
+            15.0,
+            18.0,
+            13.0
+          ],
+          "sot": [
+            6.0,
+            2.0,
+            4.0,
+            9.0,
             6.0
           ],
           "corners": [
             6.0,
-            5.0,
-            8.0,
-            8.0,
-            6.0
+            7.0,
+            4.0,
+            6.0,
+            8.0
           ],
           "cards": [
-            1.0,
+            0.0,
             3.0,
+            1.0,
             2.0,
+            1.0
+          ]
+        },
+        "away": {
+          "shots": [
+            13.0,
+            12.0,
+            14.0,
+            9.0,
+            10.0
+          ],
+          "sot": [
+            4.0,
+            6.0,
+            5.0,
+            5.0,
+            3.0
+          ],
+          "corners": [
+            4.0,
+            3.0,
+            4.0,
+            4.0,
+            3.0
+          ],
+          "cards": [
+            2.0,
+            3.0,
+            1.0,
             3.0,
             0.0
           ]
@@ -362,29 +748,29 @@
       "stats_individual": {
         "corners_home": [
           6.0,
-          3.0,
-          5.0,
-          9.0,
-          2.0
+          7.0,
+          4.0,
+          6.0,
+          8.0
         ],
         "corners_away": [
-          6.0,
-          5.0,
-          8.0,
-          8.0,
-          6.0
+          4.0,
+          3.0,
+          4.0,
+          4.0,
+          3.0
         ],
         "cards_home": [
+          0.0,
           3.0,
-          2.0,
-          2.0,
           1.0,
-          4.0
+          2.0,
+          1.0
         ],
         "cards_away": [
-          1.0,
-          3.0,
           2.0,
+          3.0,
+          1.0,
           3.0,
           0.0
         ]
@@ -397,189 +783,180 @@
       }
     },
     {
-      "league": "Ligue 1",
-      "league_dna": "Ligue 1",
-      "home_team": "Le Mans",
-      "away_team": "Toulouse",
+      "league": "Premier League",
+      "league_dna": "Premier League",
+      "home_team": "Newcastle United",
+      "away_team": "Aston Villa",
       "referee": "Não divulgado",
-      "kickoff": "2026-10-16T18:45Z",
+      "kickoff": "2026-10-17T16:30Z",
       "data_confidence": "Alta",
-      "ai_badges": [
-        {
-          "tipo": "green",
-          "texto": "Dica IA: Forte tendência +1.5 Gols (72.2%) — Modelo Dixon-Coles"
-        },
-        {
-          "tipo": "green",
-          "texto": "Dica IA: Alta probabilidade de BTTS / Ambas Marcam (63.8%)"
-        }
-      ],
+      "ai_badges": [],
       "probabilities": {
-        "exp_total_goals": 3.2,
-        "prob_over_15": 72.2,
-        "odd_over_15": 1.39,
-        "prob_over_25": 38.3,
-        "odd_over_25": 2.61,
-        "prob_btts": 63.8,
-        "odd_btts": 1.57
+        "exp_total_goals": 2.6,
+        "prob_over_15": 62.2,
+        "odd_over_15": 1.61,
+        "prob_over_25": 29.7,
+        "odd_over_25": 3.37,
+        "prob_btts": 47.1,
+        "odd_btts": 2.12
       },
       "markets": {
         "goals": {
-          "expected_total": 3.2,
+          "expected_total": 2.6,
           "lambda_h": 1.8,
-          "mu_a": 1.4,
+          "mu_a": 0.8,
           "over_1_5": {
-            "prob_over": 72.2,
-            "fair_odd": 1.39
+            "prob_over": 62.2,
+            "fair_odd": 1.61
           },
           "over_2_5": {
-            "prob_over": 38.3,
-            "fair_odd": 2.61
+            "prob_over": 29.7,
+            "fair_odd": 3.37
           },
           "btts": {
-            "prob_yes": 63.8,
-            "fair_odd": 1.57
+            "prob_yes": 47.1,
+            "fair_odd": 2.12
           },
           "btts_or_over25": {
-            "prob_hit": 73.0,
-            "fair_odd": 1.37
+            "prob_hit": 59.6,
+            "fair_odd": 1.68
           },
           "home_over_1_5": {
             "prob": 53.7,
             "fair_odd": 1.86
           },
           "away_over_1_5": {
-            "prob": 40.8,
-            "fair_odd": 2.45
+            "prob": 19.1,
+            "fair_odd": 5.24
           },
-          "home_win_prob": 45.5,
-          "draw_prob": 25.6,
-          "away_win_prob": 29.0
+          "home_win_prob": 59.5,
+          "draw_prob": 25.3,
+          "away_win_prob": 15.2
         },
         "corners": {
-          "expected_total": 7.2,
+          "expected_total": 7.4,
           "over_8_5": {
-            "prob_over": 30.3,
-            "fair_odd": 3.3
+            "prob_over": 32.4,
+            "fair_odd": 3.09
           },
           "over_9_5": {
-            "prob_over": 20.1,
-            "fair_odd": 4.98
+            "prob_over": 21.2,
+            "fair_odd": 4.72
           },
           "over_10_5": {
-            "prob_over": 12.6,
-            "fair_odd": 7.94
+            "prob_over": 12.9,
+            "fair_odd": 7.75
           }
         },
         "shots": {
-          "expected_total": 9.6,
+          "expected_total": 6.0,
           "over_8_5": {
-            "prob_over": 59.3,
-            "fair_odd": 1.69
+            "prob_over": 20.3,
+            "fair_odd": 4.93
           }
         },
         "cards": {
-          "expected_total": 3.8,
+          "expected_total": 4.6,
           "over_3_5": {
-            "prob_over": 52.7,
-            "fair_odd": 1.9
+            "prob_over": 67.4,
+            "fair_odd": 1.48
           },
           "over_4_5": {
-            "prob_over": 33.2,
-            "fair_odd": 3.01
+            "prob_over": 48.7,
+            "fair_odd": 2.05
           }
         }
       },
       "team_profiles": {
         "home": {
           "shots": [
-            11.0,
-            13.0,
-            8.0,
             12.0,
-            8.0
+            7.0,
+            8.0,
+            11.0,
+            13.0
           ],
           "sot": [
-            7.0,
             5.0,
-            3.0,
             5.0,
-            5.0
+            2.0,
+            2.0,
+            4.0
           ],
           "corners": [
-            1.0,
-            3.0,
-            2.0,
-            6.0,
-            1.0
+            4.0,
+            5.0,
+            4.0,
+            7.0,
+            2.0
           ],
           "cards": [
-            3.0,
+            1.0,
             2.0,
             2.0,
-            3.0,
-            1.0
+            2.0,
+            5.0
           ]
         },
         "away": {
           "shots": [
-            14.0,
+            15.0,
+            7.0,
             13.0,
-            24.0,
-            6.0,
-            17.0
+            7.0,
+            6.0
           ],
           "sot": [
+            6.0,
             5.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "corners": [
+            1.0,
+            6.0,
             4.0,
-            10.0,
             2.0,
             2.0
           ],
-          "corners": [
-            6.0,
-            3.0,
-            6.0,
-            2.0,
-            6.0
-          ],
           "cards": [
-            3.0,
+            2.0,
+            2.0,
             0.0,
-            1.0,
             3.0,
-            1.0
+            4.0
           ]
         }
       },
       "stats_individual": {
         "corners_home": [
-          1.0,
-          3.0,
-          2.0,
-          6.0,
-          1.0
+          4.0,
+          5.0,
+          4.0,
+          7.0,
+          2.0
         ],
         "corners_away": [
+          1.0,
           6.0,
-          3.0,
-          6.0,
+          4.0,
           2.0,
-          6.0
+          2.0
         ],
         "cards_home": [
-          3.0,
+          1.0,
           2.0,
           2.0,
-          3.0,
-          1.0
+          2.0,
+          5.0
         ],
         "cards_away": [
-          3.0,
+          2.0,
+          2.0,
           0.0,
-          1.0,
           3.0,
-          1.0
+          4.0
         ]
       },
       "model_info": {
@@ -590,85 +967,278 @@
       }
     },
     {
-      "league": "Brasileirão Série A",
-      "league_dna": "Brasileirão Série A",
-      "home_team": "Mirassol",
-      "away_team": "Internacional",
+      "league": "La Liga",
+      "league_dna": "La Liga",
+      "home_team": "Espanyol",
+      "away_team": "Atlético Madrid",
       "referee": "Não divulgado",
-      "kickoff": "2026-10-16T23:00Z",
+      "kickoff": "2026-10-17T12:00Z",
       "data_confidence": "Alta",
       "ai_badges": [
         {
-          "tipo": "orange",
-          "texto": "Atenção IA: Jogo Amarrado / Tendência Under (53.6% para +1.5)"
+          "tipo": "green",
+          "texto": "Dica IA: Forte tendência +1.5 Gols (78.2%) — Modelo Dixon-Coles"
         },
         {
           "tipo": "green",
-          "texto": "Dica IA: Volume Alto de Cantos (Média 17.2)"
+          "texto": "Dica IA: Alta probabilidade de BTTS / Ambas Marcam (69.7%)"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Combo BTTS ou Over 2.5 com forte aderência estatística (79.0%)"
         }
       ],
       "probabilities": {
-        "exp_total_goals": 2.2,
-        "prob_over_15": 53.6,
-        "odd_over_15": 1.87,
-        "prob_over_25": 23.0,
-        "odd_over_25": 4.35,
-        "prob_btts": 37.1,
-        "odd_btts": 2.7
+        "exp_total_goals": 3.6,
+        "prob_over_15": 78.2,
+        "odd_over_15": 1.28,
+        "prob_over_25": 45.8,
+        "odd_over_25": 2.18,
+        "prob_btts": 69.7,
+        "odd_btts": 1.43
       },
       "markets": {
         "goals": {
-          "expected_total": 2.2,
+          "expected_total": 3.6,
           "lambda_h": 1.6,
-          "mu_a": 0.6,
+          "mu_a": 2.0,
           "over_1_5": {
-            "prob_over": 53.6,
-            "fair_odd": 1.87
+            "prob_over": 78.2,
+            "fair_odd": 1.28
           },
           "over_2_5": {
-            "prob_over": 23.0,
-            "fair_odd": 4.35
+            "prob_over": 45.8,
+            "fair_odd": 2.18
           },
           "btts": {
-            "prob_yes": 37.1,
-            "fair_odd": 2.7
+            "prob_yes": 69.7,
+            "fair_odd": 1.43
           },
           "btts_or_over25": {
-            "prob_hit": 49.2,
-            "fair_odd": 2.03
+            "prob_hit": 79.0,
+            "fair_odd": 1.27
           },
           "home_over_1_5": {
             "prob": 47.5,
             "fair_odd": 2.11
           },
           "away_over_1_5": {
-            "prob": 12.2,
-            "fair_odd": 8.2
+            "prob": 59.4,
+            "fair_odd": 1.68
           },
-          "home_win_prob": 60.3,
-          "draw_prob": 27.1,
-          "away_win_prob": 12.6
+          "home_win_prob": 30.3,
+          "draw_prob": 24.0,
+          "away_win_prob": 45.7
         },
         "corners": {
-          "expected_total": 17.2,
+          "expected_total": 6.4,
           "over_8_5": {
-            "prob_over": 96.2,
-            "fair_odd": 1.04
+            "prob_over": 22.5,
+            "fair_odd": 4.44
           },
           "over_9_5": {
-            "prob_over": 93.7,
-            "fair_odd": 1.07
+            "prob_over": 14.9,
+            "fair_odd": 6.71
           },
           "over_10_5": {
-            "prob_over": 90.2,
-            "fair_odd": 1.11
+            "prob_over": 9.5,
+            "fair_odd": 10.53
+          }
+        },
+        "shots": {
+          "expected_total": 8.6,
+          "over_8_5": {
+            "prob_over": 49.1,
+            "fair_odd": 2.04
+          }
+        },
+        "cards": {
+          "expected_total": 5.4,
+          "over_3_5": {
+            "prob_over": 78.7,
+            "fair_odd": 1.27
+          },
+          "over_4_5": {
+            "prob_over": 62.7,
+            "fair_odd": 1.59
+          }
+        }
+      },
+      "team_profiles": {
+        "home": {
+          "shots": [
+            6.0,
+            12.0,
+            11.0,
+            8.0,
+            16.0
+          ],
+          "sot": [
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            6.0
+          ],
+          "corners": [
+            4.0,
+            0.0,
+            3.0,
+            0.0,
+            1.0
+          ],
+          "cards": [
+            3.0,
+            2.0,
+            4.0,
+            5.0,
+            3.0
+          ]
+        },
+        "away": {
+          "shots": [
+            13.0,
+            15.0,
+            12.0,
+            19.0,
+            15.0
+          ],
+          "sot": [
+            5.0,
+            5.0,
+            5.0,
+            4.0,
+            6.0
+          ],
+          "corners": [
+            3.0,
+            8.0,
+            2.0,
+            5.0,
+            6.0
+          ],
+          "cards": [
+            1.0,
+            1.0,
+            2.0,
+            4.0,
+            2.0
+          ]
+        }
+      },
+      "stats_individual": {
+        "corners_home": [
+          4.0,
+          0.0,
+          3.0,
+          0.0,
+          1.0
+        ],
+        "corners_away": [
+          3.0,
+          8.0,
+          2.0,
+          5.0,
+          6.0
+        ],
+        "cards_home": [
+          3.0,
+          2.0,
+          4.0,
+          5.0,
+          3.0
+        ],
+        "cards_away": [
+          1.0,
+          1.0,
+          2.0,
+          4.0,
+          2.0
+        ]
+      },
+      "model_info": {
+        "algorithm": "Dixon-Coles Bivariate Poisson + Negative Binomial",
+        "rho": -0.11,
+        "home_sample_size": 5,
+        "away_sample_size": 5
+      }
+    },
+    {
+      "league": "La Liga",
+      "league_dna": "La Liga",
+      "home_team": "Villarreal",
+      "away_team": "Elche",
+      "referee": "Não divulgado",
+      "kickoff": "2026-10-17T14:15Z",
+      "data_confidence": "Alta",
+      "ai_badges": [
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Volume Alto de Cantos (Média 12.6)"
+        }
+      ],
+      "probabilities": {
+        "exp_total_goals": 2.6,
+        "prob_over_15": 60.6,
+        "odd_over_15": 1.65,
+        "prob_over_25": 26.3,
+        "odd_over_25": 3.8,
+        "prob_btts": 53.9,
+        "odd_btts": 1.86
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 2.6,
+          "lambda_h": 1.4,
+          "mu_a": 1.2,
+          "over_1_5": {
+            "prob_over": 60.6,
+            "fair_odd": 1.65
+          },
+          "over_2_5": {
+            "prob_over": 26.3,
+            "fair_odd": 3.8
+          },
+          "btts": {
+            "prob_yes": 53.9,
+            "fair_odd": 1.86
+          },
+          "btts_or_over25": {
+            "prob_hit": 61.8,
+            "fair_odd": 1.62
+          },
+          "home_over_1_5": {
+            "prob": 40.8,
+            "fair_odd": 2.45
+          },
+          "away_over_1_5": {
+            "prob": 33.7,
+            "fair_odd": 2.97
+          },
+          "home_win_prob": 40.1,
+          "draw_prob": 29.1,
+          "away_win_prob": 30.8
+        },
+        "corners": {
+          "expected_total": 12.6,
+          "over_8_5": {
+            "prob_over": 82.3,
+            "fair_odd": 1.22
+          },
+          "over_9_5": {
+            "prob_over": 74.7,
+            "fair_odd": 1.34
+          },
+          "over_10_5": {
+            "prob_over": 66.0,
+            "fair_odd": 1.52
           }
         },
         "shots": {
           "expected_total": 11.6,
           "over_8_5": {
-            "prob_over": 77.3,
-            "fair_odd": 1.29
+            "prob_over": 78.2,
+            "fair_odd": 1.28
           }
         },
         "cards": {
@@ -686,92 +1256,92 @@
       "team_profiles": {
         "home": {
           "shots": [
-            12.0,
-            20.0,
-            20.0,
-            8.0,
-            13.0
+            14.0,
+            17.0,
+            19.0,
+            13.0,
+            12.0
           ],
           "sot": [
-            2.0,
-            9.0,
-            11.0,
+            8.0,
             5.0,
-            4.0
+            6.0,
+            6.0,
+            7.0
           ],
           "corners": [
-            4.0,
-            6.0,
+            7.0,
+            7.0,
             9.0,
-            4.0,
-            5.0
+            3.0,
+            10.0
           ],
           "cards": [
-            3.0,
+            1.0,
             2.0,
-            4.0,
             2.0,
-            2.0
+            2.0,
+            4.0
           ]
         },
         "away": {
           "shots": [
-            19.0,
+            3.0,
+            20.0,
             18.0,
-            26.0,
-            9.0,
-            19.0
+            7.0,
+            11.0
           ],
           "sot": [
+            1.0,
+            10.0,
             7.0,
-            4.0,
-            4.0,
-            5.0,
-            7.0
+            2.0,
+            6.0
           ],
           "corners": [
-            14.0,
-            12.0,
-            16.0,
+            1.0,
+            6.0,
+            10.0,
             3.0,
-            13.0
+            7.0
           ],
           "cards": [
-            2.0,
-            1.0,
-            1.0,
             3.0,
+            4.0,
+            1.0,
+            1.0,
             2.0
           ]
         }
       },
       "stats_individual": {
         "corners_home": [
-          4.0,
-          6.0,
+          7.0,
+          7.0,
           9.0,
-          4.0,
-          5.0
+          3.0,
+          10.0
         ],
         "corners_away": [
-          14.0,
-          12.0,
-          16.0,
+          1.0,
+          6.0,
+          10.0,
           3.0,
-          13.0
+          7.0
         ],
         "cards_home": [
-          3.0,
+          1.0,
           2.0,
-          4.0,
           2.0,
-          2.0
+          2.0,
+          4.0
         ],
         "cards_away": [
-          2.0,
-          1.0,
-          1.0,
           3.0,
+          4.0,
+          1.0,
+          1.0,
           2.0
         ]
       },
@@ -783,89 +1353,282 @@
       }
     },
     {
-      "league": "Serie A",
-      "league_dna": "Serie A",
-      "home_team": "Frosinone",
-      "away_team": "Sassuolo",
+      "league": "La Liga",
+      "league_dna": "La Liga",
+      "home_team": "Real Betis",
+      "away_team": "Barcelona",
       "referee": "Não divulgado",
-      "kickoff": "2026-10-16T18:45Z",
+      "kickoff": "2026-10-17T16:00Z",
       "data_confidence": "Alta",
       "ai_badges": [
         {
           "tipo": "green",
-          "texto": "Dica IA: Forte tendência +1.5 Gols (78.1%) — Modelo Dixon-Coles"
+          "texto": "Dica IA: Forte tendência +1.5 Gols (93.9%) — Modelo Dixon-Coles"
         },
         {
           "tipo": "green",
-          "texto": "Dica IA: Alta probabilidade de BTTS / Ambas Marcam (70.4%)"
+          "texto": "Dica IA: Alta probabilidade de BTTS / Ambas Marcam (74.1%)"
         },
         {
           "tipo": "green",
-          "texto": "Dica IA: Combo BTTS ou Over 2.5 com forte aderência estatística (79.1%)"
+          "texto": "Dica IA: Combo BTTS ou Over 2.5 com forte aderência estatística (92.2%)"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Volume Alto de Cantos (Média 11.0)"
         }
       ],
       "probabilities": {
-        "exp_total_goals": 3.6,
-        "prob_over_15": 78.1,
-        "odd_over_15": 1.28,
-        "prob_over_25": 45.5,
-        "odd_over_25": 2.2,
-        "prob_btts": 70.4,
-        "odd_btts": 1.42
+        "exp_total_goals": 5.6,
+        "prob_over_15": 93.9,
+        "odd_over_15": 1.06,
+        "prob_over_25": 76.7,
+        "odd_over_25": 1.3,
+        "prob_btts": 74.1,
+        "odd_btts": 1.35
       },
       "markets": {
         "goals": {
-          "expected_total": 3.6,
-          "lambda_h": 1.8,
-          "mu_a": 1.8,
+          "expected_total": 5.6,
+          "lambda_h": 1.4,
+          "mu_a": 4.2,
           "over_1_5": {
-            "prob_over": 78.1,
-            "fair_odd": 1.28
+            "prob_over": 93.9,
+            "fair_odd": 1.06
           },
           "over_2_5": {
-            "prob_over": 45.5,
-            "fair_odd": 2.2
+            "prob_over": 76.7,
+            "fair_odd": 1.3
           },
           "btts": {
-            "prob_yes": 70.4,
-            "fair_odd": 1.42
+            "prob_yes": 74.1,
+            "fair_odd": 1.35
           },
           "btts_or_over25": {
-            "prob_hit": 79.1,
-            "fair_odd": 1.26
+            "prob_hit": 92.2,
+            "fair_odd": 1.08
           },
           "home_over_1_5": {
-            "prob": 53.7,
-            "fair_odd": 1.86
+            "prob": 40.8,
+            "fair_odd": 2.45
           },
           "away_over_1_5": {
-            "prob": 53.7,
-            "fair_odd": 1.86
+            "prob": 92.2,
+            "fair_odd": 1.08
           },
-          "home_win_prob": 37.8,
-          "draw_prob": 24.4,
-          "away_win_prob": 37.8
+          "home_win_prob": 9.0,
+          "draw_prob": 12.3,
+          "away_win_prob": 78.7
         },
         "corners": {
-          "expected_total": 10.4,
+          "expected_total": 11.0,
           "over_8_5": {
-            "prob_over": 71.0,
-            "fair_odd": 1.41
+            "prob_over": 66.5,
+            "fair_odd": 1.5
           },
           "over_9_5": {
-            "prob_over": 59.1,
-            "fair_odd": 1.69
+            "prob_over": 58.0,
+            "fair_odd": 1.72
           },
           "over_10_5": {
-            "prob_over": 46.7,
-            "fair_odd": 2.14
+            "prob_over": 49.5,
+            "fair_odd": 2.02
           }
         },
         "shots": {
-          "expected_total": 12.6,
+          "expected_total": 15.0,
           "over_8_5": {
-            "prob_over": 88.0,
-            "fair_odd": 1.14
+            "prob_over": 96.3,
+            "fair_odd": 1.04
+          }
+        },
+        "cards": {
+          "expected_total": 2.6,
+          "over_3_5": {
+            "prob_over": 27.3,
+            "fair_odd": 3.66
+          },
+          "over_4_5": {
+            "prob_over": 14.4,
+            "fair_odd": 6.94
+          }
+        }
+      },
+      "team_profiles": {
+        "home": {
+          "shots": [
+            26.0,
+            10.0,
+            20.0,
+            15.0,
+            18.0
+          ],
+          "sot": [
+            12.0,
+            5.0,
+            6.0,
+            3.0,
+            7.0
+          ],
+          "corners": [
+            4.0,
+            6.0,
+            8.0,
+            2.0,
+            4.0
+          ],
+          "cards": [
+            0.0,
+            3.0,
+            1.0,
+            1.0,
+            3.0
+          ]
+        },
+        "away": {
+          "shots": [
+            12.0,
+            25.0,
+            26.0,
+            22.0,
+            11.0
+          ],
+          "sot": [
+            6.0,
+            10.0,
+            9.0,
+            10.0,
+            7.0
+          ],
+          "corners": [
+            5.0,
+            4.0,
+            9.0,
+            12.0,
+            1.0
+          ],
+          "cards": [
+            1.0,
+            3.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        }
+      },
+      "stats_individual": {
+        "corners_home": [
+          4.0,
+          6.0,
+          8.0,
+          2.0,
+          4.0
+        ],
+        "corners_away": [
+          5.0,
+          4.0,
+          9.0,
+          12.0,
+          1.0
+        ],
+        "cards_home": [
+          0.0,
+          3.0,
+          1.0,
+          1.0,
+          3.0
+        ],
+        "cards_away": [
+          1.0,
+          3.0,
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      "model_info": {
+        "algorithm": "Dixon-Coles Bivariate Poisson + Negative Binomial",
+        "rho": -0.11,
+        "home_sample_size": 5,
+        "away_sample_size": 5
+      }
+    },
+    {
+      "league": "La Liga",
+      "league_dna": "La Liga",
+      "home_team": "Valencia",
+      "away_team": "Athletic Club",
+      "referee": "Não divulgado",
+      "kickoff": "2026-10-17T19:00Z",
+      "data_confidence": "Alta",
+      "ai_badges": [
+        {
+          "tipo": "orange",
+          "texto": "Atenção IA: Jogo Amarrado / Tendência Under (41.7% para +1.5)"
+        }
+      ],
+      "probabilities": {
+        "exp_total_goals": 1.6,
+        "prob_over_15": 41.7,
+        "odd_over_15": 2.4,
+        "prob_over_25": 16.5,
+        "odd_over_25": 6.06,
+        "prob_btts": 14.3,
+        "odd_btts": 6.99
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 1.6,
+          "lambda_h": 0.2,
+          "mu_a": 1.4,
+          "over_1_5": {
+            "prob_over": 41.7,
+            "fair_odd": 2.4
+          },
+          "over_2_5": {
+            "prob_over": 16.5,
+            "fair_odd": 6.06
+          },
+          "btts": {
+            "prob_yes": 14.3,
+            "fair_odd": 6.99
+          },
+          "btts_or_over25": {
+            "prob_hit": 27.7,
+            "fair_odd": 3.61
+          },
+          "home_over_1_5": {
+            "prob": 1.8,
+            "fair_odd": 55.56
+          },
+          "away_over_1_5": {
+            "prob": 40.8,
+            "fair_odd": 2.45
+          },
+          "home_win_prob": 4.5,
+          "draw_prob": 27.6,
+          "away_win_prob": 67.9
+        },
+        "corners": {
+          "expected_total": 10.2,
+          "over_8_5": {
+            "prob_over": 64.1,
+            "fair_odd": 1.56
+          },
+          "over_9_5": {
+            "prob_over": 53.7,
+            "fair_odd": 1.86
+          },
+          "over_10_5": {
+            "prob_over": 43.5,
+            "fair_odd": 2.3
+          }
+        },
+        "shots": {
+          "expected_total": 6.6,
+          "over_8_5": {
+            "prob_over": 26.3,
+            "fair_odd": 3.8
           }
         },
         "cards": {
@@ -883,93 +1646,3159 @@
       "team_profiles": {
         "home": {
           "shots": [
-            22.0,
-            26.0,
-            13.0,
+            3.0,
+            3.0,
             12.0,
-            11.0
+            16.0,
+            8.0
           ],
           "sot": [
-            6.0,
-            6.0,
-            8.0,
-            6.0,
+            0.0,
+            2.0,
+            4.0,
+            3.0,
             2.0
           ],
           "corners": [
-            7.0,
-            9.0,
+            4.0,
+            1.0,
             5.0,
-            5.0,
-            3.0
+            8.0,
+            1.0
           ],
           "cards": [
-            3.0,
             2.0,
+            1.0,
+            1.0,
             2.0,
-            3.0,
             2.0
           ]
         },
         "away": {
           "shots": [
-            20.0,
-            10.0,
-            15.0,
             19.0,
-            22.0
+            11.0,
+            17.0,
+            5.0,
+            18.0
           ],
           "sot": [
-            8.0,
-            6.0,
-            6.0,
+            3.0,
+            4.0,
             7.0,
+            0.0,
             8.0
           ],
           "corners": [
-            5.0,
+            7.0,
             3.0,
             7.0,
-            4.0,
-            4.0
+            5.0,
+            10.0
           ],
           "cards": [
+            3.0,
+            0.0,
+            3.0,
+            2.0,
+            3.0
+          ]
+        }
+      },
+      "stats_individual": {
+        "corners_home": [
+          4.0,
+          1.0,
+          5.0,
+          8.0,
+          1.0
+        ],
+        "corners_away": [
+          7.0,
+          3.0,
+          7.0,
+          5.0,
+          10.0
+        ],
+        "cards_home": [
+          2.0,
+          1.0,
+          1.0,
+          2.0,
+          2.0
+        ],
+        "cards_away": [
+          3.0,
+          0.0,
+          3.0,
+          2.0,
+          3.0
+        ]
+      },
+      "model_info": {
+        "algorithm": "Dixon-Coles Bivariate Poisson + Negative Binomial",
+        "rho": -0.11,
+        "home_sample_size": 5,
+        "away_sample_size": 5
+      }
+    },
+    {
+      "league": "Bundesliga",
+      "league_dna": "Bundesliga",
+      "home_team": "1. FC Union Berlin",
+      "away_team": "Borussia Dortmund",
+      "referee": "Não divulgado",
+      "kickoff": "2026-10-17T13:30Z",
+      "data_confidence": "Alta",
+      "ai_badges": [
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Forte tendência +1.5 Gols (73.2%) — Modelo Dixon-Coles"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Alta probabilidade de BTTS / Ambas Marcam (57.0%)"
+        }
+      ],
+      "probabilities": {
+        "exp_total_goals": 3.2,
+        "prob_over_15": 73.2,
+        "odd_over_15": 1.37,
+        "prob_over_25": 41.2,
+        "odd_over_25": 2.43,
+        "prob_btts": 57.0,
+        "odd_btts": 1.75
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 3.2,
+          "lambda_h": 1.0,
+          "mu_a": 2.2,
+          "over_1_5": {
+            "prob_over": 73.2,
+            "fair_odd": 1.37
+          },
+          "over_2_5": {
+            "prob_over": 41.2,
+            "fair_odd": 2.43
+          },
+          "btts": {
+            "prob_yes": 57.0,
+            "fair_odd": 1.75
+          },
+          "btts_or_over25": {
+            "prob_hit": 71.2,
+            "fair_odd": 1.4
+          },
+          "home_over_1_5": {
+            "prob": 26.4,
+            "fair_odd": 3.79
+          },
+          "away_over_1_5": {
+            "prob": 64.5,
+            "fair_odd": 1.55
+          },
+          "home_win_prob": 15.4,
+          "draw_prob": 21.9,
+          "away_win_prob": 62.7
+        },
+        "corners": {
+          "expected_total": 8.6,
+          "over_8_5": {
+            "prob_over": 46.7,
+            "fair_odd": 2.14
+          },
+          "over_9_5": {
+            "prob_over": 36.9,
+            "fair_odd": 2.71
+          },
+          "over_10_5": {
+            "prob_over": 28.3,
+            "fair_odd": 3.53
+          }
+        },
+        "shots": {
+          "expected_total": 11.2,
+          "over_8_5": {
+            "prob_over": 67.2,
+            "fair_odd": 1.49
+          }
+        },
+        "cards": {
+          "expected_total": 5.0,
+          "over_3_5": {
+            "prob_over": 73.5,
+            "fair_odd": 1.36
+          },
+          "over_4_5": {
+            "prob_over": 56.0,
+            "fair_odd": 1.79
+          }
+        }
+      },
+      "team_profiles": {
+        "home": {
+          "shots": [
+            19.0,
+            3.0,
+            20.0,
+            5.0,
+            19.0
+          ],
+          "sot": [
+            7.0,
+            2.0,
+            8.0,
+            0.0,
+            10.0
+          ],
+          "corners": [
+            7.0,
+            2.0,
+            4.0,
+            1.0,
+            5.0
+          ],
+          "cards": [
+            2.0,
+            3.0,
+            3.0,
+            2.0,
+            2.0
+          ]
+        },
+        "away": {
+          "shots": [
+            21.0,
+            13.0,
+            14.0,
+            11.0,
+            20.0
+          ],
+          "sot": [
+            9.0,
+            2.0,
+            8.0,
+            4.0,
+            6.0
+          ],
+          "corners": [
+            9.0,
+            2.0,
+            7.0,
+            3.0,
+            3.0
+          ],
+          "cards": [
+            2.0,
+            5.0,
             1.0,
             2.0,
-            1.0,
-            3.0,
-            0.0
+            3.0
           ]
         }
       },
       "stats_individual": {
         "corners_home": [
           7.0,
-          9.0,
-          5.0,
-          5.0,
-          3.0
+          2.0,
+          4.0,
+          1.0,
+          5.0
         ],
         "corners_away": [
+          9.0,
+          2.0,
+          7.0,
+          3.0,
+          3.0
+        ],
+        "cards_home": [
+          2.0,
+          3.0,
+          3.0,
+          2.0,
+          2.0
+        ],
+        "cards_away": [
+          2.0,
           5.0,
+          1.0,
+          2.0,
+          3.0
+        ]
+      },
+      "model_info": {
+        "algorithm": "Dixon-Coles Bivariate Poisson + Negative Binomial",
+        "rho": -0.11,
+        "home_sample_size": 5,
+        "away_sample_size": 5
+      }
+    },
+    {
+      "league": "Bundesliga",
+      "league_dna": "Bundesliga",
+      "home_team": "Hamburg SV",
+      "away_team": "VfB Stuttgart",
+      "referee": "Não divulgado",
+      "kickoff": "2026-10-17T13:30Z",
+      "data_confidence": "Alta",
+      "ai_badges": [],
+      "probabilities": {
+        "exp_total_goals": 2.6,
+        "prob_over_15": 61.1,
+        "odd_over_15": 1.64,
+        "prob_over_25": 27.5,
+        "odd_over_25": 3.64,
+        "prob_btts": 51.7,
+        "odd_btts": 1.93
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 2.6,
+          "lambda_h": 1.0,
+          "mu_a": 1.6,
+          "over_1_5": {
+            "prob_over": 61.1,
+            "fair_odd": 1.64
+          },
+          "over_2_5": {
+            "prob_over": 27.5,
+            "fair_odd": 3.64
+          },
+          "btts": {
+            "prob_yes": 51.7,
+            "fair_odd": 1.93
+          },
+          "btts_or_over25": {
+            "prob_hit": 61.1,
+            "fair_odd": 1.64
+          },
+          "home_over_1_5": {
+            "prob": 26.4,
+            "fair_odd": 3.79
+          },
+          "away_over_1_5": {
+            "prob": 47.5,
+            "fair_odd": 2.11
+          },
+          "home_win_prob": 22.4,
+          "draw_prob": 27.8,
+          "away_win_prob": 49.8
+        },
+        "corners": {
+          "expected_total": 9.8,
+          "over_8_5": {
+            "prob_over": 62.8,
+            "fair_odd": 1.59
+          },
+          "over_9_5": {
+            "prob_over": 50.9,
+            "fair_odd": 1.96
+          },
+          "over_10_5": {
+            "prob_over": 39.4,
+            "fair_odd": 2.54
+          }
+        },
+        "shots": {
+          "expected_total": 9.8,
+          "over_8_5": {
+            "prob_over": 64.4,
+            "fair_odd": 1.55
+          }
+        },
+        "cards": {
+          "expected_total": 2.2,
+          "over_3_5": {
+            "prob_over": 18.1,
+            "fair_odd": 5.52
+          },
+          "over_4_5": {
+            "prob_over": 7.2,
+            "fair_odd": 13.89
+          }
+        }
+      },
+      "team_profiles": {
+        "home": {
+          "shots": [
+            15.0,
+            12.0,
+            10.0,
+            8.0,
+            8.0
+          ],
+          "sot": [
+            4.0,
+            7.0,
+            4.0,
+            1.0,
+            3.0
+          ],
+          "corners": [
+            3.0,
+            3.0,
+            7.0,
+            4.0,
+            1.0
+          ],
+          "cards": [
+            0.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0
+          ]
+        },
+        "away": {
+          "shots": [
+            18.0,
+            12.0,
+            16.0,
+            22.0,
+            11.0
+          ],
+          "sot": [
+            8.0,
+            5.0,
+            5.0,
+            8.0,
+            4.0
+          ],
+          "corners": [
+            5.0,
+            6.0,
+            7.0,
+            10.0,
+            3.0
+          ],
+          "cards": [
+            0.0,
+            2.0,
+            0.0,
+            1.0,
+            3.0
+          ]
+        }
+      },
+      "stats_individual": {
+        "corners_home": [
+          3.0,
           3.0,
           7.0,
           4.0,
-          4.0
+          1.0
+        ],
+        "corners_away": [
+          5.0,
+          6.0,
+          7.0,
+          10.0,
+          3.0
         ],
         "cards_home": [
+          0.0,
+          1.0,
+          2.0,
+          1.0,
+          1.0
+        ],
+        "cards_away": [
+          0.0,
+          2.0,
+          0.0,
+          1.0,
+          3.0
+        ]
+      },
+      "model_info": {
+        "algorithm": "Dixon-Coles Bivariate Poisson + Negative Binomial",
+        "rho": -0.11,
+        "home_sample_size": 5,
+        "away_sample_size": 5
+      }
+    },
+    {
+      "league": "Bundesliga",
+      "league_dna": "Bundesliga",
+      "home_team": "Schalke 04",
+      "away_team": "Mainz",
+      "referee": "Não divulgado",
+      "kickoff": "2026-10-17T13:30Z",
+      "data_confidence": "Alta",
+      "ai_badges": [
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Forte tendência +1.5 Gols (77.3%) — Modelo Dixon-Coles"
+        }
+      ],
+      "probabilities": {
+        "exp_total_goals": 3.4,
+        "prob_over_15": 77.3,
+        "odd_over_15": 1.29,
+        "prob_over_25": 48.1,
+        "odd_over_25": 2.08,
+        "prob_btts": 51.6,
+        "odd_btts": 1.94
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 3.4,
+          "lambda_h": 0.8,
+          "mu_a": 2.6,
+          "over_1_5": {
+            "prob_over": 77.3,
+            "fair_odd": 1.29
+          },
+          "over_2_5": {
+            "prob_over": 48.1,
+            "fair_odd": 2.08
+          },
+          "btts": {
+            "prob_yes": 51.6,
+            "fair_odd": 1.94
+          },
+          "btts_or_over25": {
+            "prob_hit": 72.4,
+            "fair_odd": 1.38
+          },
+          "home_over_1_5": {
+            "prob": 19.1,
+            "fair_odd": 5.24
+          },
+          "away_over_1_5": {
+            "prob": 73.3,
+            "fair_odd": 1.36
+          },
+          "home_win_prob": 8.8,
+          "draw_prob": 17.2,
+          "away_win_prob": 73.9
+        },
+        "corners": {
+          "expected_total": 8.4,
+          "over_8_5": {
+            "prob_over": 45.0,
+            "fair_odd": 2.22
+          },
+          "over_9_5": {
+            "prob_over": 34.7,
+            "fair_odd": 2.88
+          },
+          "over_10_5": {
+            "prob_over": 25.8,
+            "fair_odd": 3.88
+          }
+        },
+        "shots": {
+          "expected_total": 9.6,
+          "over_8_5": {
+            "prob_over": 55.6,
+            "fair_odd": 1.8
+          }
+        },
+        "cards": {
+          "expected_total": 3.6,
+          "over_3_5": {
+            "prob_over": 47.8,
+            "fair_odd": 2.09
+          },
+          "over_4_5": {
+            "prob_over": 29.7,
+            "fair_odd": 3.37
+          }
+        }
+      },
+      "team_profiles": {
+        "home": {
+          "shots": [
+            5.0,
+            13.0,
+            19.0,
+            4.0,
+            11.0
+          ],
+          "sot": [
+            1.0,
+            1.0,
+            10.0,
+            1.0,
+            5.0
+          ],
+          "corners": [
+            2.0,
+            4.0,
+            5.0,
+            0.0,
+            3.0
+          ],
+          "cards": [
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0
+          ]
+        },
+        "away": {
+          "shots": [
+            23.0,
+            17.0,
+            18.0,
+            17.0,
+            22.0
+          ],
+          "sot": [
+            5.0,
+            8.0,
+            5.0,
+            8.0,
+            4.0
+          ],
+          "corners": [
+            4.0,
+            4.0,
+            4.0,
+            5.0,
+            11.0
+          ],
+          "cards": [
+            3.0,
+            5.0,
+            0.0,
+            3.0,
+            1.0
+          ]
+        }
+      },
+      "stats_individual": {
+        "corners_home": [
+          2.0,
+          4.0,
+          5.0,
+          0.0,
+          3.0
+        ],
+        "corners_away": [
+          4.0,
+          4.0,
+          4.0,
+          5.0,
+          11.0
+        ],
+        "cards_home": [
+          1.0,
+          1.0,
+          1.0,
+          2.0,
+          1.0
+        ],
+        "cards_away": [
+          3.0,
+          5.0,
+          0.0,
+          3.0,
+          1.0
+        ]
+      },
+      "model_info": {
+        "algorithm": "Dixon-Coles Bivariate Poisson + Negative Binomial",
+        "rho": -0.11,
+        "home_sample_size": 5,
+        "away_sample_size": 5
+      }
+    },
+    {
+      "league": "Bundesliga",
+      "league_dna": "Bundesliga",
+      "home_team": "SV Elversberg",
+      "away_team": "FC Augsburg",
+      "referee": "Não divulgado",
+      "kickoff": "2026-10-17T13:30Z",
+      "data_confidence": "Alta",
+      "ai_badges": [
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Forte tendência +1.5 Gols (85.2%) — Modelo Dixon-Coles"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Alta probabilidade de BTTS / Ambas Marcam (74.2%)"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Combo BTTS ou Over 2.5 com forte aderência estatística (85.1%)"
+        }
+      ],
+      "probabilities": {
+        "exp_total_goals": 4.2,
+        "prob_over_15": 85.2,
+        "odd_over_15": 1.17,
+        "prob_over_25": 57.0,
+        "odd_over_25": 1.75,
+        "prob_btts": 74.2,
+        "odd_btts": 1.35
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 4.2,
+          "lambda_h": 1.6,
+          "mu_a": 2.6,
+          "over_1_5": {
+            "prob_over": 85.2,
+            "fair_odd": 1.17
+          },
+          "over_2_5": {
+            "prob_over": 57.0,
+            "fair_odd": 1.75
+          },
+          "btts": {
+            "prob_yes": 74.2,
+            "fair_odd": 1.35
+          },
+          "btts_or_over25": {
+            "prob_hit": 85.1,
+            "fair_odd": 1.18
+          },
+          "home_over_1_5": {
+            "prob": 47.5,
+            "fair_odd": 2.11
+          },
+          "away_over_1_5": {
+            "prob": 73.3,
+            "fair_odd": 1.36
+          },
+          "home_win_prob": 22.6,
+          "draw_prob": 20.6,
+          "away_win_prob": 56.8
+        },
+        "corners": {
+          "expected_total": 8.4,
+          "over_8_5": {
+            "prob_over": 44.8,
+            "fair_odd": 2.23
+          },
+          "over_9_5": {
+            "prob_over": 34.9,
+            "fair_odd": 2.87
+          },
+          "over_10_5": {
+            "prob_over": 26.3,
+            "fair_odd": 3.8
+          }
+        },
+        "shots": {
+          "expected_total": 10.8,
+          "over_8_5": {
+            "prob_over": 62.5,
+            "fair_odd": 1.6
+          }
+        },
+        "cards": {
+          "expected_total": 3.4,
+          "over_3_5": {
+            "prob_over": 44.2,
+            "fair_odd": 2.26
+          },
+          "over_4_5": {
+            "prob_over": 25.6,
+            "fair_odd": 3.91
+          }
+        }
+      },
+      "team_profiles": {
+        "home": {
+          "shots": [
+            7.0,
+            11.0,
+            5.0,
+            14.0,
+            11.0
+          ],
+          "sot": [
+            2.0,
+            1.0,
+            1.0,
+            10.0,
+            6.0
+          ],
+          "corners": [
+            3.0,
+            4.0,
+            3.0,
+            4.0,
+            4.0
+          ],
+          "cards": [
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            3.0
+          ]
+        },
+        "away": {
+          "shots": [
+            12.0,
+            7.0,
+            8.0,
+            17.0,
+            24.0
+          ],
+          "sot": [
+            5.0,
+            4.0,
+            5.0,
+            7.0,
+            13.0
+          ],
+          "corners": [
+            5.0,
+            2.0,
+            2.0,
+            4.0,
+            11.0
+          ],
+          "cards": [
+            3.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "stats_individual": {
+        "corners_home": [
+          3.0,
+          4.0,
+          3.0,
+          4.0,
+          4.0
+        ],
+        "corners_away": [
+          5.0,
+          2.0,
+          2.0,
+          4.0,
+          11.0
+        ],
+        "cards_home": [
+          1.0,
+          2.0,
+          2.0,
+          1.0,
+          3.0
+        ],
+        "cards_away": [
           3.0,
           2.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "model_info": {
+        "algorithm": "Dixon-Coles Bivariate Poisson + Negative Binomial",
+        "rho": -0.11,
+        "home_sample_size": 5,
+        "away_sample_size": 5
+      }
+    },
+    {
+      "league": "Bundesliga",
+      "league_dna": "Bundesliga",
+      "home_team": "Werder Bremen",
+      "away_team": "SC Paderborn 07",
+      "referee": "Não divulgado",
+      "kickoff": "2026-10-17T13:30Z",
+      "data_confidence": "Alta",
+      "ai_badges": [],
+      "probabilities": {
+        "exp_total_goals": 2.6,
+        "prob_over_15": 63.7,
+        "odd_over_15": 1.57,
+        "prob_over_25": 32.8,
+        "odd_over_25": 3.05,
+        "prob_btts": 39.9,
+        "odd_btts": 2.51
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 2.6,
+          "lambda_h": 2.0,
+          "mu_a": 0.6,
+          "over_1_5": {
+            "prob_over": 63.7,
+            "fair_odd": 1.57
+          },
+          "over_2_5": {
+            "prob_over": 32.8,
+            "fair_odd": 3.05
+          },
+          "btts": {
+            "prob_yes": 39.9,
+            "fair_odd": 2.51
+          },
+          "btts_or_over25": {
+            "prob_hit": 57.3,
+            "fair_odd": 1.75
+          },
+          "home_over_1_5": {
+            "prob": 59.4,
+            "fair_odd": 1.68
+          },
+          "away_over_1_5": {
+            "prob": 12.2,
+            "fair_odd": 8.2
+          },
+          "home_win_prob": 69.0,
+          "draw_prob": 21.7,
+          "away_win_prob": 9.3
+        },
+        "corners": {
+          "expected_total": 8.0,
+          "over_8_5": {
+            "prob_over": 40.7,
+            "fair_odd": 2.46
+          },
+          "over_9_5": {
+            "prob_over": 28.3,
+            "fair_odd": 3.53
+          },
+          "over_10_5": {
+            "prob_over": 18.4,
+            "fair_odd": 5.43
+          }
+        },
+        "shots": {
+          "expected_total": 8.8,
+          "over_8_5": {
+            "prob_over": 48.0,
+            "fair_odd": 2.08
+          }
+        },
+        "cards": {
+          "expected_total": 2.6,
+          "over_3_5": {
+            "prob_over": 26.4,
+            "fair_odd": 3.79
+          },
+          "over_4_5": {
+            "prob_over": 12.3,
+            "fair_odd": 8.13
+          }
+        }
+      },
+      "team_profiles": {
+        "home": {
+          "shots": [
+            11.0,
+            20.0,
+            14.0,
+            12.0,
+            9.0
+          ],
+          "sot": [
+            4.0,
+            11.0,
+            5.0,
+            7.0,
+            3.0
+          ],
+          "corners": [
+            3.0,
+            2.0,
+            5.0,
+            2.0,
+            5.0
+          ],
+          "cards": [
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "away": {
+          "shots": [
+            24.0,
+            13.0,
+            10.0,
+            14.0,
+            10.0
+          ],
+          "sot": [
+            6.0,
+            5.0,
+            0.0,
+            3.0,
+            0.0
+          ],
+          "corners": [
+            7.0,
+            6.0,
+            3.0,
+            5.0,
+            2.0
+          ],
+          "cards": [
+            1.0,
+            0.0,
+            1.0,
+            3.0,
+            2.0
+          ]
+        }
+      },
+      "stats_individual": {
+        "corners_home": [
+          3.0,
           2.0,
+          5.0,
+          2.0,
+          5.0
+        ],
+        "corners_away": [
+          7.0,
+          6.0,
+          3.0,
+          5.0,
+          2.0
+        ],
+        "cards_home": [
+          1.0,
+          2.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "cards_away": [
+          1.0,
+          0.0,
+          1.0,
           3.0,
           2.0
+        ]
+      },
+      "model_info": {
+        "algorithm": "Dixon-Coles Bivariate Poisson + Negative Binomial",
+        "rho": -0.11,
+        "home_sample_size": 5,
+        "away_sample_size": 5
+      }
+    },
+    {
+      "league": "Bundesliga",
+      "league_dna": "Bundesliga",
+      "home_team": "Bayern Munich",
+      "away_team": "RB Leipzig",
+      "referee": "Não divulgado",
+      "kickoff": "2026-10-17T16:30Z",
+      "data_confidence": "Alta",
+      "ai_badges": [
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Forte tendência +1.5 Gols (95.8%) — Modelo Dixon-Coles"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Alta probabilidade de BTTS / Ambas Marcam (90.5%)"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Combo BTTS ou Over 2.5 com forte aderência estatística (96.1%)"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Volume Alto de Cantos (Média 15.6)"
+        }
+      ],
+      "probabilities": {
+        "exp_total_goals": 6.2,
+        "prob_over_15": 95.8,
+        "odd_over_15": 1.04,
+        "prob_over_25": 80.4,
+        "odd_over_25": 1.24,
+        "prob_btts": 90.5,
+        "odd_btts": 1.1
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 6.2,
+          "lambda_h": 3.2,
+          "mu_a": 3.0,
+          "over_1_5": {
+            "prob_over": 95.8,
+            "fair_odd": 1.04
+          },
+          "over_2_5": {
+            "prob_over": 80.4,
+            "fair_odd": 1.24
+          },
+          "btts": {
+            "prob_yes": 90.5,
+            "fair_odd": 1.1
+          },
+          "btts_or_over25": {
+            "prob_hit": 96.1,
+            "fair_odd": 1.04
+          },
+          "home_over_1_5": {
+            "prob": 82.9,
+            "fair_odd": 1.21
+          },
+          "away_over_1_5": {
+            "prob": 80.1,
+            "fair_odd": 1.25
+          },
+          "home_win_prob": 42.5,
+          "draw_prob": 20.0,
+          "away_win_prob": 37.5
+        },
+        "corners": {
+          "expected_total": 15.6,
+          "over_8_5": {
+            "prob_over": 97.3,
+            "fair_odd": 1.03
+          },
+          "over_9_5": {
+            "prob_over": 94.7,
+            "fair_odd": 1.06
+          },
+          "over_10_5": {
+            "prob_over": 90.8,
+            "fair_odd": 1.1
+          }
+        },
+        "shots": {
+          "expected_total": 16.0,
+          "over_8_5": {
+            "prob_over": 94.1,
+            "fair_odd": 1.06
+          }
+        },
+        "cards": {
+          "expected_total": 2.0,
+          "over_3_5": {
+            "prob_over": 14.3,
+            "fair_odd": 6.99
+          },
+          "over_4_5": {
+            "prob_over": 5.3,
+            "fair_odd": 18.87
+          }
+        }
+      },
+      "team_profiles": {
+        "home": {
+          "shots": [
+            30.0,
+            23.0,
+            28.0,
+            15.0,
+            21.0
+          ],
+          "sot": [
+            10.0,
+            15.0,
+            6.0,
+            5.0,
+            9.0
+          ],
+          "corners": [
+            9.0,
+            9.0,
+            9.0,
+            11.0,
+            9.0
+          ],
+          "cards": [
+            0.0,
+            1.0,
+            0.0,
+            2.0,
+            1.0
+          ]
+        },
+        "away": {
+          "shots": [
+            20.0,
+            12.0,
+            19.0,
+            19.0,
+            25.0
+          ],
+          "sot": [
+            10.0,
+            3.0,
+            6.0,
+            5.0,
+            11.0
+          ],
+          "corners": [
+            3.0,
+            6.0,
+            8.0,
+            7.0,
+            7.0
+          ],
+          "cards": [
+            1.0,
+            3.0,
+            1.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "stats_individual": {
+        "corners_home": [
+          9.0,
+          9.0,
+          9.0,
+          11.0,
+          9.0
+        ],
+        "corners_away": [
+          3.0,
+          6.0,
+          8.0,
+          7.0,
+          7.0
+        ],
+        "cards_home": [
+          0.0,
+          1.0,
+          0.0,
+          2.0,
+          1.0
+        ],
+        "cards_away": [
+          1.0,
+          3.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      "model_info": {
+        "algorithm": "Dixon-Coles Bivariate Poisson + Negative Binomial",
+        "rho": -0.11,
+        "home_sample_size": 5,
+        "away_sample_size": 5
+      }
+    },
+    {
+      "league": "Ligue 1",
+      "league_dna": "Ligue 1",
+      "home_team": "Strasbourg",
+      "away_team": "Paris Saint-Germain",
+      "referee": "Não divulgado",
+      "kickoff": "2026-10-17T15:15Z",
+      "data_confidence": "Alta",
+      "ai_badges": [
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Forte tendência +1.5 Gols (78.2%) — Modelo Dixon-Coles"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Alta probabilidade de BTTS / Ambas Marcam (69.7%)"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Combo BTTS ou Over 2.5 com forte aderência estatística (79.0%)"
+        }
+      ],
+      "probabilities": {
+        "exp_total_goals": 3.6,
+        "prob_over_15": 78.2,
+        "odd_over_15": 1.28,
+        "prob_over_25": 45.8,
+        "odd_over_25": 2.18,
+        "prob_btts": 69.7,
+        "odd_btts": 1.43
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 3.6,
+          "lambda_h": 2.0,
+          "mu_a": 1.6,
+          "over_1_5": {
+            "prob_over": 78.2,
+            "fair_odd": 1.28
+          },
+          "over_2_5": {
+            "prob_over": 45.8,
+            "fair_odd": 2.18
+          },
+          "btts": {
+            "prob_yes": 69.7,
+            "fair_odd": 1.43
+          },
+          "btts_or_over25": {
+            "prob_hit": 79.0,
+            "fair_odd": 1.27
+          },
+          "home_over_1_5": {
+            "prob": 59.4,
+            "fair_odd": 1.68
+          },
+          "away_over_1_5": {
+            "prob": 47.5,
+            "fair_odd": 2.11
+          },
+          "home_win_prob": 45.7,
+          "draw_prob": 24.0,
+          "away_win_prob": 30.3
+        },
+        "corners": {
+          "expected_total": 7.8,
+          "over_8_5": {
+            "prob_over": 38.3,
+            "fair_odd": 2.61
+          },
+          "over_9_5": {
+            "prob_over": 28.4,
+            "fair_odd": 3.52
+          },
+          "over_10_5": {
+            "prob_over": 20.3,
+            "fair_odd": 4.93
+          }
+        },
+        "shots": {
+          "expected_total": 12.0,
+          "over_8_5": {
+            "prob_over": 71.9,
+            "fair_odd": 1.39
+          }
+        },
+        "cards": {
+          "expected_total": 3.2,
+          "over_3_5": {
+            "prob_over": 39.7,
+            "fair_odd": 2.52
+          },
+          "over_4_5": {
+            "prob_over": 21.9,
+            "fair_odd": 4.57
+          }
+        }
+      },
+      "team_profiles": {
+        "home": {
+          "shots": [
+            5.0,
+            13.0,
+            19.0,
+            16.0,
+            5.0
+          ],
+          "sot": [
+            1.0,
+            2.0,
+            12.0,
+            7.0,
+            2.0
+          ],
+          "corners": [
+            0.0,
+            2.0,
+            0.0,
+            3.0,
+            4.0
+          ],
+          "cards": [
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            3.0
+          ]
+        },
+        "away": {
+          "shots": [
+            31.0,
+            15.0,
+            23.0,
+            18.0,
+            19.0
+          ],
+          "sot": [
+            10.0,
+            7.0,
+            10.0,
+            4.0,
+            5.0
+          ],
+          "corners": [
+            7.0,
+            2.0,
+            6.0,
+            5.0,
+            10.0
+          ],
+          "cards": [
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0
+          ]
+        }
+      },
+      "stats_individual": {
+        "corners_home": [
+          0.0,
+          2.0,
+          0.0,
+          3.0,
+          4.0
+        ],
+        "corners_away": [
+          7.0,
+          2.0,
+          6.0,
+          5.0,
+          10.0
+        ],
+        "cards_home": [
+          2.0,
+          1.0,
+          1.0,
+          2.0,
+          3.0
         ],
         "cards_away": [
           1.0,
           2.0,
           1.0,
+          1.0,
+          2.0
+        ]
+      },
+      "model_info": {
+        "algorithm": "Dixon-Coles Bivariate Poisson + Negative Binomial",
+        "rho": -0.11,
+        "home_sample_size": 5,
+        "away_sample_size": 5
+      }
+    },
+    {
+      "league": "Ligue 1",
+      "league_dna": "Ligue 1",
+      "home_team": "Lille",
+      "away_team": "Brest",
+      "referee": "Não divulgado",
+      "kickoff": "2026-10-17T18:45Z",
+      "data_confidence": "Alta",
+      "ai_badges": [
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Alta probabilidade de BTTS / Ambas Marcam (61.2%)"
+        }
+      ],
+      "probabilities": {
+        "exp_total_goals": 3.0,
+        "prob_over_15": 68.6,
+        "odd_over_15": 1.46,
+        "prob_over_25": 34.1,
+        "odd_over_25": 2.93,
+        "prob_btts": 61.2,
+        "odd_btts": 1.63
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 3.0,
+          "lambda_h": 1.6,
+          "mu_a": 1.4,
+          "over_1_5": {
+            "prob_over": 68.6,
+            "fair_odd": 1.46
+          },
+          "over_2_5": {
+            "prob_over": 34.1,
+            "fair_odd": 2.93
+          },
+          "btts": {
+            "prob_yes": 61.2,
+            "fair_odd": 1.63
+          },
+          "btts_or_over25": {
+            "prob_hit": 69.8,
+            "fair_odd": 1.43
+          },
+          "home_over_1_5": {
+            "prob": 47.5,
+            "fair_odd": 2.11
+          },
+          "away_over_1_5": {
+            "prob": 40.8,
+            "fair_odd": 2.45
+          },
+          "home_win_prob": 40.9,
+          "draw_prob": 26.9,
+          "away_win_prob": 32.3
+        },
+        "corners": {
+          "expected_total": 8.4,
+          "over_8_5": {
+            "prob_over": 44.4,
+            "fair_odd": 2.25
+          },
+          "over_9_5": {
+            "prob_over": 35.0,
+            "fair_odd": 2.86
+          },
+          "over_10_5": {
+            "prob_over": 26.9,
+            "fair_odd": 3.72
+          }
+        },
+        "shots": {
+          "expected_total": 12.4,
+          "over_8_5": {
+            "prob_over": 86.9,
+            "fair_odd": 1.15
+          }
+        },
+        "cards": {
+          "expected_total": 2.4,
+          "over_3_5": {
+            "prob_over": 22.1,
+            "fair_odd": 4.52
+          },
+          "over_4_5": {
+            "prob_over": 9.6,
+            "fair_odd": 10.42
+          }
+        }
+      },
+      "team_profiles": {
+        "home": {
+          "shots": [
+            21.0,
+            13.0,
+            10.0,
+            9.0,
+            11.0
+          ],
+          "sot": [
+            8.0,
+            6.0,
+            6.0,
+            4.0,
+            8.0
+          ],
+          "corners": [
+            7.0,
+            2.0,
+            2.0,
+            0.0,
+            3.0
+          ],
+          "cards": [
+            1.0,
+            1.0,
+            0.0,
+            2.0,
+            2.0
+          ]
+        },
+        "away": {
+          "shots": [
+            8.0,
+            16.0,
+            19.0,
+            26.0,
+            26.0
+          ],
+          "sot": [
+            2.0,
+            5.0,
+            9.0,
+            7.0,
+            7.0
+          ],
+          "corners": [
+            3.0,
+            3.0,
+            5.0,
+            7.0,
+            10.0
+          ],
+          "cards": [
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0
+          ]
+        }
+      },
+      "stats_individual": {
+        "corners_home": [
+          7.0,
+          2.0,
+          2.0,
+          0.0,
+          3.0
+        ],
+        "corners_away": [
           3.0,
+          3.0,
+          5.0,
+          7.0,
+          10.0
+        ],
+        "cards_home": [
+          1.0,
+          1.0,
+          0.0,
+          2.0,
+          2.0
+        ],
+        "cards_away": [
+          1.0,
+          1.0,
+          1.0,
+          2.0,
+          1.0
+        ]
+      },
+      "model_info": {
+        "algorithm": "Dixon-Coles Bivariate Poisson + Negative Binomial",
+        "rho": -0.11,
+        "home_sample_size": 5,
+        "away_sample_size": 5
+      }
+    },
+    {
+      "league": "Ligue 1",
+      "league_dna": "Ligue 1",
+      "home_team": "Troyes",
+      "away_team": "Lens",
+      "referee": "Não divulgado",
+      "kickoff": "2026-10-17T18:45Z",
+      "data_confidence": "Alta",
+      "ai_badges": [
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Volume Alto de Cantos (Média 14.6)"
+        }
+      ],
+      "probabilities": {
+        "exp_total_goals": 2.6,
+        "prob_over_15": 62.2,
+        "odd_over_15": 1.61,
+        "prob_over_25": 29.7,
+        "odd_over_25": 3.37,
+        "prob_btts": 47.1,
+        "odd_btts": 2.12
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 2.6,
+          "lambda_h": 0.8,
+          "mu_a": 1.8,
+          "over_1_5": {
+            "prob_over": 62.2,
+            "fair_odd": 1.61
+          },
+          "over_2_5": {
+            "prob_over": 29.7,
+            "fair_odd": 3.37
+          },
+          "btts": {
+            "prob_yes": 47.1,
+            "fair_odd": 2.12
+          },
+          "btts_or_over25": {
+            "prob_hit": 59.6,
+            "fair_odd": 1.68
+          },
+          "home_over_1_5": {
+            "prob": 19.1,
+            "fair_odd": 5.24
+          },
+          "away_over_1_5": {
+            "prob": 53.7,
+            "fair_odd": 1.86
+          },
+          "home_win_prob": 15.2,
+          "draw_prob": 25.3,
+          "away_win_prob": 59.5
+        },
+        "corners": {
+          "expected_total": 14.6,
+          "over_8_5": {
+            "prob_over": 95.4,
+            "fair_odd": 1.05
+          },
+          "over_9_5": {
+            "prob_over": 91.6,
+            "fair_odd": 1.09
+          },
+          "over_10_5": {
+            "prob_over": 86.1,
+            "fair_odd": 1.16
+          }
+        },
+        "shots": {
+          "expected_total": 9.2,
+          "over_8_5": {
+            "prob_over": 57.0,
+            "fair_odd": 1.75
+          }
+        },
+        "cards": {
+          "expected_total": 3.0,
+          "over_3_5": {
+            "prob_over": 35.3,
+            "fair_odd": 2.83
+          },
+          "over_4_5": {
+            "prob_over": 18.5,
+            "fair_odd": 5.41
+          }
+        }
+      },
+      "team_profiles": {
+        "home": {
+          "shots": [
+            19.0,
+            8.0,
+            27.0,
+            11.0,
+            9.0
+          ],
+          "sot": [
+            3.0,
+            1.0,
+            6.0,
+            2.0,
+            2.0
+          ],
+          "corners": [
+            11.0,
+            5.0,
+            11.0,
+            5.0,
+            6.0
+          ],
+          "cards": [
+            2.0,
+            0.0,
+            1.0,
+            0.0,
+            2.0
+          ]
+        },
+        "away": {
+          "shots": [
+            12.0,
+            16.0,
+            17.0,
+            17.0,
+            12.0
+          ],
+          "sot": [
+            4.0,
+            6.0,
+            6.0,
+            7.0,
+            9.0
+          ],
+          "corners": [
+            8.0,
+            9.0,
+            8.0,
+            6.0,
+            4.0
+          ],
+          "cards": [
+            1.0,
+            3.0,
+            3.0,
+            2.0,
+            1.0
+          ]
+        }
+      },
+      "stats_individual": {
+        "corners_home": [
+          11.0,
+          5.0,
+          11.0,
+          5.0,
+          6.0
+        ],
+        "corners_away": [
+          8.0,
+          9.0,
+          8.0,
+          6.0,
+          4.0
+        ],
+        "cards_home": [
+          2.0,
+          0.0,
+          1.0,
+          0.0,
+          2.0
+        ],
+        "cards_away": [
+          1.0,
+          3.0,
+          3.0,
+          2.0,
+          1.0
+        ]
+      },
+      "model_info": {
+        "algorithm": "Dixon-Coles Bivariate Poisson + Negative Binomial",
+        "rho": -0.11,
+        "home_sample_size": 5,
+        "away_sample_size": 5
+      }
+    },
+    {
+      "league": "Brasileirão Série A",
+      "league_dna": "Brasileirão Série A",
+      "home_team": "Botafogo",
+      "away_team": "Chapecoense",
+      "referee": "Não divulgado",
+      "kickoff": "2026-10-17T21:00Z",
+      "data_confidence": "Alta",
+      "ai_badges": [
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Forte tendência +1.5 Gols (75.3%) — Modelo Dixon-Coles"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Alta probabilidade de BTTS / Ambas Marcam (67.5%)"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Combo BTTS ou Over 2.5 com forte aderência estatística (76.3%)"
+        }
+      ],
+      "probabilities": {
+        "exp_total_goals": 3.4,
+        "prob_over_15": 75.3,
+        "odd_over_15": 1.33,
+        "prob_over_25": 41.8,
+        "odd_over_25": 2.39,
+        "prob_btts": 67.5,
+        "odd_btts": 1.48
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 3.4,
+          "lambda_h": 1.6,
+          "mu_a": 1.8,
+          "over_1_5": {
+            "prob_over": 75.3,
+            "fair_odd": 1.33
+          },
+          "over_2_5": {
+            "prob_over": 41.8,
+            "fair_odd": 2.39
+          },
+          "btts": {
+            "prob_yes": 67.5,
+            "fair_odd": 1.48
+          },
+          "btts_or_over25": {
+            "prob_hit": 76.3,
+            "fair_odd": 1.31
+          },
+          "home_over_1_5": {
+            "prob": 47.5,
+            "fair_odd": 2.11
+          },
+          "away_over_1_5": {
+            "prob": 53.7,
+            "fair_odd": 1.86
+          },
+          "home_win_prob": 33.5,
+          "draw_prob": 25.1,
+          "away_win_prob": 41.5
+        },
+        "corners": {
+          "expected_total": 5.0,
+          "over_8_5": {
+            "prob_over": 12.5,
+            "fair_odd": 8.0
+          },
+          "over_9_5": {
+            "prob_over": 8.2,
+            "fair_odd": 12.2
+          },
+          "over_10_5": {
+            "prob_over": 5.2,
+            "fair_odd": 19.23
+          }
+        },
+        "shots": {
+          "expected_total": 6.2,
+          "over_8_5": {
+            "prob_over": 22.6,
+            "fair_odd": 4.42
+          }
+        },
+        "cards": {
+          "expected_total": 4.8,
+          "over_3_5": {
+            "prob_over": 70.6,
+            "fair_odd": 1.42
+          },
+          "over_4_5": {
+            "prob_over": 52.4,
+            "fair_odd": 1.91
+          }
+        }
+      },
+      "team_profiles": {
+        "home": {
+          "shots": [
+            6.0,
+            7.0,
+            5.0,
+            9.0,
+            10.0
+          ],
+          "sot": [
+            3.0,
+            1.0,
+            3.0,
+            4.0,
+            5.0
+          ],
+          "corners": [
+            1.0,
+            2.0,
+            0.0,
+            2.0,
+            3.0
+          ],
+          "cards": [
+            4.0,
+            4.0,
+            3.0,
+            3.0,
+            1.0
+          ]
+        },
+        "away": {
+          "shots": [
+            11.0,
+            7.0,
+            21.0,
+            7.0,
+            8.0
+          ],
+          "sot": [
+            1.0,
+            1.0,
+            8.0,
+            1.0,
+            4.0
+          ],
+          "corners": [
+            4.0,
+            6.0,
+            6.0,
+            0.0,
+            1.0
+          ],
+          "cards": [
+            3.0,
+            1.0,
+            2.0,
+            0.0,
+            3.0
+          ]
+        }
+      },
+      "stats_individual": {
+        "corners_home": [
+          1.0,
+          2.0,
+          0.0,
+          2.0,
+          3.0
+        ],
+        "corners_away": [
+          4.0,
+          6.0,
+          6.0,
+          0.0,
+          1.0
+        ],
+        "cards_home": [
+          4.0,
+          4.0,
+          3.0,
+          3.0,
+          1.0
+        ],
+        "cards_away": [
+          3.0,
+          1.0,
+          2.0,
+          0.0,
+          3.0
+        ]
+      },
+      "model_info": {
+        "algorithm": "Dixon-Coles Bivariate Poisson + Negative Binomial",
+        "rho": -0.11,
+        "home_sample_size": 5,
+        "away_sample_size": 5
+      }
+    },
+    {
+      "league": "Brasileirão Série A",
+      "league_dna": "Brasileirão Série A",
+      "home_team": "Atlético-MG",
+      "away_team": "Coritiba",
+      "referee": "Não divulgado",
+      "kickoff": "2026-10-17T21:30Z",
+      "data_confidence": "Alta",
+      "ai_badges": [
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Alta probabilidade de BTTS / Ambas Marcam (58.0%)"
+        }
+      ],
+      "probabilities": {
+        "exp_total_goals": 2.8,
+        "prob_over_15": 64.7,
+        "odd_over_15": 1.55,
+        "prob_over_25": 30.1,
+        "odd_over_25": 3.32,
+        "prob_btts": 58.0,
+        "odd_btts": 1.72
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 2.8,
+          "lambda_h": 1.4,
+          "mu_a": 1.4,
+          "over_1_5": {
+            "prob_over": 64.7,
+            "fair_odd": 1.55
+          },
+          "over_2_5": {
+            "prob_over": 30.1,
+            "fair_odd": 3.32
+          },
+          "btts": {
+            "prob_yes": 58.0,
+            "fair_odd": 1.72
+          },
+          "btts_or_over25": {
+            "prob_hit": 66.1,
+            "fair_odd": 1.51
+          },
+          "home_over_1_5": {
+            "prob": 40.8,
+            "fair_odd": 2.45
+          },
+          "away_over_1_5": {
+            "prob": 40.8,
+            "fair_odd": 2.45
+          },
+          "home_win_prob": 36.0,
+          "draw_prob": 28.1,
+          "away_win_prob": 36.0
+        },
+        "corners": {
+          "expected_total": 9.0,
+          "over_8_5": {
+            "prob_over": 49.5,
+            "fair_odd": 2.02
+          },
+          "over_9_5": {
+            "prob_over": 40.6,
+            "fair_odd": 2.46
+          },
+          "over_10_5": {
+            "prob_over": 32.6,
+            "fair_odd": 3.07
+          }
+        },
+        "shots": {
+          "expected_total": 6.0,
+          "over_8_5": {
+            "prob_over": 18.7,
+            "fair_odd": 5.35
+          }
+        },
+        "cards": {
+          "expected_total": 4.0,
+          "over_3_5": {
+            "prob_over": 56.7,
+            "fair_odd": 1.76
+          },
+          "over_4_5": {
+            "prob_over": 37.1,
+            "fair_odd": 2.7
+          }
+        }
+      },
+      "team_profiles": {
+        "home": {
+          "shots": [
+            7.0,
+            8.0,
+            18.0,
+            12.0,
+            14.0
+          ],
+          "sot": [
+            3.0,
+            2.0,
+            8.0,
+            2.0,
+            2.0
+          ],
+          "corners": [
+            2.0,
+            3.0,
+            6.0,
+            12.0,
+            5.0
+          ],
+          "cards": [
+            2.0,
+            1.0,
+            0.0,
+            2.0,
+            4.0
+          ]
+        },
+        "away": {
+          "shots": [
+            4.0,
+            18.0,
+            13.0,
+            10.0,
+            8.0
+          ],
+          "sot": [
+            2.0,
+            2.0,
+            5.0,
+            2.0,
+            2.0
+          ],
+          "corners": [
+            6.0,
+            3.0,
+            5.0,
+            2.0,
+            1.0
+          ],
+          "cards": [
+            2.0,
+            4.0,
+            1.0,
+            2.0,
+            2.0
+          ]
+        }
+      },
+      "stats_individual": {
+        "corners_home": [
+          2.0,
+          3.0,
+          6.0,
+          12.0,
+          5.0
+        ],
+        "corners_away": [
+          6.0,
+          3.0,
+          5.0,
+          2.0,
+          1.0
+        ],
+        "cards_home": [
+          2.0,
+          1.0,
+          0.0,
+          2.0,
+          4.0
+        ],
+        "cards_away": [
+          2.0,
+          4.0,
+          1.0,
+          2.0,
+          2.0
+        ]
+      },
+      "model_info": {
+        "algorithm": "Dixon-Coles Bivariate Poisson + Negative Binomial",
+        "rho": -0.11,
+        "home_sample_size": 5,
+        "away_sample_size": 5
+      }
+    },
+    {
+      "league": "Brasileirão Série A",
+      "league_dna": "Brasileirão Série A",
+      "home_team": "Athletico-PR",
+      "away_team": "Palmeiras",
+      "referee": "Não divulgado",
+      "kickoff": "2026-10-17T22:30Z",
+      "data_confidence": "Alta",
+      "ai_badges": [
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Forte tendência +1.5 Gols (81.3%) — Modelo Dixon-Coles"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Alta probabilidade de BTTS / Ambas Marcam (65.2%)"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Combo BTTS ou Over 2.5 com forte aderência estatística (79.8%)"
+        }
+      ],
+      "probabilities": {
+        "exp_total_goals": 3.8,
+        "prob_over_15": 81.3,
+        "odd_over_15": 1.23,
+        "prob_over_25": 52.0,
+        "odd_over_25": 1.92,
+        "prob_btts": 65.2,
+        "odd_btts": 1.53
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 3.8,
+          "lambda_h": 1.2,
+          "mu_a": 2.6,
+          "over_1_5": {
+            "prob_over": 81.3,
+            "fair_odd": 1.23
+          },
+          "over_2_5": {
+            "prob_over": 52.0,
+            "fair_odd": 1.92
+          },
+          "btts": {
+            "prob_yes": 65.2,
+            "fair_odd": 1.53
+          },
+          "btts_or_over25": {
+            "prob_hit": 79.8,
+            "fair_odd": 1.25
+          },
+          "home_over_1_5": {
+            "prob": 33.7,
+            "fair_odd": 2.97
+          },
+          "away_over_1_5": {
+            "prob": 73.3,
+            "fair_odd": 1.36
+          },
+          "home_win_prob": 15.5,
+          "draw_prob": 19.5,
+          "away_win_prob": 65.1
+        },
+        "corners": {
+          "expected_total": 10.4,
+          "over_8_5": {
+            "prob_over": 66.7,
+            "fair_odd": 1.5
+          },
+          "over_9_5": {
+            "prob_over": 56.2,
+            "fair_odd": 1.78
+          },
+          "over_10_5": {
+            "prob_over": 45.8,
+            "fair_odd": 2.18
+          }
+        },
+        "shots": {
+          "expected_total": 10.0,
+          "over_8_5": {
+            "prob_over": 66.7,
+            "fair_odd": 1.5
+          }
+        },
+        "cards": {
+          "expected_total": 4.0,
+          "over_3_5": {
+            "prob_over": 56.7,
+            "fair_odd": 1.76
+          },
+          "over_4_5": {
+            "prob_over": 37.1,
+            "fair_odd": 2.7
+          }
+        }
+      },
+      "team_profiles": {
+        "home": {
+          "shots": [
+            4.0,
+            18.0,
+            19.0,
+            13.0,
+            6.0
+          ],
+          "sot": [
+            2.0,
+            6.0,
+            5.0,
+            5.0,
+            2.0
+          ],
+          "corners": [
+            1.0,
+            7.0,
+            8.0,
+            8.0,
+            1.0
+          ],
+          "cards": [
+            4.0,
+            2.0,
+            3.0,
+            1.0,
+            1.0
+          ]
+        },
+        "away": {
+          "shots": [
+            8.0,
+            14.0,
+            11.0,
+            17.0,
+            13.0
+          ],
+          "sot": [
+            3.0,
+            6.0,
+            7.0,
+            8.0,
+            6.0
+          ],
+          "corners": [
+            5.0,
+            5.0,
+            4.0,
+            6.0,
+            7.0
+          ],
+          "cards": [
+            2.0,
+            3.0,
+            1.0,
+            1.0,
+            2.0
+          ]
+        }
+      },
+      "stats_individual": {
+        "corners_home": [
+          1.0,
+          7.0,
+          8.0,
+          8.0,
+          1.0
+        ],
+        "corners_away": [
+          5.0,
+          5.0,
+          4.0,
+          6.0,
+          7.0
+        ],
+        "cards_home": [
+          4.0,
+          2.0,
+          3.0,
+          1.0,
+          1.0
+        ],
+        "cards_away": [
+          2.0,
+          3.0,
+          1.0,
+          1.0,
+          2.0
+        ]
+      },
+      "model_info": {
+        "algorithm": "Dixon-Coles Bivariate Poisson + Negative Binomial",
+        "rho": -0.11,
+        "home_sample_size": 5,
+        "away_sample_size": 5
+      }
+    },
+    {
+      "league": "Brasileirão Série A",
+      "league_dna": "Brasileirão Série A",
+      "home_team": "São Paulo",
+      "away_team": "Vasco da Gama",
+      "referee": "Não divulgado",
+      "kickoff": "2026-10-18T00:00Z",
+      "data_confidence": "Alta",
+      "ai_badges": [
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Volume Alto de Cantos (Média 13.0)"
+        }
+      ],
+      "probabilities": {
+        "exp_total_goals": 2.6,
+        "prob_over_15": 61.1,
+        "odd_over_15": 1.64,
+        "prob_over_25": 27.5,
+        "odd_over_25": 3.64,
+        "prob_btts": 51.7,
+        "odd_btts": 1.93
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 2.6,
+          "lambda_h": 1.6,
+          "mu_a": 1.0,
+          "over_1_5": {
+            "prob_over": 61.1,
+            "fair_odd": 1.64
+          },
+          "over_2_5": {
+            "prob_over": 27.5,
+            "fair_odd": 3.64
+          },
+          "btts": {
+            "prob_yes": 51.7,
+            "fair_odd": 1.93
+          },
+          "btts_or_over25": {
+            "prob_hit": 61.1,
+            "fair_odd": 1.64
+          },
+          "home_over_1_5": {
+            "prob": 47.5,
+            "fair_odd": 2.11
+          },
+          "away_over_1_5": {
+            "prob": 26.4,
+            "fair_odd": 3.79
+          },
+          "home_win_prob": 49.8,
+          "draw_prob": 27.8,
+          "away_win_prob": 22.4
+        },
+        "corners": {
+          "expected_total": 13.0,
+          "over_8_5": {
+            "prob_over": 77.0,
+            "fair_odd": 1.3
+          },
+          "over_9_5": {
+            "prob_over": 70.2,
+            "fair_odd": 1.42
+          },
+          "over_10_5": {
+            "prob_over": 63.1,
+            "fair_odd": 1.58
+          }
+        },
+        "shots": {
+          "expected_total": 10.6,
+          "over_8_5": {
+            "prob_over": 65.2,
+            "fair_odd": 1.53
+          }
+        },
+        "cards": {
+          "expected_total": 3.2,
+          "over_3_5": {
+            "prob_over": 37.8,
+            "fair_odd": 2.65
+          },
+          "over_4_5": {
+            "prob_over": 25.1,
+            "fair_odd": 3.98
+          }
+        }
+      },
+      "team_profiles": {
+        "home": {
+          "shots": [
+            18.0,
+            9.0,
+            18.0,
+            8.0,
+            10.0
+          ],
+          "sot": [
+            7.0,
+            5.0,
+            4.0,
+            3.0,
+            4.0
+          ],
+          "corners": [
+            11.0,
+            7.0,
+            3.0,
+            4.0,
+            2.0
+          ],
+          "cards": [
+            0.0,
+            3.0,
+            3.0,
+            1.0,
+            0.0
+          ]
+        },
+        "away": {
+          "shots": [
+            17.0,
+            16.0,
+            26.0,
+            30.0,
+            13.0
+          ],
+          "sot": [
+            6.0,
+            2.0,
+            4.0,
+            13.0,
+            5.0
+          ],
+          "corners": [
+            9.0,
+            2.0,
+            8.0,
+            14.0,
+            5.0
+          ],
+          "cards": [
+            2.0,
+            1.0,
+            5.0,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "stats_individual": {
+        "corners_home": [
+          11.0,
+          7.0,
+          3.0,
+          4.0,
+          2.0
+        ],
+        "corners_away": [
+          9.0,
+          2.0,
+          8.0,
+          14.0,
+          5.0
+        ],
+        "cards_home": [
+          0.0,
+          3.0,
+          3.0,
+          1.0,
           0.0
+        ],
+        "cards_away": [
+          2.0,
+          1.0,
+          5.0,
+          0.0,
+          1.0
+        ]
+      },
+      "model_info": {
+        "algorithm": "Dixon-Coles Bivariate Poisson + Negative Binomial",
+        "rho": -0.11,
+        "home_sample_size": 5,
+        "away_sample_size": 5
+      }
+    },
+    {
+      "league": "Serie A",
+      "league_dna": "Serie A",
+      "home_team": "Venezia",
+      "away_team": "Napoli",
+      "referee": "Não divulgado",
+      "kickoff": "2026-10-17T13:00Z",
+      "data_confidence": "Alta",
+      "ai_badges": [
+        {
+          "tipo": "orange",
+          "texto": "Atenção IA: Jogo Amarrado / Tendência Under (52.0% para +1.5)"
+        }
+      ],
+      "probabilities": {
+        "exp_total_goals": 2.2,
+        "prob_over_15": 52.0,
+        "odd_over_15": 1.92,
+        "prob_over_25": 20.3,
+        "odd_over_25": 4.93,
+        "prob_btts": 42.8,
+        "odd_btts": 2.34
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 2.2,
+          "lambda_h": 0.8,
+          "mu_a": 1.4,
+          "over_1_5": {
+            "prob_over": 52.0,
+            "fair_odd": 1.92
+          },
+          "over_2_5": {
+            "prob_over": 20.3,
+            "fair_odd": 4.93
+          },
+          "btts": {
+            "prob_yes": 42.8,
+            "fair_odd": 2.34
+          },
+          "btts_or_over25": {
+            "prob_hit": 51.3,
+            "fair_odd": 1.95
+          },
+          "home_over_1_5": {
+            "prob": 19.1,
+            "fair_odd": 5.24
+          },
+          "away_over_1_5": {
+            "prob": 40.8,
+            "fair_odd": 2.45
+          },
+          "home_win_prob": 20.1,
+          "draw_prob": 30.3,
+          "away_win_prob": 49.6
+        },
+        "corners": {
+          "expected_total": 9.2,
+          "over_8_5": {
+            "prob_over": 54.4,
+            "fair_odd": 1.84
+          },
+          "over_9_5": {
+            "prob_over": 43.3,
+            "fair_odd": 2.31
+          },
+          "over_10_5": {
+            "prob_over": 33.2,
+            "fair_odd": 3.01
+          }
+        },
+        "shots": {
+          "expected_total": 8.6,
+          "over_8_5": {
+            "prob_over": 49.1,
+            "fair_odd": 2.04
+          }
+        },
+        "cards": {
+          "expected_total": 4.0,
+          "over_3_5": {
+            "prob_over": 55.7,
+            "fair_odd": 1.8
+          },
+          "over_4_5": {
+            "prob_over": 37.1,
+            "fair_odd": 2.7
+          }
+        }
+      },
+      "team_profiles": {
+        "home": {
+          "shots": [
+            17.0,
+            10.0,
+            15.0,
+            9.0,
+            19.0
+          ],
+          "sot": [
+            6.0,
+            3.0,
+            4.0,
+            2.0,
+            7.0
+          ],
+          "corners": [
+            7.0,
+            2.0,
+            2.0,
+            3.0,
+            5.0
+          ],
+          "cards": [
+            6.0,
+            2.0,
+            4.0,
+            3.0,
+            1.0
+          ]
+        },
+        "away": {
+          "shots": [
+            13.0,
+            15.0,
+            16.0,
+            13.0,
+            13.0
+          ],
+          "sot": [
+            5.0,
+            3.0,
+            7.0,
+            2.0,
+            4.0
+          ],
+          "corners": [
+            5.0,
+            10.0,
+            5.0,
+            2.0,
+            5.0
+          ],
+          "cards": [
+            0.0,
+            0.0,
+            2.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "stats_individual": {
+        "corners_home": [
+          7.0,
+          2.0,
+          2.0,
+          3.0,
+          5.0
+        ],
+        "corners_away": [
+          5.0,
+          10.0,
+          5.0,
+          2.0,
+          5.0
+        ],
+        "cards_home": [
+          6.0,
+          2.0,
+          4.0,
+          3.0,
+          1.0
+        ],
+        "cards_away": [
+          0.0,
+          0.0,
+          2.0,
+          1.0,
+          1.0
+        ]
+      },
+      "model_info": {
+        "algorithm": "Dixon-Coles Bivariate Poisson + Negative Binomial",
+        "rho": -0.11,
+        "home_sample_size": 5,
+        "away_sample_size": 5
+      }
+    },
+    {
+      "league": "Serie A",
+      "league_dna": "Serie A",
+      "home_team": "Bologna",
+      "away_team": "Internazionale",
+      "referee": "Não divulgado",
+      "kickoff": "2026-10-17T16:00Z",
+      "data_confidence": "Alta",
+      "ai_badges": [
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Forte tendência +1.5 Gols (80.9%) — Modelo Dixon-Coles"
+        }
+      ],
+      "probabilities": {
+        "exp_total_goals": 3.6,
+        "prob_over_15": 80.9,
+        "odd_over_15": 1.24,
+        "prob_over_25": 54.9,
+        "odd_over_25": 1.82,
+        "prob_btts": 43.3,
+        "odd_btts": 2.31
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 3.6,
+          "lambda_h": 0.6,
+          "mu_a": 3.0,
+          "over_1_5": {
+            "prob_over": 80.9,
+            "fair_odd": 1.24
+          },
+          "over_2_5": {
+            "prob_over": 54.9,
+            "fair_odd": 1.82
+          },
+          "btts": {
+            "prob_yes": 43.3,
+            "fair_odd": 2.31
+          },
+          "btts_or_over25": {
+            "prob_hit": 72.9,
+            "fair_odd": 1.37
+          },
+          "home_over_1_5": {
+            "prob": 12.2,
+            "fair_odd": 8.2
+          },
+          "away_over_1_5": {
+            "prob": 80.1,
+            "fair_odd": 1.25
+          },
+          "home_win_prob": 4.5,
+          "draw_prob": 12.5,
+          "away_win_prob": 83.0
+        },
+        "corners": {
+          "expected_total": 10.4,
+          "over_8_5": {
+            "prob_over": 57.1,
+            "fair_odd": 1.75
+          },
+          "over_9_5": {
+            "prob_over": 49.8,
+            "fair_odd": 2.01
+          },
+          "over_10_5": {
+            "prob_over": 42.9,
+            "fair_odd": 2.33
+          }
+        },
+        "shots": {
+          "expected_total": 10.6,
+          "over_8_5": {
+            "prob_over": 72.0,
+            "fair_odd": 1.39
+          }
+        },
+        "cards": {
+          "expected_total": 3.2,
+          "over_3_5": {
+            "prob_over": 39.1,
+            "fair_odd": 2.56
+          },
+          "over_4_5": {
+            "prob_over": 23.5,
+            "fair_odd": 4.26
+          }
+        }
+      },
+      "team_profiles": {
+        "home": {
+          "shots": [
+            11.0,
+            5.0,
+            21.0,
+            16.0,
+            14.0
+          ],
+          "sot": [
+            1.0,
+            2.0,
+            5.0,
+            3.0,
+            5.0
+          ],
+          "corners": [
+            1.0,
+            0.0,
+            10.0,
+            2.0,
+            8.0
+          ],
+          "cards": [
+            0.0,
+            1.0,
+            3.0,
+            0.0,
+            4.0
+          ]
+        },
+        "away": {
+          "shots": [
+            16.0,
+            27.0,
+            29.0,
+            31.0,
+            13.0
+          ],
+          "sot": [
+            5.0,
+            12.0,
+            8.0,
+            7.0,
+            5.0
+          ],
+          "corners": [
+            2.0,
+            10.0,
+            10.0,
+            6.0,
+            3.0
+          ],
+          "cards": [
+            3.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0
+          ]
+        }
+      },
+      "stats_individual": {
+        "corners_home": [
+          1.0,
+          0.0,
+          10.0,
+          2.0,
+          8.0
+        ],
+        "corners_away": [
+          2.0,
+          10.0,
+          10.0,
+          6.0,
+          3.0
+        ],
+        "cards_home": [
+          0.0,
+          1.0,
+          3.0,
+          0.0,
+          4.0
+        ],
+        "cards_away": [
+          3.0,
+          1.0,
+          1.0,
+          1.0,
+          2.0
+        ]
+      },
+      "model_info": {
+        "algorithm": "Dixon-Coles Bivariate Poisson + Negative Binomial",
+        "rho": -0.11,
+        "home_sample_size": 5,
+        "away_sample_size": 5
+      }
+    },
+    {
+      "league": "Serie A",
+      "league_dna": "Serie A",
+      "home_team": "AS Roma",
+      "away_team": "Genoa",
+      "referee": "Não divulgado",
+      "kickoff": "2026-10-17T18:45Z",
+      "data_confidence": "Alta",
+      "ai_badges": [
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Forte tendência +1.5 Gols (78.3%) — Modelo Dixon-Coles"
+        },
+        {
+          "tipo": "green",
+          "texto": "Dica IA: Volume Alto de Cantos (Média 10.8)"
+        }
+      ],
+      "probabilities": {
+        "exp_total_goals": 3.4,
+        "prob_over_15": 78.3,
+        "odd_over_15": 1.28,
+        "prob_over_25": 50.9,
+        "odd_over_25": 1.96,
+        "prob_btts": 42.8,
+        "odd_btts": 2.34
+      },
+      "markets": {
+        "goals": {
+          "expected_total": 3.4,
+          "lambda_h": 2.8,
+          "mu_a": 0.6,
+          "over_1_5": {
+            "prob_over": 78.3,
+            "fair_odd": 1.28
+          },
+          "over_2_5": {
+            "prob_over": 50.9,
+            "fair_odd": 1.96
+          },
+          "btts": {
+            "prob_yes": 42.8,
+            "fair_odd": 2.34
+          },
+          "btts_or_over25": {
+            "prob_hit": 70.3,
+            "fair_odd": 1.42
+          },
+          "home_over_1_5": {
+            "prob": 76.9,
+            "fair_odd": 1.3
+          },
+          "away_over_1_5": {
+            "prob": 12.2,
+            "fair_odd": 8.2
+          },
+          "home_win_prob": 80.9,
+          "draw_prob": 13.9,
+          "away_win_prob": 5.2
+        },
+        "corners": {
+          "expected_total": 10.8,
+          "over_8_5": {
+            "prob_over": 60.9,
+            "fair_odd": 1.64
+          },
+          "over_9_5": {
+            "prob_over": 53.4,
+            "fair_odd": 1.87
+          },
+          "over_10_5": {
+            "prob_over": 46.2,
+            "fair_odd": 2.16
+          }
+        },
+        "shots": {
+          "expected_total": 10.0,
+          "over_8_5": {
+            "prob_over": 66.7,
+            "fair_odd": 1.5
+          }
+        },
+        "cards": {
+          "expected_total": 3.8,
+          "over_3_5": {
+            "prob_over": 52.7,
+            "fair_odd": 1.9
+          },
+          "over_4_5": {
+            "prob_over": 33.2,
+            "fair_odd": 3.01
+          }
+        }
+      },
+      "team_profiles": {
+        "home": {
+          "shots": [
+            18.0,
+            14.0,
+            39.0,
+            15.0,
+            17.0
+          ],
+          "sot": [
+            4.0,
+            5.0,
+            10.0,
+            8.0,
+            8.0
+          ],
+          "corners": [
+            4.0,
+            8.0,
+            14.0,
+            1.0,
+            2.0
+          ],
+          "cards": [
+            3.0,
+            2.0,
+            0.0,
+            1.0,
+            2.0
+          ]
+        },
+        "away": {
+          "shots": [
+            12.0,
+            17.0,
+            11.0,
+            8.0,
+            11.0
+          ],
+          "sot": [
+            5.0,
+            5.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "corners": [
+            5.0,
+            8.0,
+            5.0,
+            2.0,
+            5.0
+          ],
+          "cards": [
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ]
+        }
+      },
+      "stats_individual": {
+        "corners_home": [
+          4.0,
+          8.0,
+          14.0,
+          1.0,
+          2.0
+        ],
+        "corners_away": [
+          5.0,
+          8.0,
+          5.0,
+          2.0,
+          5.0
+        ],
+        "cards_home": [
+          3.0,
+          2.0,
+          0.0,
+          1.0,
+          2.0
+        ],
+        "cards_away": [
+          3.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0
         ]
       },
       "model_info": {
